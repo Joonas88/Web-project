@@ -25,7 +25,6 @@ function etsi() {
 
             //pysakit.innerHTML += hakutulokset.features[x].attributes.LYHYTTUNNU+' '+hakutulokset.features[x].attributes.NIMI1+' '+hakutulokset.features[x].attributes.NAMN1+'<br/>';
             //document.write(hakutulokset.features[x].attributes.LYHYTTUNNU+' '+hakutulokset.features[x].attributes.NIMI1+' '+hakutulokset.features[x].attributes.NAMN1+'<br/>');
-
         }
 
     }).catch(function (error) {
