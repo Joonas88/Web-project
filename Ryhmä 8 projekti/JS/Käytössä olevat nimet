@@ -1,0 +1,5 @@
+kartta.js
+    let paikka
+    const map
+    function options
+    function error
