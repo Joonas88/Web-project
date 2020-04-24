@@ -23,6 +23,7 @@ function etsi() {
             } else
                 pysakit.innerHTML += 'Ei löydy :(<br/>';
 
+
             //pysakit.innerHTML += hakutulokset.features[x].attributes.LYHYTTUNNU+' '+hakutulokset.features[x].attributes.NIMI1+' '+hakutulokset.features[x].attributes.NAMN1+'<br/>';
             //document.write(hakutulokset.features[x].attributes.LYHYTTUNNU+' '+hakutulokset.features[x].attributes.NIMI1+' '+hakutulokset.features[x].attributes.NAMN1+'<br/>');
 
