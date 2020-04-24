@@ -16,9 +16,11 @@ const options = {
 function success(pos) {
     paikka = pos.coords;
     map.setView([paikka.latitude, paikka.longitude], 13);
+    console.log(`Latitude: ${paikka.latitude}`);
+    console.log(`Longitude: ${paikka.longitude}`);
 }
 function error(err) {
-    console.warn(`ERROR(${err.code}): ${}`)
+    console.warn(`ERROR(${err.code}): ${err.message}`);
 }
 
 navigator.geolocation.getCurrentPosition(success, error, options);
