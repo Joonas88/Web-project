@@ -3,3 +3,8 @@ kartta.js
     const map
     function options
     function error
+
+pysakit.js
+    const hakunappi
+    function etsi
+    const pysakit
