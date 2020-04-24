@@ -18,9 +18,16 @@ function success(pos) {
     map.setView([paikka.latitude, paikka.longitude], 13);
     console.log(`Latitude: ${paikka.latitude}`);
     console.log(`Longitude: ${paikka.longitude}`);
+
+    lisaaMarker(paikka, 'Minä olen tässä');
 }
 function error(err) {
     console.warn(`ERROR(${err.code}): ${err.message}`);
 }
 
 navigator.geolocation.getCurrentPosition(success, error, options);
+
+function lisaaMarker(crd, teksti) {
+    L.marker([crd.latitude, crd.longitude]).addTo(map).bindPopup(teksti).openPopup().on('click', function () {
+    });
+}

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="64ee6b11-3f50-4234-a90b-8e2787524c56" name="Default Changelist" comment="" />
+    <list default="true" id="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/kartta.js" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/Alkuperäiset koodit/kartta.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,6 +16,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1azDyRAqTQ6oWE7deNK5whICX1T" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -21,17 +27,23 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WebstormProjects\Ryhmä 8 projekti\Alkuperäiset koodit" />
+    </key>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="64ee6b11-3f50-4234-a90b-8e2787524c56" name="Default Changelist" comment="" />
+      <changelist id="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" name="Default Changelist" comment="" />
       <created>1587729782722</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587729782722</updated>
       <workItem from="1587729783896" duration="1219000" />
+      <workItem from="1587749678755" duration="8133000" />
     </task>
     <servers />
   </component>
@@ -43,5 +55,13 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112/-1920.358.1920.1040@0.0.2048.1112" timestamp="1587730290866" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587745398901">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587745398901" />
+    <state x="-1277" y="0" width="1284" height="1047" key="dock-window-1" timestamp="1587751063876">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1277" y="0" width="1284" height="1047" key="dock-window-1/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587751063876" />
   </component>
 </project>

@@ -16,16 +16,24 @@
 </div>
 
 <div class="pysäkkihaku">
-    <label for="hakukenttä">pysäkkihaku</label><input id="hakukenttä" type="text" autofocus="" placeholder="Tästä haetaan!">
+    <label for="hakukenttä">pysäkkihaku</label><input id="hakukenttä" type="checkbox" name="pysäkit" value="ch1">
     <button id="hakunappi">Search</button>
 </div>
-<script src="JS/pysakit.js"></script>
+
 
 <div id="map"></div>
 
-<main class="pysäkkitesti"> </main>
+<main class="pysäkkitesti">
+    <h2 id="id"></h2>
+    <h3 id="nimi"></h3>
+    <h4 id="namn"></h4>
+</main>
+
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.3/leaflet.js"></script>
-<script src="JS/kartta.js"></script>
+<script src="JS/pysakit.js"></script>
+
+
 </body>
 </html>
