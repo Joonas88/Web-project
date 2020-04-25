@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/kartta.js" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/Alkuperäiset koodit/kartta.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" afterDir="false" />
     </list>
@@ -29,6 +28,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WebstormProjects\Testing" />
       <recent name="D:\WebstormProjects\Ryhmä 8 projekti\Alkuperäiset koodit" />
     </key>
   </component>
@@ -43,22 +43,38 @@
       <option name="presentableId" value="Default" />
       <updated>1587729782722</updated>
       <workItem from="1587729783896" duration="1219000" />
-      <workItem from="1587749678755" duration="8133000" />
+      <workItem from="1587749678755" duration="11015000" />
+      <workItem from="1587832068435" duration="6731000" />
     </task>
+    <task id="LOCAL−00001" summary="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja">
+      <created>1587758156552</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1587758156552</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja" />
+    <option name="LAST_COMMIT_MESSAGE" value="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="523" y="215" key="CommitChangelistDialog2" timestamp="1587758155480">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="523" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587758155480" />
     <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1587730290866">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112/-1920.358.1920.1040@0.0.2048.1112" timestamp="1587730290866" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587745398901">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587758235542">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587745398901" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587758235542" />
     <state x="-1277" y="0" width="1284" height="1047" key="dock-window-1" timestamp="1587751063876">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
