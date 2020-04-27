@@ -3,7 +3,6 @@ const ylaLista = document.getElementById('pysakkiInfo');
 const lista = document.getElementById('data');
 const pysakkiCheck = document.getElementById('pysakit');
 pysakkiCheck.checked=true;
-let ajoneuvoId = null;
 
 const bussiIkoni = L.icon({
     iconUrl: 'media/Bussicon.png',
@@ -199,10 +198,8 @@ function kulkuneuvot (pysakkiId) {
                 maaranpaa=pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].headsign;
             }
 
-            ajoneuvoId=pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].trip.route.gtfsId;
-
             tietojenTulostus(pysakkiInfo.data.stop.name,pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].trip.route.shortName, maaranpaa, aikaLeima, pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].trip.route.gtfsId);
-            reittiTiedot(ajoneuvoId);
+
         }
 
     });
