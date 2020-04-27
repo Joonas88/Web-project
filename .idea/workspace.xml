@@ -3,13 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pyora.js" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pyora.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,6 +52,7 @@
       <workItem from="1587729783896" duration="1219000" />
       <workItem from="1587749678755" duration="11015000" />
       <workItem from="1587832068435" duration="6731000" />
+      <workItem from="1587991435139" duration="2372000" />
     </task>
     <task id="LOCAL−00001" summary="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja">
       <created>1587758156552</created>
@@ -53,7 +60,13 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1587758156552</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="Luotu pyora.js jossa kaupunkipyörä asemien (nimi, vapaat pyörät, tyhjät paikat, sijainti, onko tilaa) haku funktio api:sta. Tulokset tulostuvat consoleen mutta markkerit pitää vielä miettiä kuntoon.">
+      <created>1587991682909</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1587991682909</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -61,20 +74,23 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja" />
-    <option name="LAST_COMMIT_MESSAGE" value="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja" />
+    <MESSAGE value="Luotu pyora.js jossa kaupunkipyörä asemien (nimi, vapaat pyörät, tyhjät paikat, sijainti, onko tilaa) haku funktio api:sta. Tulokset tulostuvat consoleen mutta markkerit pitää vielä miettiä kuntoon." />
+    <option name="LAST_COMMIT_MESSAGE" value="Luotu pyora.js jossa kaupunkipyörä asemien (nimi, vapaat pyörät, tyhjät paikat, sijainti, onko tilaa) haku funktio api:sta. Tulokset tulostuvat consoleen mutta markkerit pitää vielä miettiä kuntoon." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="523" y="215" key="CommitChangelistDialog2" timestamp="1587758155480">
+    <state x="523" y="189" key="CommitChangelistDialog2" timestamp="1587991682482">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="523" y="189" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587991682482" />
     <state x="523" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587758155480" />
     <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1587730290866">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112/-1920.358.1920.1040@0.0.2048.1112" timestamp="1587730290866" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587758235542">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587991686366">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587991686366" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587758235542" />
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587991441365">
       <screen x="0" y="0" width="1920" height="1040" />

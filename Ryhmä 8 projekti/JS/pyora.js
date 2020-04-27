@@ -69,13 +69,13 @@ allowDropoff
         return response.json()
     }).then(function(tulos){
         console.log(tulos)
-        for(let i = 0; i<tulos.length; i++) {
+        for(let i = 0; i<tulos.data.bikeRentalStations.length; i++) {
             const sijainti = {
-                latitude: tulos[i].data.bikeRentalStation.lat,
-                longitude: tulos[i].data.bikeRentalStation.long,
+                latitude: tulos.data.bikeRentalStations[i].lat,
+                longitude: tulos.data.bikeRentalStations[i].lon,
             };
             const teksti = `
-        <h3>${tulos[i].data.bikeRentalStations.name}</h3>
+        <h3>${tulos.data.bikeRentalStations[i].name}</h3>
         
         `;
             console.log(sijainti);
