@@ -1,8 +1,8 @@
-'use strict';
-
-const id = document.getElementById('id');
-const nimi = document.getElementById('nimi');
-const namn = document.getElementById('namn');
+const pysakki = document.getElementById('nimi');
+const ylaLista = document.getElementById('pysakkiInfo');
+const lista = document.getElementById('data');
+const pysakkiCheck = document.getElementById('pysakit');
+pysakkiCheck.checked=false;
 
 let paikka = null;
 
@@ -37,18 +37,25 @@ const hakunappi = document.getElementById('hakunappi');
 
 hakunappi.addEventListener('click', napinpano);
 
+console.log(pysakkiCheck.value);
+
 function napinpano() {
-    //etsi(paikka);
-    pysakit(paikka);
+
+    if (pysakkiCheck.checked===true){
+        pysakit(paikka);
+        clear();
+    } else {
+        lista.innerHTML='Et valinnut mitään vaihtoehtoa';
+        location.reload(paikka);
+    }
+
 }
 
-function pysakit (crd) {
-    const hakuteksti = document.getElementById('hakukenttä').value;
-    console.log(hakuteksti);
 
+function pysakit (crd) {
     const pysakkiKysely = {
         query: `{
-    stopsByRadius(lat:${crd.latitude},lon:${crd.longitude},radius:${hakuteksti}) {
+    stopsByRadius(lat:${crd.latitude},lon: ${crd.longitude},radius:1000) {
       edges {
         node {
           stop { 
@@ -56,17 +63,6 @@ function pysakit (crd) {
             name
             lat
             lon
-                patterns {
-      code
-      directionId
-      headsign
-      route {
-        gtfsId
-        shortName
-        longName
-        mode
-      }
-    }
           }
           distance
         }
@@ -89,90 +85,95 @@ function pysakit (crd) {
     }).then(function (tulos) {
         console.log(tulos);
         for (let x = 0; x < tulos.data.stopsByRadius.edges.length; x++) {
-            console.log(tulos.data.stopsByRadius.edges[x].node.stop.name+' '+tulos.data.stopsByRadius.edges[x].node.distance+'m päässä');
+            console.log(tulos.data.stopsByRadius.edges[x].node.stop.gtfsId+' '+tulos.data.stopsByRadius.edges[x].node.stop.name+' '+tulos.data.stopsByRadius.edges[x].node.distance+'m päässä');
+
             const koordinaatit = {latitude: tulos.data.stopsByRadius.edges[x].node.stop.lat, longitude: tulos.data.stopsByRadius.edges[x].node.stop.lon};
 
-            //document.write('<br/>' + tulos.data.stopsByRadius.edges[x].node.stop.name+' '+tulos.data.stopsByRadius.edges[x].node.distance+'m päässä<br/>');
-            for (let i = 0; i < tulos.data.stopsByRadius.edges[x].node.stop.patterns.length; i++) {
-                console.log(tulos.data.stopsByRadius.edges[x].node.stop.patterns[i].route.shortName + ' ' + tulos.data.stopsByRadius.edges[x].node.stop.patterns[i].headsign);
-                const teksti=`<h3>${tulos.data.stopsByRadius.edges[x].node.stop.name}</h3><p>${tulos.data.stopsByRadius.edges[x].node.stop.patterns[i].route.shortName}</p><p>${tulos.data.stopsByRadius.edges[x].node.stop.patterns[i].headsign}</p>`;
-                //document.write(tulos.data.stopsByRadius.edges[x].node.stop.patterns[i].route.shortName + ' ' + tulos.data.stopsByRadius.edges[x].node.stop.patterns[i].headsign + '<br/>');
-                lisaaMarker(koordinaatit, teksti, tulos.data.stopsByRadius.edges[x].node.stop, tulos.data.stopsByRadius.edges[x].node.stop.patterns[i]);
+            const teksti=`<h4>${tulos.data.stopsByRadius.edges[x].node.stop.name+' '+tulos.data.stopsByRadius.edges[x].node.distance+'m päässä'}</h4>`;
+
+            lisaaMarker(koordinaatit, teksti, tulos.data.stopsByRadius.edges[x].node.stop.gtfsId);
+
+        }
+    });
+}
+
+function lisaaMarker(crd, teksti, pysakkiId) {
+    L.marker([crd.latitude, crd.longitude]).addTo(map).bindPopup(teksti).openPopup().on('click', function () {
+        clear();
+        kulkuneuvot(pysakkiId)
+    });
+}
+
+function kulkuneuvot (pysakkiId) {
+    console.log(pysakkiId);
+    const  kulkuneuvot = {
+        query: `{
+  stop(id: "${pysakkiId}") {
+    name
+      stoptimesWithoutPatterns {
+      scheduledArrival
+      realtimeArrival
+      arrivalDelay
+      scheduledDeparture
+      realtimeDeparture
+      departureDelay
+      realtime
+      realtimeState
+      serviceDay
+      headsign
+                      trip {
+                route {
+                  mode
+                  shortName
+                  longName
+                }
+              }
+    }
+  }  
+}`
+    };
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'Authorization': 'Bearer ' + localStorage.getItem('token'),
+        },
+        body: JSON.stringify(kulkuneuvot),
+    };
+
+    fetch('https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql', options).then(function (response) {
+        return response.json()
+    }).then(function (pysakkiInfo) {
+        console.log(pysakkiInfo);
+
+        for (let x=0; x<pysakkiInfo.data.stop.stoptimesWithoutPatterns.length; x++){
+
+            const aikaLeima = new Date((pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].serviceDay+pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].realtimeDeparture)*1000).toLocaleTimeString("fi-FI");
+
+            console.log(pysakkiInfo.data.stop.name);
+            console.log(pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].trip.route.shortName+' '+pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].headsign+' '+aikaLeima);
+
+            let maaranpaa = null;
+
+            if (pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].headsign===null){
+                maaranpaa=pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].trip.route.longName;
+            } else{
+                maaranpaa=pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].headsign;
             }
 
-        }
-    });
-}
-
-function lisaaMarker(crd, teksti, hakutulos, hakutulos2) {
-    L.marker([crd.latitude, crd.longitude]).addTo(map).bindPopup(teksti).openPopup().on('click', function () {
-        id.innerHTML =hakutulos.name;
-        nimi.innerHTML =hakutulos2.route.shortName;
-        namn.innerHTML =hakutulos2.headsign;
-    });
-}
-
-/*
-function etsi(crd) {
-    const hakuteksti = document.getElementById('hakukenttä').value;
-    console.log(hakuteksti);
-    fetch(`https://services1.arcgis.com/sswNXkUiRoWtrx0t/arcgis/rest/services/HSL_pysakit_kevat2018/FeatureServer/0/query?where=1%3D1&outFields=*&geometry=${crd.longitude}%2C${crd.latitude}%2C25.137%2C60.239&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelContains&distance=1&units=esriSRUnit_Kilometer&outSR=4326&f=json`).then(function (vastaus) {
-        return vastaus.json();
-    }).then(function (hakutulokset) {
-        console.log(hakutulokset.features);
-        console.log(hakutulokset.features[0].attributes);
-
-        const pysakit= document.querySelector('main');
-
-        for (let x=0; x<hakutulokset.features.length; x++) {
-
-            const koordinaatit = {latitude: hakutulokset.features[x].geometry.y, longitude: hakutulokset.features[x].geometry.x};
-            const teksti=`<h3>${hakutulokset.features[x].attributes.LYHYTTUNNU}</h3><p>${hakutulokset.features[x].attributes.NIMI1}</p><p>${hakutulokset.features[x].attributes.NAMN1}</p>`;
-
-            //pysakit.innerHTML += hakutulokset.features[x].attributes.LYHYTTUNNU+' '+hakutulokset.features[x].attributes.NIMI1+' '+hakutulokset.features[x].attributes.NAMN1+' '+hakutulokset.features[x].attributes.X+' '+hakutulokset.features[x].attributes.Y+'<br/>';
-            //document.write(hakutulokset.features[x].attributes.LYHYTTUNNU+' '+hakutulokset.features[x].attributes.NIMI1+' '+hakutulokset.features[x].attributes.NAMN1+'<br/>');
-
-            lisaaMarker(koordinaatit, teksti, hakutulokset.features[x].attributes);
-        }
-
-    }).catch(function (error) {
-        console.log(error);
-    });
-}
- */
-
-/*
-function etsilinja(crd) {
-    const hakuteksti = document.getElementById('hakukenttä').value;
-    console.log(hakuteksti);
-    fetch(`https://services1.arcgis.com/sswNXkUiRoWtrx0t/arcgis/rest/services/HSL_linjat_kevat2018/FeatureServer/0/query?where=1%3D1&outFields=*&geometry=${crd.longitude}%2C${crd.latitude}%2C25.038%2C60.178&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelContains&distance=2&units=esriSRUnit_Kilometer&outSR=4326&f=json`).then(function (vastaus) {
-        return vastaus.json();
-    }).then(function (linjahaku) {
-        console.log(linjahaku);
-        //console.log(hakutulokset.features[0].attributes);
-
-        //const pysakit= document.querySelector('main');
-
-        for (let x=0; x<hakutulokset.features.length; x++) {
-
-            const koordinaatit = {latitude: hakutulokset.features[x].geometry.y, longitude: hakutulokset.features[x].geometry.x};
-            const teksti=`<h3>${hakutulokset.features[x].attributes.LYHYTTUNNU}</h3><p>${hakutulokset.features[x].attributes.NIMI1}</p><p>${hakutulokset.features[x].attributes.NAMN1}</p>`;
-
-            //pysakit.innerHTML += hakutulokset.features[x].attributes.LYHYTTUNNU+' '+hakutulokset.features[x].attributes.NIMI1+' '+hakutulokset.features[x].attributes.NAMN1+' '+hakutulokset.features[x].attributes.X+' '+hakutulokset.features[x].attributes.Y+'<br/>';
-            //document.write(hakutulokset.features[x].attributes.LYHYTTUNNU+' '+hakutulokset.features[x].attributes.NIMI1+' '+hakutulokset.features[x].attributes.NAMN1+'<br/>');
-
-            lisaaMarker(koordinaatit, teksti, hakutulokset.features[x].attributes);
-
+            tietojenTulostus(pysakkiInfo.data.stop.name,pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].trip.route.shortName, maaranpaa, aikaLeima);
 
         }
 
-
-
-    }).catch(function (error) {
-        console.log(error);
     });
 }
 
- */
+function tietojenTulostus(pysakinNimi, linjaNumero, maaranpaa, lahtoAika) {
+    pysakki.innerHTML=pysakinNimi;
+    lista.innerHTML+=lahtoAika+'<br/>'+linjaNumero+' '+maaranpaa+' '+'<br/><br/>';
+}
 
-
+function clear() {
+    lista.innerHTML='';
+}

@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pyora.js" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pyora.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +32,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Testing" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\WebstormProjects\Testing" />
       <recent name="D:\WebstormProjects\Ryhmä 8 projekti\Alkuperäiset koodit" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WebstormProjects\Testing" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -51,8 +55,9 @@
       <updated>1587729782722</updated>
       <workItem from="1587729783896" duration="1219000" />
       <workItem from="1587749678755" duration="11015000" />
-      <workItem from="1587832068435" duration="6731000" />
-      <workItem from="1587991435139" duration="2372000" />
+      <workItem from="1587832068435" duration="47588000" />
+      <workItem from="1587936530716" duration="722000" />
+      <workItem from="1587976521903" duration="16865000" />
     </task>
     <task id="LOCAL−00001" summary="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja">
       <created>1587758156552</created>
@@ -60,11 +65,11 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1587758156552</updated>
     </task>
-    <task id="LOCAL−00002" summary="Luotu pyora.js jossa kaupunkipyörä asemien (nimi, vapaat pyörät, tyhjät paikat, sijainti, onko tilaa) haku funktio api:sta. Tulokset tulostuvat consoleen mutta markkerit pitää vielä miettiä kuntoon.">
-      <created>1587991682909</created>
+    <task id="LOCAL−00002" summary="Pysäkkihaku tehty uudelleen eri menetelmällä, sisältää nyt myös pysäkeiltä kulkevat linjat, sekä määränpäät.">
+      <created>1587839377291</created>
       <option name="number" value="LOCAL−00002" />
       <option name="presentableId" value="LOCAL−00002" />
-      <updated>1587991682909</updated>
+      <updated>1587839377291</updated>
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
@@ -74,31 +79,41 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja" />
-    <MESSAGE value="Luotu pyora.js jossa kaupunkipyörä asemien (nimi, vapaat pyörät, tyhjät paikat, sijainti, onko tilaa) haku funktio api:sta. Tulokset tulostuvat consoleen mutta markkerit pitää vielä miettiä kuntoon." />
-    <option name="LAST_COMMIT_MESSAGE" value="Luotu pyora.js jossa kaupunkipyörä asemien (nimi, vapaat pyörät, tyhjät paikat, sijainti, onko tilaa) haku funktio api:sta. Tulokset tulostuvat consoleen mutta markkerit pitää vielä miettiä kuntoon." />
+    <MESSAGE value="Pysäkkihaku tehty uudelleen eri menetelmällä, sisältää nyt myös pysäkeiltä kulkevat linjat, sekä määränpäät." />
+    <option name="LAST_COMMIT_MESSAGE" value="Pysäkkihaku tehty uudelleen eri menetelmällä, sisältää nyt myös pysäkeiltä kulkevat linjat, sekä määränpäät." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="523" y="189" key="CommitChangelistDialog2" timestamp="1587991682482">
+    <state x="523" y="215" key="CommitChangelistDialog2" timestamp="1587839375795">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="523" y="189" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587991682482" />
-    <state x="523" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587758155480" />
+    <state x="523" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587839375795" />
     <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1587730290866">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112/-1920.358.1920.1040@0.0.2048.1112" timestamp="1587730290866" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587991686366">
+    <state x="184" y="86" key="MergeDialog" timestamp="1587997893895">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587991686366" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587758235542" />
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587991441365">
+    <state x="184" y="86" key="MergeDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587997893895" />
+    <state x="662" y="236" key="MultipleFileMergeDialog" timestamp="1587997897319">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587991441365" />
-    <state x="-1277" y="0" width="1284" height="1047" key="dock-window-1" timestamp="1587751063876">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="662" y="236" key="MultipleFileMergeDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587997897319" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587839379463">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1277" y="0" width="1284" height="1047" key="dock-window-1/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587751063876" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587839379463" />
+    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587997867180">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587997867180" />
+    <state x="596" y="283" width="1704" height="1028" key="dock-window-1" timestamp="1587918901288">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="596" y="283" width="1704" height="1028" key="dock-window-1/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587918901288" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1587991050372">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587991050372" />
   </component>
 </project>
