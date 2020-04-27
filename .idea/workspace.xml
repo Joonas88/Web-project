@@ -4,7 +4,6 @@
     <list default="true" id="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +56,7 @@
       <workItem from="1587749678755" duration="11015000" />
       <workItem from="1587832068435" duration="47588000" />
       <workItem from="1587936530716" duration="722000" />
-      <workItem from="1587976521903" duration="16865000" />
+      <workItem from="1587976521903" duration="21264000" />
     </task>
     <task id="LOCAL−00001" summary="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja">
       <created>1587758156552</created>
@@ -71,7 +70,13 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1587839377291</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="Pysäkkien haku toteutettu toisella menetelmällä, näyttää pysäkit 500m säteellä sijainnista, pysäkkiä klikkaamalla tulostaa sivulle pysäkiltä kulkevat linjat ja seuraavat lähtöajat.&#10;Huom! Nyt kaksi .js tiedostoa, muista aina valita &lt;script&gt;-kohdalta se mitä haluat käyttää.">
+      <created>1587998553246</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1587998553246</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,13 +85,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja" />
     <MESSAGE value="Pysäkkihaku tehty uudelleen eri menetelmällä, sisältää nyt myös pysäkeiltä kulkevat linjat, sekä määränpäät." />
-    <option name="LAST_COMMIT_MESSAGE" value="Pysäkkihaku tehty uudelleen eri menetelmällä, sisältää nyt myös pysäkeiltä kulkevat linjat, sekä määränpäät." />
+    <MESSAGE value="Pysäkkien haku toteutettu toisella menetelmällä, näyttää pysäkit 500m säteellä sijainnista, pysäkkiä klikkaamalla tulostaa sivulle pysäkiltä kulkevat linjat ja seuraavat lähtöajat.&#10;Huom! Nyt kaksi .js tiedostoa, muista aina valita &lt;script&gt;-kohdalta se mitä haluat käyttää." />
+    <option name="LAST_COMMIT_MESSAGE" value="Pysäkkien haku toteutettu toisella menetelmällä, näyttää pysäkit 500m säteellä sijainnista, pysäkkiä klikkaamalla tulostaa sivulle pysäkiltä kulkevat linjat ja seuraavat lähtöajat.&#10;Huom! Nyt kaksi .js tiedostoa, muista aina valita &lt;script&gt;-kohdalta se mitä haluat käyttää." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="523" y="215" key="CommitChangelistDialog2" timestamp="1587839375795">
+    <state x="523" y="215" key="CommitChangelistDialog2" timestamp="1587998552319">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="523" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587839375795" />
+    <state x="523" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587998552319" />
     <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1587730290866">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -99,10 +105,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="662" y="236" key="MultipleFileMergeDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587997897319" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587839379463">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587998555645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587839379463" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587998555645" />
     <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587997867180">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

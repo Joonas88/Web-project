@@ -2,7 +2,7 @@ const pysakki = document.getElementById('nimi');
 const ylaLista = document.getElementById('pysakkiInfo');
 const lista = document.getElementById('data');
 const pysakkiCheck = document.getElementById('pysakit');
-pysakkiCheck.checked=false;
+pysakkiCheck.checked=true;
 
 let paikka = null;
 
@@ -123,6 +123,7 @@ function kulkuneuvot (pysakkiId) {
       headsign
                       trip {
                 route {
+                gtfsId
                   mode
                   shortName
                   longName
@@ -162,16 +163,16 @@ function kulkuneuvot (pysakkiId) {
                 maaranpaa=pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].headsign;
             }
 
-            tietojenTulostus(pysakkiInfo.data.stop.name,pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].trip.route.shortName, maaranpaa, aikaLeima);
+            tietojenTulostus(pysakkiInfo.data.stop.name,pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].trip.route.shortName, maaranpaa, aikaLeima, pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].trip.route.gtfsId);
 
         }
 
     });
 }
 
-function tietojenTulostus(pysakinNimi, linjaNumero, maaranpaa, lahtoAika) {
+function tietojenTulostus(pysakinNimi, linjaNumero, maaranpaa, lahtoAika, reittiID) {
     pysakki.innerHTML=pysakinNimi;
-    lista.innerHTML+=lahtoAika+'<br/>'+linjaNumero+' '+maaranpaa+' '+'<br/><br/>';
+    lista.innerHTML+=lahtoAika+'<br/>'+`<a href="https://reittiopas.hsl.fi/linjat/${reittiID}" target="_blank">${linjaNumero} ${maaranpaa}</a><br/><br/>`;
 }
 
 function clear() {
