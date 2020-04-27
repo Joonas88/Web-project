@@ -31,7 +31,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Testing" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Ryhmä 8 projekti/css" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -56,8 +56,7 @@
       <workItem from="1587749678755" duration="11015000" />
       <workItem from="1587832068435" duration="47588000" />
       <workItem from="1587936530716" duration="722000" />
-      <workItem from="1587976521903" duration="21264000" />
-      <workItem from="1588013826913" duration="590000" />
+      <workItem from="1587976521903" duration="25112000" />
     </task>
     <task id="LOCAL−00001" summary="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja">
       <created>1587758156552</created>
@@ -77,7 +76,13 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1587998553246</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="Tulostettavaan pysäkkaikatuluihin lisätty reittiä kilkkaamalla aukeava uusi ikkuna joka hakee suoraan HSL:n sivuilta linjan tiedot.">
+      <created>1588012972814</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1588012972814</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,13 +92,14 @@
     <MESSAGE value="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja" />
     <MESSAGE value="Pysäkkihaku tehty uudelleen eri menetelmällä, sisältää nyt myös pysäkeiltä kulkevat linjat, sekä määränpäät." />
     <MESSAGE value="Pysäkkien haku toteutettu toisella menetelmällä, näyttää pysäkit 500m säteellä sijainnista, pysäkkiä klikkaamalla tulostaa sivulle pysäkiltä kulkevat linjat ja seuraavat lähtöajat.&#10;Huom! Nyt kaksi .js tiedostoa, muista aina valita &lt;script&gt;-kohdalta se mitä haluat käyttää." />
-    <option name="LAST_COMMIT_MESSAGE" value="Pysäkkien haku toteutettu toisella menetelmällä, näyttää pysäkit 500m säteellä sijainnista, pysäkkiä klikkaamalla tulostaa sivulle pysäkiltä kulkevat linjat ja seuraavat lähtöajat.&#10;Huom! Nyt kaksi .js tiedostoa, muista aina valita &lt;script&gt;-kohdalta se mitä haluat käyttää." />
+    <MESSAGE value="Tulostettavaan pysäkkaikatuluihin lisätty reittiä kilkkaamalla aukeava uusi ikkuna joka hakee suoraan HSL:n sivuilta linjan tiedot." />
+    <option name="LAST_COMMIT_MESSAGE" value="Tulostettavaan pysäkkaikatuluihin lisätty reittiä kilkkaamalla aukeava uusi ikkuna joka hakee suoraan HSL:n sivuilta linjan tiedot." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="523" y="215" key="CommitChangelistDialog2" timestamp="1587998552319">
+    <state x="204" y="215" key="CommitChangelistDialog2" timestamp="1588012971912">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="523" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587998552319" />
+    <state x="204" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588012971912" />
     <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1587730290866">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -102,18 +108,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="86" key="MergeDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587997893895" />
-    <state x="662" y="236" key="MultipleFileMergeDialog" timestamp="1587997897319">
+    <state x="662" y="236" key="MultipleFileMergeDialog" timestamp="1588014746898">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="662" y="236" key="MultipleFileMergeDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587997897319" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1587998555645">
+    <state x="662" y="236" key="MultipleFileMergeDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588014746898" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588012974716">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587998555645" />
-    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587997867180">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588012974716" />
+    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588014739612">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587997867180" />
+    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588014739612" />
     <state x="596" y="283" width="1704" height="1028" key="dock-window-1" timestamp="1587918901288">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
