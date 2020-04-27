@@ -57,6 +57,7 @@
       <workItem from="1587832068435" duration="47588000" />
       <workItem from="1587936530716" duration="722000" />
       <workItem from="1587976521903" duration="21264000" />
+      <workItem from="1588013826913" duration="590000" />
     </task>
     <task id="LOCAL−00001" summary="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja">
       <created>1587758156552</created>
