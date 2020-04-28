@@ -1,4 +1,80 @@
+body{
+    font-family: 'Varela Round', sans-serif;
+}
+
 #map {
     width: 100%;
     height: 400px;
 }
+
+/* Pysäkki asettelua alkaen tästä*/
+.hidden{
+    display: none;
+}
+
+.visible {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 15px;
+}
+
+#pysakkicontainer{
+    max-width: 900px;
+    margin: auto;
+    padding: 10px;
+    background: #007ac9;
+    color: white;
+    border-radius: 5px;
+}
+
+#pysakkiInfo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+#pysakkiNimi{
+    padding: 5px;
+}
+
+#pysakkitxt{
+    text-align: right;
+    padding: 5px;
+    float: right;
+}
+
+#pysakkidata {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 5px;
+    margin-left: 10px;
+    color:#fed100 ;
+
+}
+
+#pysakkidata2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 5px;
+    text-align: center;
+    margin-left: 10px;
+
+}
+
+#pysakkidata3 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 5px;
+    margin-left: 10px;
+
+}
+
+a{
+    color:#fed100 ;
+    text-decoration: none;
+}
+/*Pysäkkiasettelu päättyy*/
