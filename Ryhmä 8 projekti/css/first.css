@@ -12,6 +12,11 @@ body{
     display: none;
 }
 
+#navigoi{
+    float: right;
+    padding: 5px;
+}
+
 .visible {
     display: flex;
     flex-wrap: wrap;

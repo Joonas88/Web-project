@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/css/first.css" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/css/first.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +62,7 @@
       <workItem from="1587832068435" duration="47588000" />
       <workItem from="1587936530716" duration="722000" />
       <workItem from="1587976521903" duration="30414000" />
-      <workItem from="1588063528786" duration="20199000" />
+      <workItem from="1588063528786" duration="22889000" />
     </task>
     <task id="LOCAL−00001" summary="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja">
       <created>1587758156552</created>
@@ -103,7 +106,13 @@
       <option name="presentableId" value="LOCAL−00007" />
       <updated>1588086298994</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL−00008" summary="Kellon toiminnallisuus unohtunut lisätä, lisätty">
+      <created>1588092649396</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1588092649396</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,13 +126,14 @@
     <MESSAGE value="Karttaan lisätty Joonatanin tekemät markerit ja lisätty koodiin funktioita kaikille omille markereille, eli junat, bussit, metrot ja ratikat on omilla ikoneilla." />
     <MESSAGE value="Poistettu turhia koodirivejä" />
     <MESSAGE value="Lisätty reaaliaikainen kello pysäkkihaun yhteyteen. Lisätty CSS-muotoilua pysäkkiaikataulutulostukselle sekä koodia kommentoitu urakalla" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lisätty reaaliaikainen kello pysäkkihaun yhteyteen. Lisätty CSS-muotoilua pysäkkiaikataulutulostukselle sekä koodia kommentoitu urakalla" />
+    <MESSAGE value="Kellon toiminnallisuus unohtunut lisätä, lisätty" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kellon toiminnallisuus unohtunut lisätä, lisätty" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="204" y="215" key="CommitChangelistDialog2" timestamp="1588086297808">
+    <state x="204" y="215" key="CommitChangelistDialog2" timestamp="1588092648645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="204" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588086297808" />
+    <state x="204" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588092648645" />
     <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1587730290866">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -136,10 +146,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="662" y="236" key="MultipleFileMergeDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588014746898" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588086301689">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588092650983">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588086301689" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588092650983" />
     <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588014739612">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

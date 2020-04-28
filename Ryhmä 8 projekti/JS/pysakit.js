@@ -237,6 +237,7 @@ function bussiMarker(crd, teksti, pysakkiId) { //Tätä funktiota kutsutaan pys�
         clear();
         kulkuneuvot(pysakkiId);
         nakyva.className='visible';
+        navigoi.href=`https://www.openstreetmap.org/directions?engine=graphhopper_foot&route=${paikka.latitude}%2C${paikka.longitude}%3B${crd.latitude}%2C${crd.longitude}`;
     });
 }
 
@@ -245,6 +246,7 @@ function sporaMarker(crd, teksti, pysakkiId) { //Funktio tulostaa raitiovaunuiko
         clear();
         kulkuneuvot(pysakkiId);
         nakyva.className='visible';
+        navigoi.href=`https://www.openstreetmap.org/directions?engine=graphhopper_foot&route=${paikka.latitude}%2C${paikka.longitude}%3B${crd.latitude}%2C${crd.longitude}`;
     });
 }
 
@@ -253,6 +255,7 @@ function junaMarker(crd, teksti, pysakkiId) { //Tulostaa junaikonin, muuten sama
         clear();
         kulkuneuvot(pysakkiId);
         nakyva.className='visible';
+        navigoi.href=`https://www.openstreetmap.org/directions?engine=graphhopper_foot&route=${paikka.latitude}%2C${paikka.longitude}%3B${crd.latitude}%2C${crd.longitude}`;
     });
 }
 
@@ -261,6 +264,7 @@ function metroMarker(crd, teksti, pysakkiId) { //tulostaa metroikonin, muuten sa
         clear();
         kulkuneuvot(pysakkiId);
         nakyva.className='visible';
+        navigoi.href=`https://www.openstreetmap.org/directions?engine=graphhopper_foot&route=${paikka.latitude}%2C${paikka.longitude}%3B${crd.latitude}%2C${crd.longitude}`;
     });
 }
 
