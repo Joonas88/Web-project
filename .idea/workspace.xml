@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/css/first.css" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/css/first.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pyora.js" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pyora.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,9 +129,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Kellon toiminnallisuus unohtunut lisätä, lisätty" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="204" y="215" key="CommitChangelistDialog2" timestamp="1588092648645">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2224" y="168" key="CommitChangelistDialog2" timestamp="1588151147304">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
+    <state x="2224" y="168" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588151147304" />
     <state x="204" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588092648645" />
     <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1587730290866">
       <screen x="0" y="0" width="2048" height="1112" />
@@ -150,9 +150,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588092650983" />
-    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588014739612">
+    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588144268423">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588144268423" />
     <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588014739612" />
     <state x="2062" y="716" width="1657" height="1028" key="dock-window-1" timestamp="1588092497798">
       <screen x="1920" y="0" width="1920" height="1040" />
