@@ -16,9 +16,11 @@
     <button id="searchButton">Search</button>
 </div>
 
-<div class="pysäkkihaku">
-    <label for="pysakit">pysäkkihaku</label><input id="pysakit" type="checkbox" name="Pysäkit">
-    <button id="hakunappi">Search</button>
+<div class="checkBoksit">
+    <label for="pysakit">Julkisten pysäkit</label><input id="pysakit" type="checkbox" name="Pysäkit">
+    <br>
+    <label for="parkkipaikat">Liityntäpysäköinti</label><input id="parkkipaikat" type="checkbox" name="Parkkipaikat">
+    <button id="hakunappi">HAE!</button>
 </div>
 
 <div class="pyora">
@@ -32,8 +34,10 @@
 <main class="pysäkkitesti">
     <div id="piilotus" class="hidden">
         <div id="pysakkicontainer">
+            <img id="vyohykeKuva" src="">
             <div id="pysakkitxt"></div>
             <div id="pysakkiNimi"></div>
+
             <div id="pysakkiInfo">
                 <div id="pysakkidata2"></div>
                 <div id="pysakkidata3"></div>
