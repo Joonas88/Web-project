@@ -34,7 +34,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Ryhmä 8 projekti/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -62,6 +62,7 @@
       <workItem from="1587936530716" duration="722000" />
       <workItem from="1587976521903" duration="30414000" />
       <workItem from="1588063528786" duration="22889000" />
+      <workItem from="1588232421433" duration="3437000" />
     </task>
     <task id="LOCAL−00001" summary="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja">
       <created>1587758156552</created>
@@ -111,7 +112,13 @@
       <option name="presentableId" value="LOCAL−00008" />
       <updated>1588092649396</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL−00009" summary="Pyora markerin ikoni vaihdettu ja lisätty asemien tietoja markkeriin">
+      <created>1588151173497</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1588151173497</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,13 +133,14 @@
     <MESSAGE value="Poistettu turhia koodirivejä" />
     <MESSAGE value="Lisätty reaaliaikainen kello pysäkkihaun yhteyteen. Lisätty CSS-muotoilua pysäkkiaikataulutulostukselle sekä koodia kommentoitu urakalla" />
     <MESSAGE value="Kellon toiminnallisuus unohtunut lisätä, lisätty" />
-    <option name="LAST_COMMIT_MESSAGE" value="Kellon toiminnallisuus unohtunut lisätä, lisätty" />
+    <MESSAGE value="Pyora markerin ikoni vaihdettu ja lisätty asemien tietoja markkeriin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pyora markerin ikoni vaihdettu ja lisätty asemien tietoja markkeriin" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2224" y="168" key="CommitChangelistDialog2" timestamp="1588151147304">
+    <state x="2224" y="168" key="CommitChangelistDialog2" timestamp="1588238435729">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2224" y="168" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588151147304" />
+    <state x="2224" y="168" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588238435729" />
     <state x="204" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588092648645" />
     <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1587730290866">
       <screen x="0" y="0" width="2048" height="1112" />
@@ -146,14 +154,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="662" y="236" key="MultipleFileMergeDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588014746898" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588092650983">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588151176069">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588151176069" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588092650983" />
-    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588144268423">
+    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588232438858">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588144268423" />
+    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588232438858" />
     <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588014739612" />
     <state x="2062" y="716" width="1657" height="1028" key="dock-window-1" timestamp="1588092497798">
       <screen x="1920" y="0" width="1920" height="1040" />

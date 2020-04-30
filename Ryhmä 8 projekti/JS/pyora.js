@@ -1,7 +1,9 @@
 'use strict';
 
 const nimi = document.getElementById('nimi');
-
+const nappi = document.getElementById('nappi');
+const pyorahaku = document.getElementById('pyorahaku');
+pyorahaku.checked = true;
 
 let paikka = null;
 
@@ -39,18 +41,23 @@ function error(err) {
 
 navigator.geolocation.getCurrentPosition(success, error, options);
 
-const nappi = document.getElementById('nappi');
+
 
 nappi.addEventListener('click', haepyorat);
 
 function haepyorat() {
-    hae(paikka);
+    if(pyorahaku.checked === true) {
+        hae(paikka);
+    } else {
+        location.reload(paikka);
+    }
+
 }
 
 function hae(crd) {
     const kysely = {
         query: `{
-bikeRentalStations(id:"070") {
+bikeRentalStations {
 name
 stationId
 bikesAvailable
@@ -108,6 +115,7 @@ function pyoraMarker(crd, teksti, tuloos) {
     bindPopup(teksti).
     openPopup().
     on('click', function () {
+        navigoi.href=`https://www.openstreetmap.org/directions?engine=graphhopper_foot&route=${paikka.latitude}%2C${paikka.longitude}%3B${crd.latitude}%2C${crd.longitude}`;
         nimi.innerHTML = tuloos.data.RentalStations.name;
     });
 }
