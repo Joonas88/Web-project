@@ -16,12 +16,14 @@
     <button id="searchButton">Search</button>
 </div>
 
-<div class="checkBoksit">
-    <label for="pysakit">Julkisten pysäkit</label><input id="pysakit" type="checkbox" name="Pysäkit">
-    <br>
-    <label for="parkkipaikat">Liityntäpysäköinti</label><input id="parkkipaikat" type="checkbox" name="Parkkipaikat">
-    <button id="hakunappi">HAE!</button>
-</div>
+<label>Valitse näytettävä asia <select name="valinta" id="valinta"/></label>
+<option value="empty" id="empty"></option>
+<option value="pysäkit" id="pysakit">Julkiset kulkuvälineet</option>
+<option value="parkit" id="parkkipaikat">Liityntäpysäköinti</option>
+<option value="pyörat" id="kaupunkipyorat">Kaupunkipyörät</option>
+<option value="liikunta" id="liikuntapaikat">Liikuntapaikat</option>
+</select>
+<button id="hakunappi">HAE!</button>
 
 <div class="pyora">
     <label for="pyorahaku">pyora</label><input id="pyorahaku" type="checkbox" autofocus="" placeholder="Tästä haetaan!">

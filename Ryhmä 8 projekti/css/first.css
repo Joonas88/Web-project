@@ -24,6 +24,12 @@ body{
     margin: 15px;
 }
 
+#vyohykeKuva{
+    height: 25px;
+    width: 160px;
+    padding: 5px;
+}
+
 #pysakkicontainer{
     max-width: 900px;
     margin: auto;

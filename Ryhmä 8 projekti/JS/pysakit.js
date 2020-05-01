@@ -9,12 +9,11 @@ const reitti = document.getElementById('pysakkidata3');
 const nakyva = document.getElementById('piilotus');
 const navigoi = document.getElementById('navigoi');
 const hakunappi = document.getElementById('hakunappi');
-const pysakkiCheck = document.getElementById('pysakit');
-const parkkiCheck = document.getElementById('parkkipaikat');
+const pudotusValikko = document.getElementById('valinta');
+const vyohykeKuva = document.getElementById('vyohykeKuva');
 
 //let ajoneuvoId = null;
 let paikka = null;
-let marker = L.marker;
 
 const bussiIkoni = L.icon({ //Luodaan omille ikoneille muuttujat, joita voidaan käyttää myöhemmin leaflet-kirjaton ikonin sijasta
     iconUrl: 'media/Bussicon.png', //Määritetään lähde, ikonin koko, ankkurointi ikoniin nähden ja popup-ankkurointi
@@ -67,7 +66,6 @@ const pyoraParkkiIkoni = L.icon({
 
 const map = L.map('map'); //Luodaan kartalle muuttuja ja määritetään sille lähde karttapohjan hakuun
 
-
 L.tileLayer('https://cdn.digitransit.fi/map/v1/{id}/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
         '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
@@ -75,7 +73,6 @@ L.tileLayer('https://cdn.digitransit.fi/map/v1/{id}/{z}/{x}/{y}.png', {
     tileSize: 512,
     zoomOffset: -1,
     id: 'hsl-map'}).addTo(map);
-
 
 const options = { //Kartan asetuksia joilla määritetään sijainnin tarkuuden tarkkuus
     enableHighAccuracy: true,
@@ -101,21 +98,19 @@ navigator.geolocation.getCurrentPosition(success, error, options); //Tämä omin
 
 hakunappi.addEventListener('click', napinpano);
 
-function napinpano() { //Funktiolla määritellään mitä tapathuu hakunappia painettaessa
+function napinpano() { //Funktiolla määritellään mitä tapahtuu hakunappia painettaessa
 
-    if (pysakkiCheck.checked===true){ //Tulostetaan julkisen liikenteen pysäkit 1000m säteellä
-
-        pysakit(paikka);
-
-        clear();
-    } else if (parkkiCheck.checked===true){ //Tulostetaan liityntäpysäköintipaikat 2000m säteellä
-
-        pysakointiPaikat(paikka);
-
-    } else { //Kutsutaan kartan päivitysfunktiota, jos checkboxit on tyhjät ja annetaan käyttäjälle tieto, että on oltava jokin valittuna
-        pyyhiMarker(alert('Valitse jokin mitä haluat näyettävän'));
+    switch (pudotusValikko.selectedIndex) { //Switch-case määrittää mikä pudostusvalikon atribuutti on käytössä ja default päivittä kartan
+        case 1:
+            pysakit(paikka);
+            break;
+        case 2:
+            pysakointiPaikat(paikka);
+            break;
+        default:
+            pyyhiMarker();
+            break;
     }
-
 }
 
 function pyyhiMarker(){ //Funktio päivittää sivuston
@@ -123,14 +118,15 @@ function pyyhiMarker(){ //Funktio päivittää sivuston
     location.reload(paikka);
 }
 
-//Helsingin rautatieasmean koordinaatit: lat:60.171040,lon: 24.941957
+//Helsingin rautatieasmean koordinaatit:lat:60.171040,lon: 24.941957
 //Tikkurila Heurekan koordinaatit: lat:60.287520,lon: 25.040841
+//Pasia koordinaatit:lat:60.198008,lon:24.933722
 // kartan toiminnallisuuden testaamista varten
 
 function pysakit (crd) { //Funktiolla haetaan API:sta dataa, tässä tapauksessa pysäkkien sijaintitietoja
     const pysakkiKysely = { //Annetaan hakuun parametrit, mitä tietoja rajapinnasta haetaan, käytetään omaa sijaintia sekä 500m sädettä tuloksien rajaamiseen
         query: `{
-    stopsByRadius(lat:${crd.latitude},lon: ${crd.longitude} ,radius:1000) { 
+    stopsByRadius(lat:${crd.latitude},lon: ${crd.longitude},radius:750) { 
       edges {
         node {
           stop { 
@@ -159,27 +155,25 @@ function pysakit (crd) { //Funktiolla haetaan API:sta dataa, tässä tapauksessa
 
     fetch('https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql', options).then(function (response) { //Rajapinnasta nouto
         return response.json()
-    }).then(function (tulos) { //Tässä on haettu data tulos-muuttujan muodossa
+    }).then(function (pysakit) { //Tässä on haettu data tulos-muuttujan muodossa
 
-        console.log(tulos);
-        for (let x = 0; x < tulos.data.stopsByRadius.edges.length; x++) { //Rajapinnan tulos iteroidaan sieltä löytyvän Arrayn pituuden mukaan ja annetaan muuttujille halutut arvot
+        //console.log(pysakit);
+        for (let x = 0; x < pysakit.data.stopsByRadius.edges.length; x++) { //Rajapinnan tulos iteroidaan sieltä löytyvän Arrayn pituuden mukaan ja annetaan muuttujille halutut arvot
 
             //console.log(tulos.data.stopsByRadius.edges[x].node.stop.gtfsId+' '+tulos.data.stopsByRadius.edges[x].node.stop.name+' '+tulos.data.stopsByRadius.edges[x].node.distance+'m päässä');
+            //console.log(pysakit.data.stopsByRadius.edges[x].node.stop.vehicleMode);
 
-            const koordinaatit = {latitude: tulos.data.stopsByRadius.edges[x].node.stop.lat, longitude: tulos.data.stopsByRadius.edges[x].node.stop.lon}; //Tässä tapauksessa koordinaatit ja toiselle pysäkin nimi ja etäisyys käyttäjästä
+            const koordinaatit = {latitude: pysakit.data.stopsByRadius.edges[x].node.stop.lat, longitude: pysakit.data.stopsByRadius.edges[x].node.stop.lon}; //Tässä tapauksessa koordinaatit ja toiselle pysäkin nimi ja etäisyys käyttäjästä
+            const teksti=`<h4>${pysakit.data.stopsByRadius.edges[x].node.stop.name+' '+pysakit.data.stopsByRadius.edges[x].node.distance+'m päässä'}</h4>`;
 
-            const teksti=`<h4>${tulos.data.stopsByRadius.edges[x].node.stop.name+' '+tulos.data.stopsByRadius.edges[x].node.distance+'m päässä'}</h4>`;
-
-            //console.log(tulos.data.stopsByRadius.edges[x].node.stop.vehicleMode);
-
-            if (tulos.data.stopsByRadius.edges[x].node.stop.vehicleMode==='TRAM'){ //Tuloksista riippuen kutsutaan toista funktiota jole lähetetään saatuja arjova, sekä lisänä pysäkkien ID
-                sporaMarker(koordinaatit, teksti, tulos.data.stopsByRadius.edges[x].node.stop.gtfsId);
-            } else if (tulos.data.stopsByRadius.edges[x].node.stop.vehicleMode==='RAIL') {
-                junaMarker(koordinaatit, teksti, tulos.data.stopsByRadius.edges[x].node.stop.gtfsId);
-            } else if (tulos.data.stopsByRadius.edges[x].node.stop.vehicleMode==='SUBWAY'){
-                metroMarker(koordinaatit, teksti, tulos.data.stopsByRadius.edges[x].node.stop.gtfsId);
+            if (pysakit.data.stopsByRadius.edges[x].node.stop.vehicleMode==='TRAM'){ //Tuloksista riippuen kutsutaan toista funktiota jole lähetetään saatuja arjova, sekä lisänä pysäkkien ID
+                sporaMarker(koordinaatit, teksti, pysakit.data.stopsByRadius.edges[x].node.stop.gtfsId);
+            } else if (pysakit.data.stopsByRadius.edges[x].node.stop.vehicleMode==='RAIL') {
+                junaMarker(koordinaatit, teksti, pysakit.data.stopsByRadius.edges[x].node.stop.gtfsId);
+            } else if (pysakit.data.stopsByRadius.edges[x].node.stop.vehicleMode==='SUBWAY'){
+                metroMarker(koordinaatit, teksti, pysakit.data.stopsByRadius.edges[x].node.stop.gtfsId);
             } else {
-                bussiMarker(koordinaatit, teksti, tulos.data.stopsByRadius.edges[x].node.stop.gtfsId);
+                bussiMarker(koordinaatit, teksti, pysakit.data.stopsByRadius.edges[x].node.stop.gtfsId);
             }
 
         }
@@ -192,6 +186,8 @@ function kulkuneuvot (pysakkiId) { //Funktiolla haetaan API:sta dataa, tässä t
         query: `{
   stop(id: "${pysakkiId}") {
     name
+    gtfsId
+    platformCode
     zoneId
       stoptimesWithoutPatterns {
       scheduledArrival
@@ -228,24 +224,24 @@ function kulkuneuvot (pysakkiId) { //Funktiolla haetaan API:sta dataa, tässä t
 
     fetch('https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql', options).then(function (response) {
         return response.json()
-    }).then(function (pysakkiInfo) { //API palauttaa listan linjoista jotka kulkeat halutun pysäkin läpi
+    }).then(function (pysakkiInfo) { //API palauttaa listan linjoista jotka kulkevat halutun pysäkin läpi
         //console.log(pysakkiInfo);
 
         for (let x=0; x<pysakkiInfo.data.stop.stoptimesWithoutPatterns.length; x++){ //Iteroidaan API:sta saatu tieto
 
-            const aikaLeima = new Date((pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].serviceDay+pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].realtimeDeparture)*1000).toLocaleTimeString("fi-FI"); //Muuttujalle määritellään API:sta saatu aikatieto ja muunnetaan se ihmisen luettavaan kellonaikaan
-            //API palauttaa UNIX aikamuotoa, eli sekunteja pisteestä X, tässä tapauksessa keskiyöstä nykyhetkeen.
             /*
             console.log(pysakkiInfo.data.stop.zoneId);
             console.log(pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].trip.route.gtfsId);
             console.log(pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].trip.route.shortName+' '+pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].headsign+' '+aikaLeima);
-
+            console.log(pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].headsign);
              */
+            const aikaLeima = new Date((pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].serviceDay+pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].realtimeDeparture)*1000).toLocaleTimeString("fi-FI"); //Muuttujalle määritellään API:sta saatu aikatieto ja muunnetaan se ihmisen luettavaan kellonaikaan
+            //API palauttaa UNIX aikamuotoa, eli sekunteja pisteestä X, tässä tapauksessa keskiyöstä nykyhetkeen.
 
             let maaranpaa = null;
 
-            if (pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].headsign===null){ //Määränpää linjalla voi olla tietyissä tilantessa NULL, menossa varikolle tai lopettamassa linjaa, jolloin haetaan tilalle linjan reittitieto
-                maaranpaa=pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].trip.route.longName;
+            if (pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].headsign===null){ //Määränpää linjalla voi olla tietyissä tilantessa NULL, menossa varikolle tai lopettamassa linjaa, jolloin annetaan kiinteä arvo
+                maaranpaa='Päätepysäkki / Ei reittitietoa';
             } else{
                 maaranpaa=pysakkiInfo.data.stop.stoptimesWithoutPatterns[x].headsign;
             }
@@ -258,17 +254,17 @@ function kulkuneuvot (pysakkiId) { //Funktiolla haetaan API:sta dataa, tässä t
 
     });
 }
-const vyohykeKuva = document.getElementById('vyohykeKuva');
+
 function tietojenTulostus(pysakinNimi, linjaNumero, maaranpaa, lahtoAika, reittiID,vyohyke) { //Tämä funktio tulostaa HTML-sivulle kartan alle halutut tiedot, eli pysäkin nimen, sen läpi kulkevat linjat ja niiden lähtöajan
 
     if (vyohyke==='D'){
-        vyohykeKuva.src='Screenshot_4.png';
+        vyohykeKuva.src='media/vyohyke_D.png';
     } else if (vyohyke==='B'){
-        vyohykeKuva.src='Screenshot_2.png';
+        vyohykeKuva.src='media/vyohyke_B.png';
     } else if (vyohyke==='C'){
-        vyohykeKuva.src='Screenshot_3.png';
+        vyohykeKuva.src='media/vyohyke_C.png';
     } else {
-        vyohykeKuva.src='Screenshot_1.png';
+        vyohykeKuva.src='media/vyohyke_A.png';
     }
 
     pysakki.innerHTML=pysakinNimi+'<br/>'+'<p>Seuraavat lähtevät</p>';
@@ -277,25 +273,21 @@ function tietojenTulostus(pysakinNimi, linjaNumero, maaranpaa, lahtoAika, reitti
     reitti.innerHTML+=`<a href="https://reittiopas.hsl.fi/linjat/${reittiID}" target="_blank">${maaranpaa}</a><br/><br/>`
 }
 
-function minaOlenTassa(crd, teksti) { //Tämä funktio tulostaa markerin kaartalle oman sijainnin kohdalle, Markerissa on klik, eli painotoiminto, jota ei tässä käytetä kuin popup kuplan nostoon
-    marker([crd.latitude, crd.longitude], {icon: omaIkoni}).addTo(map).bindPopup(teksti).openPopup().on('click', function () {
-
-    });
+function minaOlenTassa(crd, teksti) { //Tämä funktio tulostaa markerin kartalle oman sijainnin kohdalle ja avaa popupin, joka myös aukeaa markeria klikattaessa.
+    L.marker([crd.latitude, crd.longitude], {icon: omaIkoni}).addTo(map).bindPopup(teksti).openPopup()
 }
 
-
 function bussiMarker(crd, teksti, pysakkiId) { //Tätä funktiota kutsutaan pysäkit-funktiotsta ja tämä asettaa kartalle oman markerin linja-autoille. Funktion click-toiminto tyhjentää edellisen pysäkkikohtaisen listauksen,
-    marker([crd.latitude, crd.longitude], {icon: bussiIkoni}).addTo(map).bindPopup(teksti).openPopup().on('click', function () { // kutsuu uutta listausta funktiolla kulkuneuvot ja muuttaa HTML-koodissa listauksen luokan näkyväksi
+    L.marker([crd.latitude, crd.longitude], {icon: bussiIkoni}).addTo(map).bindPopup(teksti).openPopup().on('click', function () { // kutsuu uutta listausta funktiolla kulkuneuvot ja muuttaa HTML-koodissa listauksen luokan näkyväksi
         clear();
         kulkuneuvot(pysakkiId);
         nakyva.className='visible';
         navigoi.href=`https://www.openstreetmap.org/directions?engine=graphhopper_foot&route=${paikka.latitude}%2C${paikka.longitude}%3B${crd.latitude}%2C${crd.longitude}`;
-
     });
 }
 
 function sporaMarker(crd, teksti, pysakkiId) { //Funktio tulostaa raitiovaunuikonin kartalle, muuten sama toiminnallisuus kuin edellisessä
-    marker([crd.latitude, crd.longitude], {icon: ratikkaIkoni}).addTo(map).bindPopup(teksti).openPopup().on('click', function () {
+    L.marker([crd.latitude, crd.longitude], {icon: ratikkaIkoni}).addTo(map).bindPopup(teksti).openPopup().on('click', function () {
         clear();
         kulkuneuvot(pysakkiId);
         nakyva.className='visible';
@@ -304,7 +296,7 @@ function sporaMarker(crd, teksti, pysakkiId) { //Funktio tulostaa raitiovaunuiko
 }
 
 function junaMarker(crd, teksti, pysakkiId) { //Tulostaa junaikonin, muuten sama kuin kaksi edellistä
-    marker([crd.latitude, crd.longitude], {icon: junaIkoni}).addTo(map).bindPopup(teksti).openPopup().on('click', function () {
+    L.marker([crd.latitude, crd.longitude], {icon: junaIkoni}).addTo(map).bindPopup(teksti).openPopup().on('click', function () {
         clear();
         kulkuneuvot(pysakkiId);
         nakyva.className='visible';
@@ -313,7 +305,7 @@ function junaMarker(crd, teksti, pysakkiId) { //Tulostaa junaikonin, muuten sama
 }
 
 function metroMarker(crd, teksti, pysakkiId) { //tulostaa metroikonin, muuten sama kuin kolme edellistä
-    marker([crd.latitude, crd.longitude], {icon: metroIkoni}).addTo(map).bindPopup(teksti).openPopup().on('click', function () {
+    L.marker([crd.latitude, crd.longitude], {icon: metroIkoni}).addTo(map).bindPopup(teksti).openPopup().on('click', function () {
         clear();
         kulkuneuvot(pysakkiId);
         nakyva.className='visible';
@@ -339,7 +331,7 @@ function startTime() { //Funktio näytää reaaliaikasta kelloa pysäkkiaikataul
     var t = setTimeout(startTime, 500);
 }
 function checkTime(i) { //Funktiolla määritetään oikea aikamuoto
-    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    if (i < 10) {i = "0" + i}  // add zero in front of numbers < 10
     return i;
 }
 
@@ -356,29 +348,29 @@ function liityntaPysakointi(crd, teksti, tila, kulkuneuvo, maksullisuus, omasija
         if (kulkuneuvo === 'BICYCLE') {
 
             if (maksullisuus === 'CUSTOM') {
-                marker([crd.latitude, crd.longitude], {icon: pyoraParkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + maksullinen + navigoi).openPopup().on('click', function () {
+                L.marker([crd.latitude, crd.longitude], {icon: pyoraParkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + maksullinen + navigoi).openPopup().on('click', function () {
 
                 });
             } else if (maksullisuus === 'FREE_12H') {
-                marker([crd.latitude, crd.longitude], {icon: pyoraParkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + ilmainen12 + navigoi).openPopup().on('click', function () {
+                L.marker([crd.latitude, crd.longitude], {icon: pyoraParkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + ilmainen12 + navigoi).openPopup().on('click', function () {
 
                 });
             } else {
-                marker([crd.latitude, crd.longitude], {icon: pyoraParkkiIkoni}).addTo(map).bindPopup(teksti + '<br>' + ilmainen + navigoi).openPopup().on('click', function () {
+                L.marker([crd.latitude, crd.longitude], {icon: pyoraParkkiIkoni}).addTo(map).bindPopup(teksti + '<br>' + ilmainen + navigoi).openPopup().on('click', function () {
 
                 });
             }
         } else {
             if (maksullisuus === 'CUSTOM') {
-                marker([crd.latitude, crd.longitude], {icon: parkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + maksullinen + navigoi).openPopup().on('click', function () {
+                L.marker([crd.latitude, crd.longitude], {icon: parkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + maksullinen + navigoi).openPopup().on('click', function () {
 
                 });
             } else if (maksullisuus === 'FREE_12H'){
-                marker([crd.latitude, crd.longitude], {icon: parkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + ilmainen12 + navigoi).openPopup().on('click', function () {
+                L.marker([crd.latitude, crd.longitude], {icon: parkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + ilmainen12 + navigoi).openPopup().on('click', function () {
 
                 });
             } else {
-                marker([crd.latitude, crd.longitude], {icon: parkkiIkoni}).addTo(map).bindPopup(teksti + '<br>' + ilmainen + navigoi).openPopup().on('click', function () {
+                L.marker([crd.latitude, crd.longitude], {icon: parkkiIkoni}).addTo(map).bindPopup(teksti + '<br>' + ilmainen + navigoi).openPopup().on('click', function () {
 
                 });
             }
@@ -391,7 +383,7 @@ function pysakointiPaikat(crd) { //Haetaan API:sta liityntäpysäköintipaikat j
     fetch(`https://p.hsl.fi/api/v1/facilities?geometry=POLYGON((${crd.longitude}+${crd.latitude},${crd.longitude}+${crd.latitude},${crd.longitude}+${crd.latitude},${crd.longitude}+${crd.latitude}))&maxDistance=2000`).then(function (vastaus) {
         return vastaus.json();
     }).then(function (hakutulokset) {
-        console.log(hakutulokset);
+        //console.log(hakutulokset);
         for (let y=0;y<hakutulokset.results.length; y++){
 
             const tila = hakutulokset.results[y].status;
