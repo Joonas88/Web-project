@@ -1,6 +1,11 @@
 'use strict';
 
 const nimi = document.getElementById('nimi');
+const stationid = document.getElementById('stationid');
+const bikes = document.getElementById('bikes');
+const allow = document.getElementById('allow');
+const spaces = document.getElementById('spaces');
+
 const nappi = document.getElementById('nappi');
 const pyorahaku = document.getElementById('pyorahaku');
 pyorahaku.checked = true;
@@ -44,7 +49,7 @@ navigator.geolocation.getCurrentPosition(success, error, options);
 
 
 nappi.addEventListener('click', haepyorat);
-
+//jos pyörä checkboxi on merkitty ja nappiapainetaan funktio hakee pks:n kaupunkipyörä asemat
 function haepyorat() {
     if(pyorahaku.checked === true) {
         hae(paikka);
@@ -53,7 +58,7 @@ function haepyorat() {
     }
 
 }
-
+//funktio tekee kyselyn digitransitin apiin ja palauttaa sieltä pks:n kaupunkipyörä asemien tiedot
 function hae(crd) {
     const kysely = {
         query: `{
@@ -81,23 +86,23 @@ allowDropoff
     fetch('https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql', options).
     then(function(response){
         return response.json()
-    }).then(function(tulos){
-        console.log(tulos)
-        for(let i = 0; i<tulos.data.bikeRentalStations.length; i++) {
+    }).then(function(bikeInfo){
+        console.log(bikeInfo)
+        for(let i = 0; i<bikeInfo.data.bikeRentalStations.length; i++) {
             const sijainti = {
-                latitude: tulos.data.bikeRentalStations[i].lat,
-                longitude: tulos.data.bikeRentalStations[i].lon,
+                latitude: bikeInfo.data.bikeRentalStations[i].lat,
+                longitude: bikeInfo.data.bikeRentalStations[i].lon,
             };
 
             const teksti = `
-        <h3>${tulos.data.bikeRentalStations[i].name}</h3>
+        <h3>${bikeInfo.data.bikeRentalStations[i].name}</h3>
         <p>Aseman ID:${bikeInfo.data.bikeRentalStations[i].stationId}</p>
         <p>Vapaita pyöriä:${bikeInfo.data.bikeRentalStations[i].bikesAvailable}</p>
         <p>Vapaita paikkoja:${bikeInfo.data.bikeRentalStations[i].spacesAvailable}</p>
         <p>Tilaa palauttaa:${bikeInfo.data.bikeRentalStations[i].allowDropoff}</p>
         `;
             console.log(sijainti);
-            pyoraMarker(sijainti, teksti, tulos[i]);
+            pyoraMarker(sijainti, teksti, bikeInfo[i]);
         }
     }).
     catch(function(error) {
@@ -109,13 +114,18 @@ function minaOlenTassa(crd, teksti) {
 
     });
 }
-function pyoraMarker(crd, teksti, tuloos) {
+function pyoraMarker(crd, teksti, info) {
     L.marker([crd.latitude, crd.longitude], {icon: pyoraIkoni}).
     addTo(map).
     bindPopup(teksti).
     openPopup().
     on('click', function () {
         navigoi.href=`https://www.openstreetmap.org/directions?engine=graphhopper_foot&route=${paikka.latitude}%2C${paikka.longitude}%3B${crd.latitude}%2C${crd.longitude}`;
-        nimi.innerHTML = tuloos.data.RentalStations.name;
+        nimi.innerHTML = info.data.bikeRentalStations.name;
+        stationid.innerHTML = info.data.bikeRentalStations.stationId;
+        bikes.innerHTML = info.data.bikeRentalStations.bikesAvailable;
+        spaces.innerHTML = info.data.bikeRentalStations.spacesAvailable;
+        allow.innerHTML = info.data.bikeRentalStations.allowDropoff;
+
     });
 }
