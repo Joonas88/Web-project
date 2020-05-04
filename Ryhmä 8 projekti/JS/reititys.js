@@ -13,3 +13,4 @@ function mene() {
         console.log(error);
     })
 }
+//https://graphhopper.com/api/1/route?point=60.198008,24.933722&point=60.171040,24.941957&vehicle=foot&locale=fi&calc_points=true&points_encoded=false&key=212b25b6-ac73-4540-89bf-61b6cf489997
