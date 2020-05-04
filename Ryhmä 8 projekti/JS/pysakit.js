@@ -129,15 +129,15 @@ function pyyhiMarker(){ //Funktio päivittää sivuston
     location.reload(paikka);
 }
 
-//Helsingin rautatieasmean koordinaatit:
+//Helsingin rautatieasmean koordinaatit:lat:60.171040,lon: 24.941957
 //Tikkurila Heurekan koordinaatit:lat:60.287520,lon: 25.040841
 //Pasia koordinaatit:lat:60.198008,lon:24.933722
-// kartan toiminnallisuuden testaamista varten lat:${crd.latitude},lon: ${crd.longitude}
+// kartan toiminnallisuuden testaamista varten
 
 function pysakit (crd) { //Funktiolla haetaan API:sta dataa, tässä tapauksessa pysäkkien sijaintitietoja
     const pysakkiKysely = { //Annetaan hakuun parametrit, mitä tietoja rajapinnasta haetaan, käytetään omaa sijaintia sekä 500m sädettä tuloksien rajaamiseen
         query: `{
-    stopsByRadius(lat:60.171040,lon: 24.941957,radius:1000) { 
+    stopsByRadius(lat:${crd.latitude},lon: ${crd.longitude},radius:1000) { 
       edges {
         node {
           stop { 
@@ -623,11 +623,6 @@ function junaAikataulutulostus() { //Funktiolla tulostetaan kartan alapuolelle j
             }
         }
     }
-    const aika = document.getElementById('aika');
-    const juna = document.getElementById('juna');
-    const suunta = document.getElementById('suunta');
-    const raide = document.getElementById('raide');
-    const taulukko = document.getElementById('taulukko');
     lista.sort(dynamicSort("departureTime"));
     //console.log(lista);
     taulukko.className='visible';
