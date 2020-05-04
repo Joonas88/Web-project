@@ -5,16 +5,36 @@ body{
 #map {
     width: 100%;
     height: 400px;
+
 }
 
 /* Pysäkki asettelua alkaen tästä*/
+table {
+    width:500px;
+    height:auto;
+    border-spacing:0;
+    border:1px solid #007ac9;
+    background: #007ac9;
+    border-radius: 5px;
+    color: white;
+}
+th {
+    height:auto;
+    padding: 10px;
+    text-align: left;
+}
+td{
+    text-align: center;
+}
+#raide{
+    padding: 10px;
+}
+#suunta{
+    text-align: left;
+    padding:10px;
+}
 .hidden{
     display: none;
-}
-
-#navigoi{
-    float: right;
-    padding: 5px;
 }
 
 .visible {
@@ -30,13 +50,27 @@ body{
     padding: 5px;
 }
 
+#navigoi{
+    float: right;
+    padding: 5px;
+}
+
 #pysakkicontainer{
-    max-width: 900px;
-    margin: auto;
+    width: 500px;
     padding: 10px;
     background: #007ac9;
     color: white;
     border-radius: 5px;
+}
+
+#pysakkiNimi{
+    padding: 5px;
+}
+
+#pysakkitxt{
+
+    padding: 5px;
+    float: right;
 }
 
 #pysakkiInfo {
@@ -44,15 +78,6 @@ body{
     flex-wrap: wrap;
     flex-direction: row;
 
-}
-#pysakkiNimi{
-    padding: 5px;
-}
-
-#pysakkitxt{
-    text-align: right;
-    padding: 5px;
-    float: right;
 }
 
 #pysakkidata {

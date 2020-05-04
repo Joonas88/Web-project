@@ -220,7 +220,6 @@
       <change afterPath="$PROJECT_DIR$/Testing/testing2.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Testing/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/reititys.js" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/reititys.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,7 +286,7 @@
       <workItem from="1588345580175" duration="17820000" />
       <workItem from="1588417376020" duration="26512000" />
       <workItem from="1588531204753" duration="11575000" />
-      <workItem from="1588588127637" duration="3739000" />
+      <workItem from="1588588127637" duration="9899000" />
     </task>
     <task id="LOCAL−00001" summary="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja">
       <created>1587758156552</created>
@@ -355,7 +354,13 @@
       <option name="presentableId" value="LOCAL−00011" />
       <updated>1588343025089</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL−00012" summary="Reititys-apiin kirjoitettu loopit ja arrayn-tulostus, että saadaan haalittua data oikeaan muotoon reitin kartalle piirtämistä varten.">
+      <created>1588591939134</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1588591939134</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,7 +378,8 @@
     <MESSAGE value="Lisätty pysäkkien tietoihin reittiohjeistus joka aukeaa uuteen ikkunaan, sekä muotoilu yms. mitä se tarvitsi." />
     <MESSAGE value="Pysäkkihaun tulostusnäkymään lisätty HSL-vyöhykeinfo.&#10;Lisätty liityntäpysköintihaku, autoille ja polkupyörille oma. Näyttää onko maksullinen pysäköinti vaiko rajoitetusti ilmainen. Näyttää vain aktiiviset paikat. &#10;Pysäkeille ja p-paikoille linkitetty reittihaku uudessa ikkunassa ulkopuolisena palveluna." />
     <MESSAGE value="Checkbox vaihdettu pudotusvalikkoon, siistitty koodia ja otettu turhia konsolitulostuksia pois, lisätty myös kuvatiedostot vyöhykemerkinnöistä sekä muotoilu." />
-    <option name="LAST_COMMIT_MESSAGE" value="Checkbox vaihdettu pudotusvalikkoon, siistitty koodia ja otettu turhia konsolitulostuksia pois, lisätty myös kuvatiedostot vyöhykemerkinnöistä sekä muotoilu." />
+    <MESSAGE value="Reititys-apiin kirjoitettu loopit ja arrayn-tulostus, että saadaan haalittua data oikeaan muotoon reitin kartalle piirtämistä varten." />
+    <option name="LAST_COMMIT_MESSAGE" value="Reititys-apiin kirjoitettu loopit ja arrayn-tulostus, että saadaan haalittua data oikeaan muotoon reitin kartalle piirtämistä varten." />
   </component>
   <component name="WindowStateProjectService">
     <state x="628" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588588272025">
@@ -384,10 +390,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588345392206" />
-    <state x="204" y="215" key="CommitChangelistDialog2" timestamp="1588343022135">
+    <state x="204" y="215" key="CommitChangelistDialog2" timestamp="1588591937229">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="204" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588343022135" />
+    <state x="204" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588591937229" />
     <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1587730290866">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -404,18 +410,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="672" y="184" key="SettingsEditor/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588417454710" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588343028952">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588591940303">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588343028952" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588591940303" />
     <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588589794593">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588589794593" />
-    <state x="1912" y="-8" width="976" height="1056" key="dock-window-1" timestamp="1588589772764">
+    <state x="1912" y="-8" width="976" height="1056" key="dock-window-1" timestamp="1588597198474">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="1912" y="-8" width="976" height="1056" key="dock-window-1/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588589772764" />
+    <state x="1912" y="-8" width="976" height="1056" key="dock-window-1/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588597198474" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1588194745736">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -16,7 +16,8 @@
     <button id="searchButton">Search</button>
 </div>
 
-<label>Valitse näytettävä asia <select name="valinta" id="valinta"/></label>
+<p>Valitse näytettävä tieto:</p>
+<select name="valinta" id="valinta"/></label>
 <option value="empty" id="empty"></option>
 <option value="pysäkit" id="pysakit">Julkiset kulkuvälineet</option>
 <option value="parkit" id="parkkipaikat">Liityntäpysäköinti</option>
@@ -47,6 +48,33 @@
             </div>
             <a id="navigoi" href="" target="_blank">Hae reitti pysäkille</a>
         </div>
+    </div>
+    <div id="taulukko" class="hidden">
+        <table>
+            <thead>
+            <tr>
+                <th colspan="4" id="vyöhyke"><img src="media/vyohyke_A.png" height="25" width="160"/></th>
+            </tr>
+            <tr>
+                <th id="kellonaika"></th>
+                <th colspan="3">Helsingin rautatieasema, lähijunat</th>
+            </tr>
+            </thead>
+            <tr>
+                <th>Lähtöaika</th>
+                <th>Juna</th>
+                <th>Määränpää</th>
+                <th>Raide</th>
+            </tr>
+            <tbody>
+            <tr>
+                <td id="aika"></td>
+                <td id="juna"></td>
+                <td id="suunta"></td>
+                <td id="raide"></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
     <h3 id="nimi">nimi</h3>
     <h4 id="stationid">asema</h4>

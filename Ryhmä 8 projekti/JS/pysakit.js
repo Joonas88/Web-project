@@ -11,6 +11,16 @@ const navigoi = document.getElementById('navigoi');
 const hakunappi = document.getElementById('hakunappi');
 const pudotusValikko = document.getElementById('valinta');
 const vyohykeKuva = document.getElementById('vyohykeKuva');
+const taulukko = document.getElementById('taulukko');
+let maaranpaaLista = [];
+let junatunnuslista = [];
+let lista = [];
+const aika = document.getElementById('aika');
+const juna = document.getElementById('juna');
+const suunta = document.getElementById('suunta');
+const raide = document.getElementById('raide');
+
+
 
 //let ajoneuvoId = null;
 let paikka = null;
@@ -111,6 +121,7 @@ function napinpano() { //Funktiolla määritellään mitä tapahtuu hakunappia p
             pyyhiMarker();
             break;
     }
+    junaTiedot1(); //Helsingin rauatieasemaa koskevien aikataulutietojen haku suoritetaan aina nappia painaessa
 }
 
 function pyyhiMarker(){ //Funktio päivittää sivuston
@@ -118,15 +129,15 @@ function pyyhiMarker(){ //Funktio päivittää sivuston
     location.reload(paikka);
 }
 
-//Helsingin rautatieasmean koordinaatit:lat:60.171040,lon: 24.941957
-//Tikkurila Heurekan koordinaatit: lat:60.287520,lon: 25.040841
+//Helsingin rautatieasmean koordinaatit:
+//Tikkurila Heurekan koordinaatit:lat:60.287520,lon: 25.040841
 //Pasia koordinaatit:lat:60.198008,lon:24.933722
-// kartan toiminnallisuuden testaamista varten
+// kartan toiminnallisuuden testaamista varten lat:${crd.latitude},lon: ${crd.longitude}
 
 function pysakit (crd) { //Funktiolla haetaan API:sta dataa, tässä tapauksessa pysäkkien sijaintitietoja
     const pysakkiKysely = { //Annetaan hakuun parametrit, mitä tietoja rajapinnasta haetaan, käytetään omaa sijaintia sekä 500m sädettä tuloksien rajaamiseen
         query: `{
-    stopsByRadius(lat:${crd.latitude},lon: ${crd.longitude},radius:750) { 
+    stopsByRadius(lat:60.171040,lon: 24.941957,radius:1000) { 
       edges {
         node {
           stop { 
@@ -181,7 +192,7 @@ function pysakit (crd) { //Funktiolla haetaan API:sta dataa, tässä tapauksessa
 }
 
 function kulkuneuvot (pysakkiId) { //Funktiolla haetaan API:sta dataa, tässä tapauksessa edellä haettujen pysäkkien kautta kulkevia linjoja, käyttäen pysäkkiId parametriä joka on määritetty toisessa funktiossa
-    //console.log(pysakkiId);
+    console.log(pysakkiId);
     const  kulkuneuvot = {
         query: `{
   stop(id: "${pysakkiId}") {
@@ -270,7 +281,7 @@ function tietojenTulostus(pysakinNimi, linjaNumero, maaranpaa, lahtoAika, reitti
     pysakki.innerHTML=pysakinNimi+'<br/>'+'<p>Seuraavat lähtevät</p>';
     lahto.innerHTML+=lahtoAika+'<br/>';
     linjaNRO.innerHTML+=`<a href="https://reittiopas.hsl.fi/linjat/${reittiID}" target="_blank">${linjaNumero}`;
-    reitti.innerHTML+=`<a href="https://reittiopas.hsl.fi/linjat/${reittiID}" target="_blank">${maaranpaa}</a><br/><br/>`
+    reitti.innerHTML+=`<a href="https://reittiopas.hsl.fi/linjat/${reittiID}" target="_blank">${maaranpaa}</a>`
 }
 
 function minaOlenTassa(crd, teksti) { //Tämä funktio tulostaa markerin kartalle oman sijainnin kohdalle ja avaa popupin, joka myös aukeaa markeria klikattaessa.
@@ -282,6 +293,7 @@ function bussiMarker(crd, teksti, pysakkiId) { //Tätä funktiota kutsutaan pys�
         clear();
         kulkuneuvot(pysakkiId);
         nakyva.className='visible';
+        taulukko.className='hidden';
         navigoi.href=`https://www.openstreetmap.org/directions?engine=graphhopper_foot&route=${paikka.latitude}%2C${paikka.longitude}%3B${crd.latitude}%2C${crd.longitude}`;
     });
 }
@@ -291,15 +303,23 @@ function sporaMarker(crd, teksti, pysakkiId) { //Funktio tulostaa raitiovaunuiko
         clear();
         kulkuneuvot(pysakkiId);
         nakyva.className='visible';
+        taulukko.className='hidden';
         navigoi.href=`https://www.openstreetmap.org/directions?engine=graphhopper_foot&route=${paikka.latitude}%2C${paikka.longitude}%3B${crd.latitude}%2C${crd.longitude}`;
     });
 }
 
-function junaMarker(crd, teksti, pysakkiId) { //Tulostaa junaikonin, muuten sama kuin kaksi edellistä
+function junaMarker(crd, teksti, pysakkiId) { //Tulostaa junaikonin, muuten sama kuin kaksi edellistä, mutta Helsingin rautatienaseman kohdalla haetaan aikataulutiedot toisesta rajapinnasta
     L.marker([crd.latitude, crd.longitude], {icon: junaIkoni}).addTo(map).bindPopup(teksti).openPopup().on('click', function () {
         clear();
-        kulkuneuvot(pysakkiId);
-        nakyva.className='visible';
+        if (pysakkiId==='HSL:1020552'||pysakkiId==='HSL:1020502'||pysakkiId==='HSL:1020551'||pysakkiId==='HSL:1020501'||pysakkiId==='HSL:1020553'||pysakkiId==='HSL:1020503'){ //Määritetään tietyt junaikonit kutsumaan eri funktiota
+            junaAikataulutulostus();
+            taulukko.className='visible';
+            nakyva.className='hidden';
+        } else {
+            nakyva.className='visible';
+            taulukko.className='hidden';
+            kulkuneuvot(pysakkiId);
+        }
         navigoi.href=`https://www.openstreetmap.org/directions?engine=graphhopper_foot&route=${paikka.latitude}%2C${paikka.longitude}%3B${crd.latitude}%2C${crd.longitude}`;
     });
 }
@@ -309,6 +329,7 @@ function metroMarker(crd, teksti, pysakkiId) { //tulostaa metroikonin, muuten sa
         clear();
         kulkuneuvot(pysakkiId);
         nakyva.className='visible';
+        taulukko.className='hidden';
         navigoi.href=`https://www.openstreetmap.org/directions?engine=graphhopper_foot&route=${paikka.latitude}%2C${paikka.longitude}%3B${crd.latitude}%2C${crd.longitude}`;
     });
 }
@@ -317,18 +338,24 @@ function clear() { //Funktio tyhjentää pysäkkitiedot ennen uudelleenkirjoitus
     lahto.innerHTML='';
     linjaNRO.innerHTML='';
     reitti.innerHTML='';
+    aika.innerHTML='';
+    juna.innerHTML='';
+    suunta.innerHTML='';
+    raide.innerHTML='';
 }
 
 function startTime() { //Funktio näytää reaaliaikasta kelloa pysäkkiaikataulujen yhteydessä
-    var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();
+    const today = new Date();
+    let h = today.getHours();
+    let m = today.getMinutes();
+    let s = today.getSeconds();
     m = checkTime(m);
     s = checkTime(s);
     document.getElementById('pysakkitxt').innerHTML =
         h + ":" + m + ":" + s;
-    var t = setTimeout(startTime, 500);
+    document.getElementById('kellonaika').innerHTML =
+        h + ":" + m + ":" + s;
+    let t = setTimeout(startTime, 500);
 }
 function checkTime(i) { //Funktiolla määritetään oikea aikamuoto
     if (i < 10) {i = "0" + i}  // add zero in front of numbers < 10
@@ -400,4 +427,216 @@ function pysakointiPaikat(crd) { //Haetaan API:sta liityntäpysäköintipaikat j
     }).catch(function (error) {
         console.log(error);
     });
+}
+
+function junaTiedot1 () { //Funktiolla haetaan pysäkkikohtaisia tietoja, mutta spesifillä Helsingin rautatieaseman pysäkillä, idea on saada määränpäätieto oikealle junatunnukselle tämän API:n kautta
+    const  junaTiedot1 = {
+        query: `{
+  stop(id: "HSL:1020501") {
+    name
+    zoneId
+      stoptimesWithoutPatterns {
+      headsign
+        trip {
+            route {
+            shortName
+            }
+        }
+      }
+    }  
+}`
+    };
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'Authorization': 'Bearer ' + localStorage.getItem('token'),
+        },
+        body: JSON.stringify(junaTiedot1),
+    };
+    fetch('https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql', options).then(function (response) {
+        return response.json()
+    }).then(function (junaTiedot1) {
+        let zoneID=null, asemaNimi=null;
+
+        for (let y=0;y<junaTiedot1.data.stop.stoptimesWithoutPatterns.length;y++){ //Loopissa haetaan muuttujille oikea data sekä pusketaan kahteen listaan junatunnuksia ja määränpäitä
+            zoneID=junaTiedot1.data.stop.zoneId;
+            asemaNimi = junaTiedot1.data.stop.name;
+            junatunnuslista.push(junaTiedot1.data.stop.stoptimesWithoutPatterns[y].headsign)
+            maaranpaaLista.push(junaTiedot1.data.stop.stoptimesWithoutPatterns[y].trip.route.shortName);
+        }
+        junaTiedot2(zoneID,asemaNimi); //Kutsutaan seuraavaa funktiota, jolla haetaan lisää tietoja edellä oleviin taulukoihin ja annetaan lähtöparametrinä kaksi muuttujaa
+    });
+}
+
+function junaTiedot2 (zoneID, asemaNimi) {//Funktiolla haetaan pysäkkikohtaisia tietoja, mutta spesifillä Helsingin rautatieaseman pysäkillä, idea on saada määränpäätieto oikealle junatunnukselle tämän API:n kautta
+    const  junaTiedot2 = {
+        query: `{
+  stop(id: "HSL:1020502") {
+    name
+    zoneId
+      stoptimesWithoutPatterns {
+      headsign
+        trip {
+            route {
+            shortName
+            }
+        }
+      }
+    }  
+}`
+    };
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'Authorization': 'Bearer ' + localStorage.getItem('token'),
+        },
+        body: JSON.stringify(junaTiedot2),
+    };
+    fetch('https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql', options).then(function (response) {
+        return response.json()
+    }).then(function (junaTiedot2) {
+        for (let y=0;y<junaTiedot2.data.stop.stoptimesWithoutPatterns.length;y++){ //Loopataan samoihin taulukoihin lisää dataa, junatunnus sekä määränpää
+            junatunnuslista.push(junaTiedot2.data.stop.stoptimesWithoutPatterns[y].headsign);
+            maaranpaaLista.push(junaTiedot2.data.stop.stoptimesWithoutPatterns[y].trip.route.shortName);
+        }
+        junaTiedot3(zoneID,asemaNimi); //kutsutaan kolmatta samanlaista funktiota ja lähetetään edellisen funktion tiedot yhä eteenpäin
+    });
+}
+
+function junaTiedot3 (zoneID, asemaNimi) {//Funktiolla haetaan pysäkkikohtaisia tietoja, mutta spesifillä Helsignin rautatieaseman pysäkillä, idea on saada määränpäätieto oikealle junatunnukselle tämän API:n kautta
+    const  junaTiedot3 = {
+        query: `{
+  stop(id: "HSL:1020503") {
+    name
+    zoneId
+      stoptimesWithoutPatterns {
+      headsign
+        trip {
+            route {
+            shortName
+            }
+        }
+      }
+    }  
+}`
+    };
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'Authorization': 'Bearer ' + localStorage.getItem('token'),
+        },
+        body: JSON.stringify(junaTiedot3),
+    };
+
+    fetch('https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql', options).then(function (response) {
+        return response.json()
+    }).then(function (junaTiedot3) {
+        let junaTietolista = [];
+        for (let y=0;y<junaTiedot3.data.stop.stoptimesWithoutPatterns.length;y++){ //Loopataan kolmannen kerran samoihin taulukoihin dataa, viimeisen kerran.
+            junatunnuslista.push(junaTiedot3.data.stop.stoptimesWithoutPatterns[y].headsign)
+            maaranpaaLista.push(junaTiedot3.data.stop.stoptimesWithoutPatterns[y].trip.route.shortName);
+        }
+        for(let a=0;a<junatunnuslista.length;a++){ //edelliset kaksi taulukkoa työnnetään kolmanteen taulukkoon ja koostetaan niistä yksittäiset kokonaisuudet
+            junaTietolista.push({heading:maaranpaaLista[a], trainID:junatunnuslista[a]});
+        }
+        junaAsematiedot(zoneID,asemaNimi, junaTietolista);//kutsutaan seuraavaa funktiota joka hakee eri rajapinnasta asematiedot, sekä lähetetään sille ensimmäiseltä junatiedot-funktiolta saadut tiedot ja tästä funktiosta luotu taulukko.
+    });
+}
+
+function junaAsematiedot(zoneID,asemaNimi, junaTietoLista) {//Funktiolla haetaan digitraficin rajapinnasta asematieto käyttäen digitransit rajapinnan tietoja hyväksi.
+    fetch(`https://rata.digitraffic.fi/api/v1/metadata/stations`).then(function (vastaus) {
+        return vastaus.json();
+    }).then(function (junaAsematiedot) {
+        let asemaTunnus =null;
+
+        if (asemaNimi==='Helsinki'){ //Määritetään digitransit-rajapinnasta saatu arvo digitrafic-rajapinnan kanssa samaa tarkoittavaksi
+            asemaNimi='Helsinki asema'
+        } else if (asemaNimi==='Pasila'){
+            asemaNimi='Pasila asema'
+        } else if (asemaNimi ==='Tikkurila'){
+            asemaNimi='Tikkurila asema'
+        }
+        for (let i=0;i<junaAsematiedot.length;i++){ //Iteroidaan uusi rajapinta
+            if (junaAsematiedot[i].stationName===asemaNimi){ //Vertailuoperaattorilla katsotaan oikea asematunnus, että saadaan oikean aseman aikataulu tulostettua.
+                console.log(junaAsematiedot[i].stationName);
+                console.log(junaAsematiedot[i].stationUICCode);
+                asemaTunnus=junaAsematiedot[i].stationUICCode;
+            }
+        }
+        trainSchedule(zoneID,asemaTunnus, junaTietoLista); //kutsutaan seuraavaa funktiota ja annetaan uusi muuttuja asematieodon kanssa, sekä myös aiemmasta funktisota saatu lista
+    }).catch(function (error) {
+        console.log(error);
+    });
+}
+
+function trainSchedule(zoneID, asemaTunnus, junaTietolista) {//Funktiolla haetaan digitrafficin-rajapinnasta lähijunien aikatauluja ennalta määrätyillä parametreillä, lähtevät junat seuraavan 60min aikana
+    fetch(`https://rata.digitraffic.fi/api/v1//live-trains/station/HKI?minutes_before_departure=60&minutes_after_departure=0&minutes_before_arrival=0&minutes_after_arrival=0&train_categories=Commuter`).then(function (vastaus) {
+        return vastaus.json();
+    }).then(function (trainSchedule) {
+        //console.log(trainSchedule);
+        //console.log(junaTietolista);
+        for (let i=0;i<trainSchedule.length;i++){
+            for (let u=0;u<trainSchedule[i].timeTableRows.length;u++) { //Iteroidaan API:sta saatu tieto
+                if (trainSchedule[i].timeTableRows[u].stationUICCode===asemaTunnus&&trainSchedule[i].timeTableRows[u].type==='DEPARTURE') {//Vertailuoperaattoreilla haetaan tietyn aseman lähtevät junat
+                    junaAikatauluKoostus(junaTietolista, trainSchedule[i].timeTableRows[u].scheduledTime, trainSchedule[i].commuterLineID, trainSchedule[i].timeTableRows[0].commercialTrack); //Kutsutaan tiettyjen ehtojen täyttessä seuraavaa funktiota minne lähetetään raaka data juuri iteroidusta rajapinnasta
+                }
+            }
+        }
+    }).catch(function (error) {
+        console.log(error);
+    });
+}
+
+function junaAikatauluKoostus(junaTietolista, lahtoaika, linjaID, raide) {//Funktiolla koostetaan kahden eri rajapinnan tiedot yhdeksi aikataululistaksi
+    let dateStr = null, maaranpaa = null, paivamaara = null;
+    dateStr = lahtoaika;
+    paivamaara = new Date(dateStr); //Luodaan rajapinnasta saadusta lähtöajasta normaali kellonaika
+
+    for (let a=0;a<junaTietolista.length;a++) {//iteroidaan aiemmin luotu määrnpäälista toisesta rajapinnasta saadun vertailuoperaattorin avulla ja annetaan oikealle junatunnukselle oikea määränpää
+        if (linjaID === junaTietolista[a].heading) {
+            maaranpaa = junaTietolista [a].trainID;
+        }
+    }
+    const listaData=paivamaara.toTimeString().slice(0, 5); //määritetään muuttujalle oikea kellonaika ja muokataan se lopulliseen muotoon.
+    lista.push({departureTime:listaData, directionId:linjaID, heading:maaranpaa,track:raide}); //Laitetaan lista-muuttujaan kahdesta rajapinnasta haetut yhdistetyt juna-aikataulut
+}
+
+function junaAikataulutulostus() { //Funktiolla tulostetaan kartan alapuolelle juna-aikataululista joka on haettu kahdesta rajapinnasta ja koostettu yhdeksi kokonaisuudeksi
+    function dynamicSort(property) { //Tämä funktio lajittelee aiemmin luodun listan oikeaan kellonaikajärjestykseen
+        let sortOrder = 1;
+
+        if(property[0] === "-") {
+            sortOrder = -1;
+            property = property.substr(1);
+        }
+        return function (a,b) {
+            if(sortOrder === -1){
+                return b[property].localeCompare(a[property]);
+            }else{
+                return a[property].localeCompare(b[property]);
+            }
+        }
+    }
+    const aika = document.getElementById('aika');
+    const juna = document.getElementById('juna');
+    const suunta = document.getElementById('suunta');
+    const raide = document.getElementById('raide');
+    const taulukko = document.getElementById('taulukko');
+    lista.sort(dynamicSort("departureTime"));
+    //console.log(lista);
+    taulukko.className='visible';
+    for (let a=0;a<lista.length;a++){ //Tässä iteroidaan yhdistety lista näkyväksi aikatauluksi
+        //console.log('Lähtöaika: '+lista[a].departureTime+' '+'Juna: '+lista[a].directionId+' '+'Määränpää: '+lista[a].heading+' '+'Raide: '+lista[a].track);
+        aika.innerHTML+=lista[a].departureTime+'<br/>';
+        juna.innerHTML+=lista[a].directionId+'<br/>';
+        suunta.innerHTML+=lista[a].heading+'<br/>';
+        raide.innerHTML+=lista[a].track+'<br/>';
+
+    }
 }
