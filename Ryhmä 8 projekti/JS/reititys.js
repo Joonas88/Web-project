@@ -13,7 +13,7 @@ function mene() {
             //console.log(info.paths[i].points.coordinates);
             for (let y=0;y<info.paths[i].points.coordinates.length;y++){
                 //console.log(info.paths[i].points.coordinates[y][0]+', '+info.paths[i].points.coordinates[y][1]);
-                latlngs.push(info.paths[i].points.coordinates[y][1]+', '+info.paths[i].points.coordinates[y][0]);
+                latlngs.push([info.paths[i].points.coordinates[y][1], info.paths[i].points.coordinates[y][0]]);
             }
         }
     }).
@@ -22,3 +22,6 @@ function mene() {
     })
     console.log(latlngs);
 }
+//piirtää reitin kartalle taulukosta otettujen koordinaattien perusteella
+var polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
+map.fitBounds(polyline.getBounds());
