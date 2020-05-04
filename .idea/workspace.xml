@@ -14,8 +14,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -138,10 +138,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Pyora markerin ikoni vaihdettu ja lisätty asemien tietoja markkeriin" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2224" y="168" key="CommitChangelistDialog2" timestamp="1588238435729">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="552" y="114" key="CommitChangelistDialog2" timestamp="1588584679396">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="2224" y="168" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588238435729" />
+    <state x="552" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588584679396" />
     <state x="204" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588092648645" />
     <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1587730290866">
       <screen x="0" y="0" width="2048" height="1112" />
@@ -155,15 +155,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="662" y="236" key="MultipleFileMergeDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588014746898" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588151176069">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588584681814">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588151176069" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588584681814" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588092650983" />
-    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588232438858">
+    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588584693431">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588232438858" />
+    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588584693431" />
     <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588014739612" />
     <state x="2062" y="716" width="1657" height="1028" key="dock-window-1" timestamp="1588092497798">
       <screen x="1920" y="0" width="1920" height="1040" />
