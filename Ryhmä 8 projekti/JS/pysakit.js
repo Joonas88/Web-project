@@ -1,5 +1,5 @@
 'use strict';
-
+//Julkisten kulkuneuvojen muuttujat
 const pysakki = document.getElementById('pysakkiNimi');
 const lahto = document.getElementById('pysakkidata');
 const linjaNRO = document.getElementById('pysakkidata2');
@@ -9,6 +9,7 @@ const hakunappi = document.getElementById('hakunappi');
 const pudotusValikko = document.getElementById('valinta');
 const vyohykeKuva = document.getElementById('vyohykeKuva');
 const taulukko = document.getElementById('helsinkiRautatieasema');
+const pyoraTulostus = document.getElementById('pyoraHakuhtml');
 let maaranpaaLista = [];
 let junatunnuslista = [];
 let lista = [];
@@ -17,15 +18,100 @@ const juna = document.getElementById('juna');
 const suunta = document.getElementById('suunta');
 const raide = document.getElementById('raide');
 
+//Kaupunkipyörähaun muuttujat
+const nimi = document.getElementById('nimi');
+const stationid = document.getElementById('stationid');
+const bikes = document.getElementById('bikes');
+const allow = document.getElementById('allow');
+const spaces = document.getElementById('spaces');
+const pyorahaku = document.getElementById('pyorahaku');
 
 
-//let ajoneuvoId = null;
 let paikka = null;
+
+
+const map = L.map('map'); //Luodaan kartalle muuttuja ja määritetään sille lähde karttapohjan hakuun
+
+L.tileLayer('https://cdn.digitransit.fi/map/v1/{id}/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+        '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+    maxZoom: 19,
+    tileSize: 512,
+    zoomOffset: -1,
+    id: 'hsl-map'}).addTo(map);
+
+const options = { //Kartan asetuksia joilla määritetään sijainnin tarkuuden tarkkuus
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0
+};
+
+function success(pos) { //Funktiolla ajetaan käyttäjän sijainti kartalle
+    paikka = pos.coords;
+
+    console.log(`Latitude: ${paikka.latitude}`);
+    console.log(`Longitude: ${paikka.longitude}`);
+
+    map.setView([paikka.latitude, paikka.longitude], 13);
+    minaOlenTassa(paikka,'Minä olen tässä!');
+}
+
+function error(err) { //Virheen sattuessa ajetaan tämä funktio ja tulostetaan virheestä johtuva data konsoliin
+    console.warn(`ERROR(${err.code}): ${err.message}`);
+}
+
+navigator.geolocation.getCurrentPosition(success, error, options); //Tämä ominaisuus hakee käyttäjän sijainnin
+
+hakunappi.addEventListener('click', napinpano);
+
+function napinpano() { //Funktiolla määritellään mitä tapahtuu hakunappia painettaessa
+
+    switch (pudotusValikko.selectedIndex) { //Switch-case määrittää mikä pudostusvalikon atribuutti on käytössä ja default päivittä kartan
+        case 1:
+            pysakit(paikka);
+            break;
+        case 2:
+            pysakointiPaikat(paikka);
+            break;
+        case 3:
+            hae(paikka);
+            break;
+        default:
+            pyyhiMarker();
+            break;
+    }
+    junaTiedot1(); //Helsingin rauatieasemaa koskevien aikataulutietojen haku suoritetaan aina nappia painaessa
+}
+
+function pyyhiMarker(){ //Funktio päivittää sivuston
+    console.log('Päivitetään sivu');
+    location.reload(paikka);
+}
+
+
+function minaOlenTassa(crd, teksti) { //Tämä funktio tulostaa markerin kartalle oman sijainnin kohdalle ja avaa popupin, joka myös aukeaa markeria klikattaessa.
+    L.marker([crd.latitude, crd.longitude], {icon: omaIkoni}).addTo(map).bindPopup(teksti).openPopup()
+}
+
+function clear() { //Funktio tyhjentää HTML-näkymän ennen uudelleenkirjoitusta
+    lahto.innerHTML='';
+    linjaNRO.innerHTML='';
+    reitti.innerHTML='';
+    aika.innerHTML='';
+    juna.innerHTML='';
+    suunta.innerHTML='';
+    raide.innerHTML='';
+    nimi.innerHTML='';
+    stationid.innerHTML='';
+    bikes.innerHTML='';
+    allow.innerHTML='';
+    spaces.innerHTML='';
+    //ohjeet.innerHTML='';
+}
 
 /**
  * @author Joonas Soininen
  */
-
 
 const bussiIkoni = L.icon({ //Luodaan omille ikoneille muuttujat, joita voidaan käyttää myöhemmin leaflet-kirjaton ikonin sijasta
     iconUrl: 'media/Bussicon.png', //Määritetään lähde, ikonin koko, ankkurointi ikoniin nähden ja popup-ankkurointi
@@ -75,63 +161,6 @@ const pyoraParkkiIkoni = L.icon({
     iconAnchor: [15,30],
     popupAnchor: [5,-30]
 });
-
-const map = L.map('map'); //Luodaan kartalle muuttuja ja määritetään sille lähde karttapohjan hakuun
-
-L.tileLayer('https://cdn.digitransit.fi/map/v1/{id}/{z}/{x}/{y}.png', {
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-        '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-    maxZoom: 19,
-    tileSize: 512,
-    zoomOffset: -1,
-    id: 'hsl-map'}).addTo(map);
-
-const options = { //Kartan asetuksia joilla määritetään sijainnin tarkuuden tarkkuus
-    enableHighAccuracy: true,
-    timeout: 5000,
-    maximumAge: 0
-};
-
-function success(pos) { //Funktiolla ajetaan käyttäjän sijainti kartalle
-    paikka = pos.coords;
-
-    console.log(`Latitude: ${paikka.latitude}`);
-    console.log(`Longitude: ${paikka.longitude}`);
-
-    map.setView([paikka.latitude, paikka.longitude], 13);
-    minaOlenTassa(paikka,'Minä olen tässä!');
-}
-
-function error(err) { //Virheen sattuessa ajetaan tämä funktio ja tulostetaan virheestä johtuva data konsoliin
-    console.warn(`ERROR(${err.code}): ${err.message}`);
-}
-
-navigator.geolocation.getCurrentPosition(success, error, options); //Tämä ominaisuus hakee käyttäjän sijainnin
-
-hakunappi.addEventListener('click', napinpano);
-
-function napinpano() { //Funktiolla määritellään mitä tapahtuu hakunappia painettaessa
-
-    switch (pudotusValikko.selectedIndex) { //Switch-case määrittää mikä pudostusvalikon atribuutti on käytössä ja default päivittä kartan
-        case 1:
-            pysakit(paikka);
-            break;
-        case 2:
-            pysakointiPaikat(paikka);
-            break;
-        case 3:
-            //Tähän pyörähaku
-        default:
-            pyyhiMarker();
-            break;
-    }
-    junaTiedot1(); //Helsingin rauatieasemaa koskevien aikataulutietojen haku suoritetaan aina nappia painaessa
-}
-
-function pyyhiMarker(){ //Funktio päivittää sivuston
-    console.log('Päivitetään sivu');
-    location.reload(paikka);
-}
 
 //Helsingin rautatieasmean koordinaatit:lat:60.171040,lon: 24.941957
 //Tikkurila Heurekan koordinaatit:lat:60.287520,lon: 25.040841
@@ -288,17 +317,13 @@ function tietojenTulostus(pysakinNimi, linjaNumero, maaranpaa, lahtoAika, reitti
     reitti.innerHTML+=`<a href="https://reittiopas.hsl.fi/linjat/${reittiID}" target="_blank">${maaranpaa}</a>`
 }
 
-function minaOlenTassa(crd, teksti) { //Tämä funktio tulostaa markerin kartalle oman sijainnin kohdalle ja avaa popupin, joka myös aukeaa markeria klikattaessa.
-    L.marker([crd.latitude, crd.longitude], {icon: omaIkoni}).addTo(map).bindPopup(teksti).openPopup()
-}
-
 function bussiMarker(crd, teksti, pysakkiId) { //Tätä funktiota kutsutaan pysäkit-funktiotsta ja tämä asettaa kartalle oman markerin linja-autoille. Funktion click-toiminto tyhjentää edellisen pysäkkikohtaisen listauksen,
     L.marker([crd.latitude, crd.longitude], {icon: bussiIkoni}).addTo(map).bindPopup(teksti).openPopup().on('click', function () { // kutsuu uutta listausta funktiolla kulkuneuvot ja muuttaa HTML-koodissa listauksen luokan näkyväksi
         clear();
         kulkuneuvot(pysakkiId);
         nakyva.className='visible';
         taulukko.className='hidden';
-        navigoi.href=`https://www.openstreetmap.org/directions?engine=graphhopper_foot&route=${paikka.latitude}%2C${paikka.longitude}%3B${crd.latitude}%2C${crd.longitude}`;
+        pyoraTulostus.className='hidden';
     });
 }
 
@@ -308,7 +333,7 @@ function sporaMarker(crd, teksti, pysakkiId) { //Funktio tulostaa raitiovaunuiko
         kulkuneuvot(pysakkiId);
         nakyva.className='visible';
         taulukko.className='hidden';
-        navigoi.href=`https://www.openstreetmap.org/directions?engine=graphhopper_foot&route=${paikka.latitude}%2C${paikka.longitude}%3B${crd.latitude}%2C${crd.longitude}`;
+        pyoraTulostus.className='hidden';
     });
 }
 
@@ -319,12 +344,13 @@ function junaMarker(crd, teksti, pysakkiId) { //Tulostaa junaikonin, muuten sama
             junaAikataulutulostus();
             taulukko.className='visible';
             nakyva.className='hidden';
+            pyoraTulostus.className='hidden';;
         } else {
             nakyva.className='visible';
             taulukko.className='hidden';
+            pyoraTulostus.className='hidden';
             kulkuneuvot(pysakkiId);
         }
-        navigoi.href=`https://www.openstreetmap.org/directions?engine=graphhopper_foot&route=${paikka.latitude}%2C${paikka.longitude}%3B${crd.latitude}%2C${crd.longitude}`;
     });
 }
 
@@ -334,18 +360,8 @@ function metroMarker(crd, teksti, pysakkiId) { //tulostaa metroikonin, muuten sa
         kulkuneuvot(pysakkiId);
         nakyva.className='visible';
         taulukko.className='hidden';
-        navigoi.href=`https://www.openstreetmap.org/directions?engine=graphhopper_foot&route=${paikka.latitude}%2C${paikka.longitude}%3B${crd.latitude}%2C${crd.longitude}`;
+        pyoraTulostus.className='hidden';
     });
-}
-
-function clear() { //Funktio tyhjentää pysäkkitiedot ennen uudelleenkirjoitusta
-    lahto.innerHTML='';
-    linjaNRO.innerHTML='';
-    reitti.innerHTML='';
-    aika.innerHTML='';
-    juna.innerHTML='';
-    suunta.innerHTML='';
-    raide.innerHTML='';
 }
 
 function startTime() { //Funktio näytää reaaliaikasta kelloa pysäkkiaikataulujen yhteydessä
@@ -361,6 +377,7 @@ function startTime() { //Funktio näytää reaaliaikasta kelloa pysäkkiaikataul
         h + ":" + m + ":" + s;
     let t = setTimeout(startTime, 500);
 }
+
 function checkTime(i) { //Funktiolla määritetään oikea aikamuoto
     if (i < 10) {i = "0" + i}  // add zero in front of numbers < 10
     return i;
@@ -639,3 +656,86 @@ function junaAikataulutulostus() { //Funktiolla tulostetaan kartan alapuolelle j
 
     }
 }
+
+
+/**
+ * @author Timo Tamminiemi
+ */
+
+const pyoraIkoni = L.icon({
+    iconUrl: 'media/Bikeicon.png',
+    iconSize: [40,40],
+    iconAnchor: [10,30],
+    popupAnchor: [10,-30]
+});
+
+//funktio tekee kyselyn digitransitin apiin ja palauttaa sieltä pks:n kaupunkipyörä asemien tiedot
+function hae(crd) {
+    const kysely = {
+        query: `{
+bikeRentalStations {
+name
+stationId
+bikesAvailable
+spacesAvailable
+lat
+lon
+allowDropoff
+}
+}`
+    };
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'Authorization': 'Bearer ' + localStorage.getItem('token'),
+        },
+        body: JSON.stringify(kysely),
+    };
+
+    fetch('https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql', options).
+    then(function(response){
+        return response.json()
+    }).then(function(bikeInfo){
+        console.log(bikeInfo)
+        for(let i = 0; i<bikeInfo.data.bikeRentalStations.length; i++) {
+            const sijainti = {
+                latitude: bikeInfo.data.bikeRentalStations[i].lat,
+                longitude: bikeInfo.data.bikeRentalStations[i].lon,
+            };
+
+            const teksti = `
+        <h3>${bikeInfo.data.bikeRentalStations[i].name}</h3>
+        <p>Aseman ID:${bikeInfo.data.bikeRentalStations[i].stationId}</p>
+        <p>Vapaita pyöriä:${bikeInfo.data.bikeRentalStations[i].bikesAvailable}</p>
+        <p>Vapaita paikkoja:${bikeInfo.data.bikeRentalStations[i].spacesAvailable}</p>
+        <p>Tilaa palauttaa:${bikeInfo.data.bikeRentalStations[i].allowDropoff}</p>
+        `;
+            console.log(sijainti);
+            pyoraMarker(sijainti, teksti, bikeInfo.data.bikeRentalStations[i]);
+        }
+    }).
+    catch(function(error) {
+        console.log(error);
+    })
+}
+
+function pyoraMarker(crd, teksti, info) {
+    L.marker([crd.latitude, crd.longitude], {icon: pyoraIkoni}).
+    addTo(map).
+    bindPopup(teksti).
+    openPopup().
+    on('click', function () {
+        pyoraTulostus.className='visible';
+        taulukko.className='hidden';
+        nakyva.className='hidden';
+        nimi.innerHTML = info.name;
+        stationid.innerHTML = info.stationId;
+        bikes.innerHTML = info.bikesAvailable;
+        spaces.innerHTML = info.spacesAvailable;
+        allow.innerHTML = info.allowDropoff;
+
+    });
+}
+
