@@ -87,3 +87,13 @@ function reitti(latlngs) {
     let polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
     map.fitBounds(polyline.getBounds());
 }
+
+//mene pitää korvata jollain yllä olevalla funktiolla
+function valifunktio(crd) {
+    haeReitti.addEventListener('click', napinpainallus);
+    function napinpainallus() {
+        console.log(crd);
+        mene(paikka, crd);
+    }
+}
+//valifunktio kutsutaan lisaamarkerista
