@@ -5,8 +5,7 @@ const stationid = document.getElementById('stationid');
 const bikes = document.getElementById('bikes');
 const allow = document.getElementById('allow');
 const spaces = document.getElementById('spaces');
-
-const nappi = document.getElementById('nappi');
+const nappi = document.getElementById('hakunappi');
 const pyorahaku = document.getElementById('pyorahaku');
 pyorahaku.checked = true;
 

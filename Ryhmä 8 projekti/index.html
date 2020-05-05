@@ -11,31 +11,20 @@
 <header>
     <h1>Karttajuttuja!</h1>
 </header>
-<div class="hakujutut">
-    <label for="searchField">Hae tällä: </label><input id="searchField" type="text" autofocus="" placeholder="Tästä haetaan!">
-    <button id="searchButton">Search</button>
-</div>
 
 <p>Valitse näytettävä tieto:</p>
 <select name="valinta" id="valinta"/></label>
 <option value="empty" id="empty"></option>
 <option value="pysäkit" id="pysakit">Julkiset kulkuvälineet</option>
 <option value="parkit" id="parkkipaikat">Liityntäpysäköinti</option>
-<option value="pyörat" id="kaupunkipyorat">Kaupunkipyörät</option>
-<option value="liikunta" id="liikuntapaikat">Liikuntapaikat</option>
+<option value="pyörat" id="pyorahaku">Kaupunkipyörät</option>
 </select>
 <button id="hakunappi">HAE!</button>
 
-<div class="pyora">
-    <label for="pyorahaku">pyora</label><input id="pyorahaku" type="checkbox" autofocus="" placeholder="Tästä haetaan!">
-    <button id="nappi">Search</button>
-</div>
-
-
 <div id="map"></div>
 
-<main class="pysäkkitesti">
-    <div id="piilotus" class="hidden">
+<main class="markkerihaku">
+    <div id="julkisetMarker" class="hidden">
         <div id="pysakkicontainer">
             <img id="vyohykeKuva" src="">
             <div id="pysakkitxt"></div>
@@ -46,10 +35,9 @@
                 <div id="pysakkidata3"></div>
                 <div id="pysakkidata"></div>
             </div>
-            <a id="navigoi" href="" target="_blank">Hae reitti pysäkille</a>
         </div>
     </div>
-    <div id="taulukko" class="hidden">
+    <div id="helsinkiRautatieasema" class="hidden">
         <table>
             <thead>
             <tr>
@@ -76,14 +64,14 @@
             </tbody>
         </table>
     </div>
-    <h3 id="nimi">nimi</h3>
-    <h4 id="stationid">asema</h4>
-    <p id="bikes">pyörä</p>
-    <p id="spaces">paikat</p>
-    <p id="allow">true</p>
+    <div id="pyoraHakuhtml" class="hidden">
+         <h3 id="nimi">nimi</h3>
+         <h4 id="stationid">asema</h4>
+         <p id="bikes">pyörä</p>
+         <p id="spaces">paikat</p>
+         <p id="allow">true</p>
+    </div>
 </main>
-
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.3/leaflet.js"></script>
 <---script src="JS/pyora.js"><---/script>

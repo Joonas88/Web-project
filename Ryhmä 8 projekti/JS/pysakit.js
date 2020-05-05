@@ -1,17 +1,14 @@
 'use strict';
-/**
- * @author Joonas Soininen
- */
+
 const pysakki = document.getElementById('pysakkiNimi');
 const lahto = document.getElementById('pysakkidata');
 const linjaNRO = document.getElementById('pysakkidata2');
 const reitti = document.getElementById('pysakkidata3');
-const nakyva = document.getElementById('piilotus');
-const navigoi = document.getElementById('navigoi');
+const nakyva = document.getElementById('julkisetMarker');
 const hakunappi = document.getElementById('hakunappi');
 const pudotusValikko = document.getElementById('valinta');
 const vyohykeKuva = document.getElementById('vyohykeKuva');
-const taulukko = document.getElementById('taulukko');
+const taulukko = document.getElementById('helsinkiRautatieasema');
 let maaranpaaLista = [];
 let junatunnuslista = [];
 let lista = [];
@@ -24,6 +21,11 @@ const raide = document.getElementById('raide');
 
 //let ajoneuvoId = null;
 let paikka = null;
+
+/**
+ * @author Joonas Soininen
+ */
+
 
 const bussiIkoni = L.icon({ //Luodaan omille ikoneille muuttujat, joita voidaan käyttää myöhemmin leaflet-kirjaton ikonin sijasta
     iconUrl: 'media/Bussicon.png', //Määritetään lähde, ikonin koko, ankkurointi ikoniin nähden ja popup-ankkurointi
@@ -117,6 +119,8 @@ function napinpano() { //Funktiolla määritellään mitä tapahtuu hakunappia p
         case 2:
             pysakointiPaikat(paikka);
             break;
+        case 3:
+            //Tähän pyörähaku
         default:
             pyyhiMarker();
             break;
