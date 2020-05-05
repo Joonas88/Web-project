@@ -21,6 +21,13 @@
 </select>
 <button id="hakunappi">HAE!</button>
 
+<div id="reittihakuvalikko" class="hidden">
+    <input class="checks" type="radio" name="radio" value="r1" id="radio1"/>Jalan
+    <input class="checks" type="radio" name="radio" value="r2" id="radio2"/>Pyörällä
+    <input class="checks" type="radio" name="radio" value="r3" id="radio3"/>Autolla
+    <button id="haeReitti">Hae reitti</button>
+</div>
+
 <div id="map"></div>
 
 <main class="markkerihaku">
@@ -71,11 +78,14 @@
          <p id="spaces">paikat</p>
          <p id="allow">true</p>
     </div>
+    <div id="reittiohje" class="hidden">
+        <h3 id="matka"></h3>
+        <p id="ohjeet"></p>
+    </div>
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.3/leaflet.js"></script>
 <script src="JS/pysakit.js"></script>
-<----script src="JS/reititys.js"><--/----script>
 
 </body>
 </html>

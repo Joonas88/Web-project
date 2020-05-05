@@ -1,9 +1,12 @@
 'use strict';
+
+let paikka = null;
+
 //Julkisten kulkuneuvojen muuttujat
 const pysakki = document.getElementById('pysakkiNimi');
 const lahto = document.getElementById('pysakkidata');
 const linjaNRO = document.getElementById('pysakkidata2');
-const reitti = document.getElementById('pysakkidata3');
+const junareitti = document.getElementById('pysakkidata3');
 const nakyva = document.getElementById('julkisetMarker');
 const hakunappi = document.getElementById('hakunappi');
 const pudotusValikko = document.getElementById('valinta');
@@ -24,10 +27,15 @@ const stationid = document.getElementById('stationid');
 const bikes = document.getElementById('bikes');
 const allow = document.getElementById('allow');
 const spaces = document.getElementById('spaces');
-const pyorahaku = document.getElementById('pyorahaku');
 
-
-let paikka = null;
+//Reittihaun muuttujat
+const reittiOhjeistus = document.getElementById('reittiohje');
+const reittiHaku = document.getElementById('reittihakuvalikko');
+const haeReitti = document.getElementById('haeReitti');
+const ohjeet = document.getElementById('ohjeet');
+const matka = document.getElementById('matka');
+let polyline=null;
+let latlngs = [];
 
 
 const map = L.map('map'); //Luodaan kartalle muuttuja ja määritetään sille lähde karttapohjan hakuun
@@ -96,7 +104,7 @@ function minaOlenTassa(crd, teksti) { //Tämä funktio tulostaa markerin kartall
 function clear() { //Funktio tyhjentää HTML-näkymän ennen uudelleenkirjoitusta
     lahto.innerHTML='';
     linjaNRO.innerHTML='';
-    reitti.innerHTML='';
+    junareitti.innerHTML='';
     aika.innerHTML='';
     juna.innerHTML='';
     suunta.innerHTML='';
@@ -106,7 +114,7 @@ function clear() { //Funktio tyhjentää HTML-näkymän ennen uudelleenkirjoitus
     bikes.innerHTML='';
     allow.innerHTML='';
     spaces.innerHTML='';
-    //ohjeet.innerHTML='';
+    ohjeet.innerHTML='';
 }
 
 /**
@@ -314,53 +322,81 @@ function tietojenTulostus(pysakinNimi, linjaNumero, maaranpaa, lahtoAika, reitti
     pysakki.innerHTML=pysakinNimi+'<br/>'+'<p>Seuraavat lähtevät</p>';
     lahto.innerHTML+=lahtoAika+'<br/>';
     linjaNRO.innerHTML+=`<a href="https://reittiopas.hsl.fi/linjat/${reittiID}" target="_blank">${linjaNumero}`;
-    reitti.innerHTML+=`<a href="https://reittiopas.hsl.fi/linjat/${reittiID}" target="_blank">${maaranpaa}</a>`
+    junareitti.innerHTML+=`<a href="https://reittiopas.hsl.fi/linjat/${reittiID}" target="_blank">${maaranpaa}</a>`
 }
 
 function bussiMarker(crd, teksti, pysakkiId) { //Tätä funktiota kutsutaan pysäkit-funktiotsta ja tämä asettaa kartalle oman markerin linja-autoille. Funktion click-toiminto tyhjentää edellisen pysäkkikohtaisen listauksen,
+
     L.marker([crd.latitude, crd.longitude], {icon: bussiIkoni}).addTo(map).bindPopup(teksti).openPopup().on('click', function () { // kutsuu uutta listausta funktiolla kulkuneuvot ja muuttaa HTML-koodissa listauksen luokan näkyväksi
         clear();
+        valifunktio(crd);
         kulkuneuvot(pysakkiId);
+        if (polyline===null){
+            reittiHaku.className='visible';
+        }
         nakyva.className='visible';
         taulukko.className='hidden';
         pyoraTulostus.className='hidden';
+        reittiOhjeistus.className='hidden';
     });
 }
 
 function sporaMarker(crd, teksti, pysakkiId) { //Funktio tulostaa raitiovaunuikonin kartalle, muuten sama toiminnallisuus kuin edellisessä
+
     L.marker([crd.latitude, crd.longitude], {icon: ratikkaIkoni}).addTo(map).bindPopup(teksti).openPopup().on('click', function () {
         clear();
+        valifunktio(crd);
         kulkuneuvot(pysakkiId);
+        if (polyline===null){
+            reittiHaku.className='visible';
+        }
         nakyva.className='visible';
         taulukko.className='hidden';
         pyoraTulostus.className='hidden';
+        reittiOhjeistus.className='hidden';
     });
 }
 
 function junaMarker(crd, teksti, pysakkiId) { //Tulostaa junaikonin, muuten sama kuin kaksi edellistä, mutta Helsingin rautatienaseman kohdalla haetaan aikataulutiedot toisesta rajapinnasta
+
     L.marker([crd.latitude, crd.longitude], {icon: junaIkoni}).addTo(map).bindPopup(teksti).openPopup().on('click', function () {
         clear();
+        valifunktio(crd);
         if (pysakkiId==='HSL:1020552'||pysakkiId==='HSL:1020502'||pysakkiId==='HSL:1020551'||pysakkiId==='HSL:1020501'||pysakkiId==='HSL:1020553'||pysakkiId==='HSL:1020503'){ //Määritetään tietyt junaikonit kutsumaan eri funktiota
             junaAikataulutulostus();
+            if (polyline===null){
+                reittiHaku.className='visible';
+            }
             taulukko.className='visible';
             nakyva.className='hidden';
-            pyoraTulostus.className='hidden';;
+            pyoraTulostus.className='hidden';
+            reittiOhjeistus.className='hidden';
         } else {
+            if (polyline===null){
+                reittiHaku.className='visible';
+            }
             nakyva.className='visible';
             taulukko.className='hidden';
             pyoraTulostus.className='hidden';
+            reittiOhjeistus.className='hidden';
             kulkuneuvot(pysakkiId);
         }
     });
 }
 
 function metroMarker(crd, teksti, pysakkiId) { //tulostaa metroikonin, muuten sama kuin kolme edellistä
+
     L.marker([crd.latitude, crd.longitude], {icon: metroIkoni}).addTo(map).bindPopup(teksti).openPopup().on('click', function () {
         clear();
+        valifunktio(crd);
         kulkuneuvot(pysakkiId);
+        if (polyline===null){
+            reittiHaku.className='visible';
+        }
         nakyva.className='visible';
         taulukko.className='hidden';
         pyoraTulostus.className='hidden';
+        reittiOhjeistus.className='hidden';
     });
 }
 
@@ -383,8 +419,7 @@ function checkTime(i) { //Funktiolla määritetään oikea aikamuoto
     return i;
 }
 
-function liityntaPysakointi(crd, teksti, tila, kulkuneuvo, maksullisuus, omasijainti) { //Tulostetaan kartalle oikeat markerit pysäköintipaikoille, sekä tehdään toimintoja ettei toimimattomat paikat näy käyttäjälle
-    const navigoi = '<br/><a href="https://www.openstreetmap.org/directions?engine=graphhopper_bicycle&route='+`${omasijainti.latitude}%2C${omasijainti.longitude}%3B${crd.latitude}%2C${crd.longitude}`+'" target="_blank">Etsi reitti</a>';
+function liityntaPysakointi(crd, teksti, tila, kulkuneuvo, maksullisuus) { //Tulostetaan kartalle oikeat markerit pysäköintipaikoille, sekä tehdään toimintoja ettei toimimattomat paikat näy käyttäjälle
     const maksullinen = 'Pysäköinti on maksullista';
     const ilmainen12 = '12H maksuton pysäköinti';
     const ilmainen = 'Ilmainen pysäköinti 24H';
@@ -396,30 +431,54 @@ function liityntaPysakointi(crd, teksti, tila, kulkuneuvo, maksullisuus, omasija
         if (kulkuneuvo === 'BICYCLE') {
 
             if (maksullisuus === 'CUSTOM') {
-                L.marker([crd.latitude, crd.longitude], {icon: pyoraParkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + maksullinen + navigoi).openPopup().on('click', function () {
-
+                L.marker([crd.latitude, crd.longitude], {icon: pyoraParkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + maksullinen).openPopup().on('click', function () {
+                    valifunktio(crd);
+                    reittiOhjeistus.className='hidden';
+                    if (polyline===null){
+                        reittiHaku.className='visible';
+                    }
                 });
             } else if (maksullisuus === 'FREE_12H') {
-                L.marker([crd.latitude, crd.longitude], {icon: pyoraParkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + ilmainen12 + navigoi).openPopup().on('click', function () {
-
+                L.marker([crd.latitude, crd.longitude], {icon: pyoraParkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + ilmainen12).openPopup().on('click', function () {
+                    valifunktio(crd);
+                    reittiOhjeistus.className='hidden';
+                    if (polyline===null){
+                        reittiHaku.className='visible';
+                    }
                 });
             } else {
-                L.marker([crd.latitude, crd.longitude], {icon: pyoraParkkiIkoni}).addTo(map).bindPopup(teksti + '<br>' + ilmainen + navigoi).openPopup().on('click', function () {
-
+                L.marker([crd.latitude, crd.longitude], {icon: pyoraParkkiIkoni}).addTo(map).bindPopup(teksti + '<br>' + ilmainen).openPopup().on('click', function () {
+                    valifunktio(crd);
+                    reittiOhjeistus.className='hidden';
+                    if (polyline===null){
+                        reittiHaku.className='visible';
+                    }
                 });
             }
         } else {
             if (maksullisuus === 'CUSTOM') {
-                L.marker([crd.latitude, crd.longitude], {icon: parkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + maksullinen + navigoi).openPopup().on('click', function () {
-
+                L.marker([crd.latitude, crd.longitude], {icon: parkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + maksullinen).openPopup().on('click', function () {
+                    valifunktio(crd);
+                    reittiOhjeistus.className='hidden';
+                    if (polyline===null){
+                        reittiHaku.className='visible';
+                    }
                 });
             } else if (maksullisuus === 'FREE_12H'){
-                L.marker([crd.latitude, crd.longitude], {icon: parkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + ilmainen12 + navigoi).openPopup().on('click', function () {
-
+                L.marker([crd.latitude, crd.longitude], {icon: parkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + ilmainen12).openPopup().on('click', function () {
+                    valifunktio(crd);
+                    reittiOhjeistus.className='hidden';
+                    if (polyline===null){
+                        reittiHaku.className='visible';
+                    }
                 });
             } else {
-                L.marker([crd.latitude, crd.longitude], {icon: parkkiIkoni}).addTo(map).bindPopup(teksti + '<br>' + ilmainen + navigoi).openPopup().on('click', function () {
-
+                L.marker([crd.latitude, crd.longitude], {icon: parkkiIkoni}).addTo(map).bindPopup(teksti + '<br>' + ilmainen).openPopup().on('click', function () {
+                    valifunktio(crd);
+                    reittiOhjeistus.className='hidden';
+                    if (polyline===null){
+                        reittiHaku.className='visible';
+                    }
                 });
             }
 
@@ -722,14 +781,21 @@ allowDropoff
 }
 
 function pyoraMarker(crd, teksti, info) {
+
     L.marker([crd.latitude, crd.longitude], {icon: pyoraIkoni}).
     addTo(map).
     bindPopup(teksti).
     openPopup().
     on('click', function () {
+        clear();
+        valifunktio(crd);
+        if (polyline===null){
+            reittiHaku.className='visible';
+        }
         pyoraTulostus.className='visible';
         taulukko.className='hidden';
         nakyva.className='hidden';
+        reittiOhjeistus.className='hidden';
         nimi.innerHTML = info.name;
         stationid.innerHTML = info.stationId;
         bikes.innerHTML = info.bikesAvailable;
@@ -739,3 +805,115 @@ function pyoraMarker(crd, teksti, info) {
     });
 }
 
+function reittiKavellen(paikka, crd) {
+    reittiOhjeistus.className='visible';
+    pyoraTulostus.className='hidden';
+    taulukko.className='hidden';
+    nakyva.className='hidden';
+    fetch(`https://graphhopper.com/api/1/route?point=${paikka.latitude},${paikka.longitude}&point=${crd.latitude},${crd.longitude}&vehicle=foot&locale=fi&calc_points=true&points_encoded=false&key=212b25b6-ac73-4540-89bf-61b6cf489997`).
+    then(function(vastaus) {
+        return vastaus.json();
+    }).
+    then(function(info) {
+        console.log(info);
+        for (let i=0;i<info.paths.length; i++){
+            for (let y=0;y<info.paths[i].points.coordinates.length;y++){
+                latlngs.push([info.paths[i].points.coordinates[y][1], info.paths[i].points.coordinates[y][0]]);
+            }
+            //for looppi joka tulostaa reitin tiedot sivulle
+            for (let j = 0; j < info.paths[0].instructions.length; j++) {
+                ohjeet.innerHTML += info.paths[0].instructions[j].text + "<br/><br/>";
+                console.log(info.paths[0].instructions[j].text);
+            }
+        }
+        reitti(latlngs);
+        matka.innerHTML = 'Reitin pituus on ' + ((Math.round(info.paths[0].distance) / 1000).toFixed(2)) + ' Km' +"<br/>";
+    }).
+    catch(function(error) {
+        console.log(error);
+    })
+    console.log(latlngs);
+}
+function reittiPyoralla(paikka, crd) {
+    reittiOhjeistus.className='visible';
+    pyoraTulostus.className='hidden';
+    taulukko.className='hidden';
+    nakyva.className='hidden';
+    fetch(`https://graphhopper.com/api/1/route?point=${paikka.latitude},${paikka.longitude}&point=${crd.latitude},${crd.longitude}&vehicle=bike&locale=fi&calc_points=true&points_encoded=false&key=212b25b6-ac73-4540-89bf-61b6cf489997`).
+    then(function(vastaus) {
+        return vastaus.json();
+    }).
+    then(function(info) {
+        console.log(info);
+        for (let i=0;i<info.paths.length; i++){
+            for (let y=0;y<info.paths[i].points.coordinates.length;y++){
+                latlngs.push([info.paths[i].points.coordinates[y][1], info.paths[i].points.coordinates[y][0]]);
+            }
+            //for looppi joka tulostaa reitin tiedot sivulle
+            for (let j = 0; j < info.paths[0].instructions.length; j++) {
+                ohjeet.innerHTML += info.paths[0].instructions[j].text + "<br/><br/>";
+                console.log(info.paths[0].instructions[j].text);
+            }
+        }
+        reitti(latlngs);
+        matka.innerHTML = 'Reitin pituus on ' + ((Math.round(info.paths[0].distance) / 1000).toFixed(2)) + ' Km' +"<br/>";
+    }).
+    catch(function(error) {
+        console.log(error);
+    })
+    console.log(latlngs);
+}
+
+function reittiAutolla(paikka, crd) {
+    reittiOhjeistus.className='visible';
+    pyoraTulostus.className='hidden';
+    taulukko.className='hidden';
+    nakyva.className='hidden';
+    fetch(`https://graphhopper.com/api/1/route?point=${paikka.latitude},${paikka.longitude}&point=${crd.latitude},${crd.longitude}&vehicle=car&locale=fi&calc_points=true&points_encoded=false&key=212b25b6-ac73-4540-89bf-61b6cf489997`).
+    then(function(vastaus) {
+        return vastaus.json();
+    }).
+    then(function(info) {
+        console.log(info);
+        for (let i=0;i<info.paths.length; i++){
+            for (let y=0;y<info.paths[i].points.coordinates.length;y++){
+                latlngs.push([info.paths[i].points.coordinates[y][1], info.paths[i].points.coordinates[y][0]]);
+            }
+            //for looppi joka tulostaa reitin tiedot sivulle
+            for (let j = 0; j < info.paths[0].instructions.length; j++) {
+                ohjeet.innerHTML += info.paths[0].instructions[j].text + "<br/><br/>";
+                console.log(info.paths[0].instructions[j].text);
+            }
+        }
+        reitti(latlngs);
+        matka.innerHTML = 'Reitin pituus on ' + ((Math.round(info.paths[0].distance) / 1000).toFixed(2)) + ' Km' +"<br/>";
+    }).
+    catch(function(error) {
+        console.log(error);
+    })
+    console.log(latlngs);
+}
+//funktio piirtää reitin kartalle taulukosta otettujen koordinaattien perusteella
+function reitti(latlngs) {
+    reittiHaku.className='hidden';
+    console.log(latlngs);
+    polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
+    map.fitBounds(polyline.getBounds());
+}
+
+//mene pitää korvata jollain yllä olevalla funktiolla
+function valifunktio(crd) {
+    haeReitti.addEventListener('click', napinpainallus);
+    function napinpainallus() {
+        if (document.getElementById('radio1')) {
+            reittiKavellen(paikka, crd);
+        } else if (document.getElementById('radio2')){
+            reittiPyoralla(paikka, crd);
+        } else if (document.getElementById('radio3')){
+            reittiAutolla(paikka, crd);
+        } else {
+                alert('Valitse jokin kulkumuotovaihtoehto');
+        }
+    }
+}
+//valifunktio kutsutaan lisaamarkerista
