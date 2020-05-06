@@ -797,14 +797,14 @@ function pyoraMarker(crd, teksti, info) {
         nakyva.className='hidden';
         reittiOhjeistus.className='hidden';
         nimi.innerHTML = info.name;
-        stationid.innerHTML = info.stationId;
-        bikes.innerHTML = info.bikesAvailable;
-        spaces.innerHTML = info.spacesAvailable;
-        allow.innerHTML = info.allowDropoff;
+        stationid.innerHTML = 'Aseman ID: ' + info.stationId;
+        bikes.innerHTML = 'Vapaita pyöriä: ' + info.bikesAvailable;
+        spaces.innerHTML = 'Vapaita paikkoja: ' + info.spacesAvailable;
+        allow.innerHTML = 'Tilaa palauttaa: ' + info.allowDropoff;
 
     });
 }
-
+//funktio hakee reitti ohjeet kävellen
 function reittiKavellen(paikka, crd) {
     reittiOhjeistus.className='visible';
     pyoraTulostus.className='hidden';
@@ -822,7 +822,7 @@ function reittiKavellen(paikka, crd) {
             }
             //for looppi joka tulostaa reitin tiedot sivulle
             for (let j = 0; j < info.paths[0].instructions.length; j++) {
-                ohjeet.innerHTML += info.paths[0].instructions[j].text + "<br/><br/>";
+                ohjeet.innerHTML += (j + 1) + '. ' + info.paths[0].instructions[j].text + "<br/>";
                 console.log(info.paths[0].instructions[j].text);
             }
         }
@@ -834,6 +834,7 @@ function reittiKavellen(paikka, crd) {
     })
     console.log(latlngs);
 }
+//funktio hakee reitti ohjeet pyörällä
 function reittiPyoralla(paikka, crd) {
     reittiOhjeistus.className='visible';
     pyoraTulostus.className='hidden';
@@ -851,7 +852,7 @@ function reittiPyoralla(paikka, crd) {
             }
             //for looppi joka tulostaa reitin tiedot sivulle
             for (let j = 0; j < info.paths[0].instructions.length; j++) {
-                ohjeet.innerHTML += info.paths[0].instructions[j].text + "<br/><br/>";
+                ohjeet.innerHTML += (j + 1) + '. ' + info.paths[0].instructions[j].text + "<br/>";
                 console.log(info.paths[0].instructions[j].text);
             }
         }
@@ -863,7 +864,7 @@ function reittiPyoralla(paikka, crd) {
     })
     console.log(latlngs);
 }
-
+//funktio hakee reittiohjeet autolla
 function reittiAutolla(paikka, crd) {
     reittiOhjeistus.className='visible';
     pyoraTulostus.className='hidden';
@@ -881,7 +882,7 @@ function reittiAutolla(paikka, crd) {
             }
             //for looppi joka tulostaa reitin tiedot sivulle
             for (let j = 0; j < info.paths[0].instructions.length; j++) {
-                ohjeet.innerHTML += info.paths[0].instructions[j].text + "<br/><br/>";
+                ohjeet.innerHTML += (j + 1) + '. ' + info.paths[0].instructions[j].text + "<br/>";
                 console.log(info.paths[0].instructions[j].text);
             }
         }
