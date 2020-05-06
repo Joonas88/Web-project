@@ -450,7 +450,6 @@ function liityntaPysakointi(crd, teksti, tila, kulkuneuvo, maksullisuus) { //Tul
             if (maksullisuus === 'CUSTOM') {
                 L.marker([crd.latitude, crd.longitude], {icon: pyoraParkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + maksullinen).on('click', function () {
                     valifunktio(crd);
-                    reittiOhjeistus.className='hidden';
                     if (polyline===null){
                         reittiHaku.className='visible';
                     }
@@ -458,7 +457,6 @@ function liityntaPysakointi(crd, teksti, tila, kulkuneuvo, maksullisuus) { //Tul
             } else if (maksullisuus === 'FREE_12H') {
                 L.marker([crd.latitude, crd.longitude], {icon: pyoraParkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + ilmainen12).on('click', function () {
                     valifunktio(crd);
-                    reittiOhjeistus.className='hidden';
                     if (polyline===null){
                         reittiHaku.className='visible';
                     }
@@ -466,7 +464,6 @@ function liityntaPysakointi(crd, teksti, tila, kulkuneuvo, maksullisuus) { //Tul
             } else {
                 L.marker([crd.latitude, crd.longitude], {icon: pyoraParkkiIkoni}).addTo(map).bindPopup(teksti + '<br>' + ilmainen).on('click', function () {
                     valifunktio(crd);
-                    reittiOhjeistus.className='hidden';
                     if (polyline===null){
                         reittiHaku.className='visible';
                     }
@@ -476,7 +473,6 @@ function liityntaPysakointi(crd, teksti, tila, kulkuneuvo, maksullisuus) { //Tul
             if (maksullisuus === 'CUSTOM') {
                 L.marker([crd.latitude, crd.longitude], {icon: parkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + maksullinen).on('click', function () {
                     valifunktio(crd);
-                    reittiOhjeistus.className='hidden';
                     if (polyline===null){
                         reittiHaku.className='visible';
                     }
@@ -484,7 +480,6 @@ function liityntaPysakointi(crd, teksti, tila, kulkuneuvo, maksullisuus) { //Tul
             } else if (maksullisuus === 'FREE_12H'){
                 L.marker([crd.latitude, crd.longitude], {icon: parkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + ilmainen12).on('click', function () {
                     valifunktio(crd);
-                    reittiOhjeistus.className='hidden';
                     if (polyline===null){
                         reittiHaku.className='visible';
                     }
@@ -492,7 +487,6 @@ function liityntaPysakointi(crd, teksti, tila, kulkuneuvo, maksullisuus) { //Tul
             } else {
                 L.marker([crd.latitude, crd.longitude], {icon: parkkiIkoni}).addTo(map).bindPopup(teksti + '<br>' + ilmainen).on('click', function () {
                     valifunktio(crd);
-                    reittiOhjeistus.className='hidden';
                     if (polyline===null){
                         reittiHaku.className='visible';
                     }

@@ -79,6 +79,7 @@ nav a:hover {
     flex-direction: column;
     border:10px solid #00b9e4;
     border-radius: 5px;
+    height: 500px;
 }
 
 #map {
@@ -90,7 +91,7 @@ nav a:hover {
 
 #tietojentulostus{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 /*Radiobutton muotoilu*/
@@ -156,11 +157,6 @@ nav a:hover {
     background: white;
 }
 
-#tietojentulostus{
-    padding: 0 0 0 50px;
-}
-
-
 /* Pysäkki asettelua alkaen tästä*/
 table {
     width:500px;
@@ -194,7 +190,6 @@ td{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin: 15px;
 }
 
 #vyohykeKuva{
@@ -209,11 +204,13 @@ td{
 }
 
 #pysakkicontainer{
-    width: 500px;
+    width: 450px;
     border:10px solid #00b9e4;
     border-radius: 5px;
     background: #007ac9;
     color: white;
+    margin-bottom: 5px;
+    margin-right: 10px;
 }
 
 #pysakkiNimi{
@@ -274,20 +271,28 @@ a{
     border-radius: 5px;
     background: #007ac9;
     color: white;
+    margin-right: 10px;
 }
 
-#matka{
+#pyoraHakuhtml{
+    width: 400px;
+    border:10px solid #00b9e4;
+    border-radius: 5px;
+    background: #007ac9;
+    color: white;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+#nimi, #stationid, #bikes, #spaces, #allow, #ohjeet, #matka, #hakuContainer, #reittihakuvalikko{
     padding: 5px;
     margin-left: 10px;
 }
-
-#ohjeet{
-    padding: 5px;
-    margin-left: 10px;
+.container{
+    margin-top: 10px;
 }
 
-@media only screen and (max-width: 500px) {
-    header, main{
+@media only screen and (max-width: 700px) {
+    header, main, body{
         width: 100%;
     }
 }
