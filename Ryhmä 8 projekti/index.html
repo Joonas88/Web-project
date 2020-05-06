@@ -11,24 +11,38 @@
 <header>
     <h1>Karttajuttuja!</h1>
 </header>
+<div id="mapContainer">
+    <div id="map"></div>
 
-<p>Valitse näytettävä tieto:</p>
-<select name="valinta" id="valinta"/></label>
-<option value="empty" id="empty"></option>
-<option value="pysäkit" id="pysakit">Julkiset kulkuvälineet</option>
-<option value="parkit" id="parkkipaikat">Liityntäpysäköinti</option>
-<option value="pyörat" id="pyorahaku">Kaupunkipyörät</option>
-</select>
-<button id="hakunappi">HAE!</button>
+    <div id="hakuContainer">
+        <div id="tiedohaku">
+            <p>Valitse näytettävä tieto:</p>
+            <select name="valinta" id="valinta">
+                <option value="empty" id="empty"></option>
+                <option value="pysäkit" id="pysakit">Julkiset kulkuvälineet</option>
+                <option value="parkit" id="parkkipaikat">Liityntäpysäköinti</option>
+                <option value="pyörat" id="pyorahaku">Kaupunkipyörät</option>
+            </select>
+            <button id="hakunappi">HAE!</button>
+        </div>
 
-<div id="reittihakuvalikko" class="hidden">
-    <input class="checks" type="radio" name="radio" value="r1" id="radio1"/>Jalan
-    <input class="checks" type="radio" name="radio" value="r2" id="radio2"/>Pyörällä
-    <input class="checks" type="radio" name="radio" value="r3" id="radio3"/>Autolla
-    <button id="haeReitti">Hae reitti</button>
+        <div id="reittihakuvalikko" class="hidden">
+            <label class="container">Jalan
+                <input type="radio" checked="checked" name="radio" id="radio1">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Pyörällä
+                <input type="radio" name="radio" id="radio2">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Autolla
+                <input type="radio" name="radio" id="radio3">
+                <span class="checkmark"></span>
+            </label>
+            <button id="haeReitti">Hae reitti</button>
+        </div>
+    </div>
 </div>
-
-<div id="map"></div>
 
 <main class="markkerihaku">
     <div id="julkisetMarker" class="hidden">
