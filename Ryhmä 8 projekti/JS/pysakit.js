@@ -73,7 +73,7 @@ const options = { //Kartan asetuksia joilla määritetään sijainnin tarkuuden 
     timeout: 5000,
     maximumAge: 0
 };
-
+//Helsingin rautatieasmean koordinaatit:lat:60.171040,lon: 24.941957
 function success(pos) { //Funktiolla ajetaan käyttäjän sijainti kartalle
     paikka = pos.coords;
 
@@ -363,7 +363,7 @@ function bussiMarker(crd, teksti, pysakkiId) { //Tätä funktiota kutsutaan pys�
 
 function sporaMarker(crd, teksti, pysakkiId) { //Funktio tulostaa raitiovaunuikonin kartalle, muuten sama toiminnallisuus kuin edellisessä
 
-    L.marker([crd.latitude, crd.longitude], {icon: ratikkaIkoni}).addTo(map).bindPopup(teksti).openPopup().on('click', function () {
+    L.marker([crd.latitude, crd.longitude], {icon: ratikkaIkoni}).addTo(map).bindPopup(teksti).on('click', function () {
         clear();
         valifunktio(crd);
         kulkuneuvot(pysakkiId);
@@ -379,7 +379,7 @@ function sporaMarker(crd, teksti, pysakkiId) { //Funktio tulostaa raitiovaunuiko
 
 function junaMarker(crd, teksti, pysakkiId) { //Tulostaa junaikonin, muuten sama kuin kaksi edellistä, mutta Helsingin rautatienaseman kohdalla haetaan aikataulutiedot toisesta rajapinnasta
 
-    L.marker([crd.latitude, crd.longitude], {icon: junaIkoni}).addTo(map).bindPopup(teksti).openPopup().on('click', function () {
+    L.marker([crd.latitude, crd.longitude], {icon: junaIkoni}).addTo(map).bindPopup(teksti).on('click', function () {
         clear();
         valifunktio(crd);
         if (pysakkiId==='HSL:1020552'||pysakkiId==='HSL:1020502'||pysakkiId==='HSL:1020551'||pysakkiId==='HSL:1020501'||pysakkiId==='HSL:1020553'||pysakkiId==='HSL:1020503'){ //Määritetään tietyt junaikonit kutsumaan eri funktiota
@@ -406,7 +406,7 @@ function junaMarker(crd, teksti, pysakkiId) { //Tulostaa junaikonin, muuten sama
 
 function metroMarker(crd, teksti, pysakkiId) { //tulostaa metroikonin, muuten sama kuin kolme edellistä
 
-    L.marker([crd.latitude, crd.longitude], {icon: metroIkoni}).addTo(map).bindPopup(teksti).openPopup().on('click', function () {
+    L.marker([crd.latitude, crd.longitude], {icon: metroIkoni}).addTo(map).bindPopup(teksti).on('click', function () {
         clear();
         valifunktio(crd);
         kulkuneuvot(pysakkiId);
@@ -451,7 +451,7 @@ function liityntaPysakointi(crd, teksti, tila, kulkuneuvo, maksullisuus) { //Tul
         if (kulkuneuvo === 'BICYCLE') {
 
             if (maksullisuus === 'CUSTOM') {
-                L.marker([crd.latitude, crd.longitude], {icon: pyoraParkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + maksullinen).openPopup().on('click', function () {
+                L.marker([crd.latitude, crd.longitude], {icon: pyoraParkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + maksullinen).on('click', function () {
                     valifunktio(crd);
                     reittiOhjeistus.className='hidden';
                     if (polyline===null){
@@ -459,7 +459,7 @@ function liityntaPysakointi(crd, teksti, tila, kulkuneuvo, maksullisuus) { //Tul
                     }
                 });
             } else if (maksullisuus === 'FREE_12H') {
-                L.marker([crd.latitude, crd.longitude], {icon: pyoraParkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + ilmainen12).openPopup().on('click', function () {
+                L.marker([crd.latitude, crd.longitude], {icon: pyoraParkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + ilmainen12).on('click', function () {
                     valifunktio(crd);
                     reittiOhjeistus.className='hidden';
                     if (polyline===null){
@@ -467,7 +467,7 @@ function liityntaPysakointi(crd, teksti, tila, kulkuneuvo, maksullisuus) { //Tul
                     }
                 });
             } else {
-                L.marker([crd.latitude, crd.longitude], {icon: pyoraParkkiIkoni}).addTo(map).bindPopup(teksti + '<br>' + ilmainen).openPopup().on('click', function () {
+                L.marker([crd.latitude, crd.longitude], {icon: pyoraParkkiIkoni}).addTo(map).bindPopup(teksti + '<br>' + ilmainen).on('click', function () {
                     valifunktio(crd);
                     reittiOhjeistus.className='hidden';
                     if (polyline===null){
@@ -477,7 +477,7 @@ function liityntaPysakointi(crd, teksti, tila, kulkuneuvo, maksullisuus) { //Tul
             }
         } else {
             if (maksullisuus === 'CUSTOM') {
-                L.marker([crd.latitude, crd.longitude], {icon: parkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + maksullinen).openPopup().on('click', function () {
+                L.marker([crd.latitude, crd.longitude], {icon: parkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + maksullinen).on('click', function () {
                     valifunktio(crd);
                     reittiOhjeistus.className='hidden';
                     if (polyline===null){
@@ -485,7 +485,7 @@ function liityntaPysakointi(crd, teksti, tila, kulkuneuvo, maksullisuus) { //Tul
                     }
                 });
             } else if (maksullisuus === 'FREE_12H'){
-                L.marker([crd.latitude, crd.longitude], {icon: parkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + ilmainen12).openPopup().on('click', function () {
+                L.marker([crd.latitude, crd.longitude], {icon: parkkiIkoni}).addTo(map).bindPopup(teksti + '<br/>' + ilmainen12).on('click', function () {
                     valifunktio(crd);
                     reittiOhjeistus.className='hidden';
                     if (polyline===null){
@@ -493,7 +493,7 @@ function liityntaPysakointi(crd, teksti, tila, kulkuneuvo, maksullisuus) { //Tul
                     }
                 });
             } else {
-                L.marker([crd.latitude, crd.longitude], {icon: parkkiIkoni}).addTo(map).bindPopup(teksti + '<br>' + ilmainen).openPopup().on('click', function () {
+                L.marker([crd.latitude, crd.longitude], {icon: parkkiIkoni}).addTo(map).bindPopup(teksti + '<br>' + ilmainen).on('click', function () {
                     valifunktio(crd);
                     reittiOhjeistus.className='hidden';
                     if (polyline===null){
@@ -805,7 +805,6 @@ function pyoraMarker(crd, teksti, info) {
     L.marker([crd.latitude, crd.longitude], {icon: pyoraIkoni}).
     addTo(map).
     bindPopup(teksti).
-    openPopup().
     on('click', function () {
         clear();
         valifunktio(crd);
