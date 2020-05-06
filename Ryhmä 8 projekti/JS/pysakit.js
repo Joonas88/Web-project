@@ -134,7 +134,6 @@ function clear() { //Funktio tyhjentää HTML-näkymän ennen uudelleenkirjoitus
     bikes.innerHTML='';
     allow.innerHTML='';
     spaces.innerHTML='';
-    ohjeet.innerHTML='';
 }
 
 /**

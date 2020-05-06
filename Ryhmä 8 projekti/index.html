@@ -8,14 +8,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 </head>
 <body onload="startTime()">
-<header>
-    <h1>Karttajuttuja!</h1>
-</header>
+<div id="headernavContainer">
+    <header>
+        <div class="headerContainer"><img id="headerKuva" src="media/banneri_v2.jpg"><div class="centered">Karttajuttuja!</div></div>
+    </header>
+
+    <nav id="navigointi">
+        <ul id="navigointiLista">
+            <li id="etusivu"><a href="index.html">Etusivu</a></li>
+            <li id="video"><a href="video.html">Esittelyvideo</a></li>
+            <li id="tietojameista"><a href="tietoa.html">Tietoja tekijöistä</a></li>
+            <li id="lahteet"><a href="rajapinnat.html">Käytetyt rajapinnat</a></li>
+        </ul>
+    </nav>
+</div>
+
 <div id="mapContainer">
     <div id="map"></div>
 
     <div id="hakuContainer">
-        <div id="tiedohaku">
+        <div id="tiedohaku" class="visible">
             <p>Valitse näytettävä tieto:</p>
             <select name="valinta" id="valinta">
                 <option value="empty" id="empty"></option>
@@ -45,56 +57,58 @@
 </div>
 
 <main class="markkerihaku">
-    <div id="julkisetMarker" class="hidden">
-        <div id="pysakkicontainer">
-            <img id="vyohykeKuva" src="">
-            <div id="pysakkitxt"></div>
-            <div id="pysakkiNimi"></div>
+    <div id="tietojentulostus">
+        <div id="julkisetMarker" class="hidden">
+            <div id="pysakkicontainer">
+                <img id="vyohykeKuva" src="">
+                <div id="pysakkitxt"></div>
+                <div id="pysakkiNimi"></div>
 
-            <div id="pysakkiInfo">
-                <div id="pysakkidata2"></div>
-                <div id="pysakkidata3"></div>
-                <div id="pysakkidata"></div>
+                <div id="pysakkiInfo">
+                    <div id="pysakkidata2"></div>
+                    <div id="pysakkidata3"></div>
+                    <div id="pysakkidata"></div>
+                </div>
             </div>
         </div>
-    </div>
-    <div id="helsinkiRautatieasema" class="hidden">
-        <table>
-            <thead>
-            <tr>
-                <th colspan="4" id="vyöhyke"><img src="media/vyohyke_A.png" height="25" width="160"/></th>
-            </tr>
-            <tr>
-                <th id="kellonaika"></th>
-                <th colspan="3">Helsingin rautatieasema, lähijunat</th>
-            </tr>
-            </thead>
-            <tr>
-                <th>Lähtöaika</th>
-                <th>Juna</th>
-                <th>Määränpää</th>
-                <th>Raide</th>
-            </tr>
-            <tbody>
-            <tr>
-                <td id="aika"></td>
-                <td id="juna"></td>
-                <td id="suunta"></td>
-                <td id="raide"></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    <div id="pyoraHakuhtml" class="hidden">
-         <h3 id="nimi">nimi</h3>
-         <h4 id="stationid">asema</h4>
-         <p id="bikes">pyörä</p>
-         <p id="spaces">paikat</p>
-         <p id="allow">true</p>
-    </div>
-    <div id="reittiohje" class="hidden">
-        <h3 id="matka"></h3>
-        <p id="ohjeet"></p>
+        <div id="helsinkiRautatieasema" class="hidden">
+            <table>
+                <thead>
+                <tr>
+                    <th colspan="4" id="vyöhyke"><img src="media/vyohyke_A.png" height="25" width="160"/></th>
+                </tr>
+                <tr>
+                    <th id="kellonaika"></th>
+                    <th colspan="3">Helsingin rautatieasema, lähijunat</th>
+                </tr>
+                </thead>
+                <tr>
+                    <th>Lähtöaika</th>
+                    <th>Juna</th>
+                    <th>Määränpää</th>
+                    <th>Raide</th>
+                </tr>
+                <tbody>
+                <tr>
+                    <td id="aika"></td>
+                    <td id="juna"></td>
+                    <td id="suunta"></td>
+                    <td id="raide"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="pyoraHakuhtml" class="hidden">
+             <h3 id="nimi">nimi</h3>
+             <h4 id="stationid">asema</h4>
+             <p id="bikes">pyörä</p>
+             <p id="spaces">paikat</p>
+             <p id="allow">true</p>
+        </div>
+        <div id="reittiohje" class="hidden">
+            <h3 id="matka"></h3>
+            <p id="ohjeet"></p>
+        </div>
     </div>
 </main>
 

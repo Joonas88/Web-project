@@ -1,14 +1,239 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" name="Default Changelist" comment="">
+    <list default="true" id="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" name="Default Changelist" comment="Checkbox vaihdettu pudotusvalikkoon, siistitty koodia ja otettu turhia konsolitulostuksia pois, lisätty myös kuvatiedostot vyöhykemerkinnöistä sekä muotoilu.">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/AJAX-harjoitus/ajax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/AJAX-harjoitus/css/ajax.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/AJAX-harjoitus/js/ajaxscript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/AJAX-harjoitus/media/sorry.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/AJAX-harjoitus/salaus/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/AJAX-harjoitus/salaus/.htpasswd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/AJAX-harjoitus/salaus/Uusi tekstiasiakirja.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/AJAX-harjoitus/ÄLÄ käytä, vanhat koodit/ajax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/AJAX-harjoitus/ÄLÄ käytä, vanhat koodit/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus1/.vs/Harjoitus1/v16/.suo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus1/.vs/VSWorkspaceState.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus1/.vs/slnx.sqlite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus1/harjoitus1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus1/js/teht1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus1/js/teht2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus1/js/teht3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus1/js/teht4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus1/js/teht5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus1/js/teht6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus1/js/teht7.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus1/js/teht8.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus1/js/teht9.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus2/Tehtävä1/kuha.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus2/Tehtävä1/teht1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus2/Tehtävä2/potter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus2/Tehtävä2/teht2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus2/Tehtävä3/hemo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus2/Tehtävä3/teht3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus2/Tehtävä4/bussilippu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus2/Tehtävä4/thet4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus2/Tehtävä5/squareroot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus2/Tehtävä5/teht5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus2/Tehtävä6/karkaus.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus2/Tehtävä6/teht6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus3/Teht1/kertoma.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus3/Teht1/teht1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus3/Teht2/neliotoisto.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus3/Teht2/teht2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus3/Teht3/karkauslista.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus3/Teht3/teht3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus3/Teht4/arpak.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus3/Teht4/teht4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus3/Teht5/alkuluku.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus3/Teht5/teht5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus3/Teht6/teht6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus3/Teht6/todarpa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus3/Teht7/bingo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus3/Teht7/teht7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus3/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus4/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus4/teht1/taulukko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus4/teht1/teht1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus4/teht2/osallistujat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus4/teht2/teht2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus4/teht3/koirat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus4/teht3/teht3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus4/teht4/nolla.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus4/teht4/teht4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus4/teht5/samaluku.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus4/teht5/teht5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus4/teht6/mediaani.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus4/teht6/teht6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus4/teht7/teht7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus4/teht7/vote.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus5/Teht1/gallona.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus5/Teht1/teht1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus5/Teht2/gallonat2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus5/Teht2/teht2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus5/Teht3/itseisarvo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus5/Teht3/teht3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus5/Teht4/suurin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus5/Teht4/teht4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus5/Teht5/liitos.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus5/Teht5/teht5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus5/Teht6/teht6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus5/Teht6/vastaluvuksi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus5/Teht7/parilliset.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus5/Teht7/teht7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus5/Teht8/fibonacci.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus5/Teht8/teht8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus5/Teht9/fibonaccinuoli.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus5/Teht9/teht9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus5/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus6 DOM ja BOM/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus6 DOM ja BOM/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus6 DOM ja BOM/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus6 DOM ja BOM/img/pic1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus6 DOM ja BOM/img/pic2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus6 DOM ja BOM/img/pic3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus6 DOM ja BOM/img/pic4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus6 DOM ja BOM/img/pic5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus6 DOM ja BOM/img/pic7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus6 DOM ja BOM/img/pic8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus6 DOM ja BOM/img/pic9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus6 DOM ja BOM/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus6 DOM ja BOM/js/main-b.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus6 DOM ja BOM/js/main-c.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus6 DOM ja BOM/js/main-d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus6 DOM ja BOM/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus6 DOM ja BOM/originalindex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus6 DOM ja BOM/task-b.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus6 DOM ja BOM/task-c.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus6 DOM ja BOM/task-d.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus7 EventHandler/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus7 EventHandler/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus7 EventHandler/aloitussivu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus7 EventHandler/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus7 EventHandler/js/teht1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus7 EventHandler/js/teht2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus7 EventHandler/js/teht3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus7 EventHandler/js/teht3vetovalikko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus7 EventHandler/js/teht3yksikentta.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus7 EventHandler/js/teht4A.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus7 EventHandler/js/teht4B.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus7 EventHandler/teht1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus7 EventHandler/teht2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus7 EventHandler/teht3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus7 EventHandler/teht3vetovalikko.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus7 EventHandler/teht3yksikentta.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus7 EventHandler/teht4A.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScript-Harjoitukset/Harjoitus7 EventHandler/teht4B.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko2/images/alkuperäinen.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko2/images/edit.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko2/images/paljon-pakattu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko2/images/pieni.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko2/images/saturn1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko2/images/taso.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko2/images/taso.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko2/images/taso.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko2/images/taso2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko2/images/taso2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko2/images/taso2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko2/images/tiedostomuototesti.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko2/media_viikko2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/css/lightbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/css/lightbox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/prev.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/thumb/10thumb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/thumb/1thumb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/thumb/2thumb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/thumb/3thumb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/thumb/4thumb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/thumb/5thumb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/thumb/6thumb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/thumb/7thumb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/thumb/8thumb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/thumb/9thumb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/thumb/whitebalance_600_thumb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/thumb/whitebalance_EDIT_2_600_thumb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/thumb/whitebalance_EDIT_600_thumb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/whitebalance.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/whitebalance_600.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/whitebalance_EDIT.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/whitebalance_EDIT_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/whitebalance_EDIT_2_600.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/images/whitebalance_EDIT_600.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/js/lightbox-plus-jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/js/lightbox-plus-jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/js/lightbox-plus-jquery.min.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/js/lightbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/js/lightbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/js/lightbox.min.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/mobile-app-design-task/edit-this.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/mobile-app-design-task/image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/mobile-app-design-task/make-it-look-mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/mobile-app-design-task/my-app-view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko3/viikko3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko4/2thumb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko4/edit.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko4/media.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko4/original.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko4/viikko4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/rajapinnat.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/tietoa.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/video.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/Kopio/Bikeicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/Kopio/Bikepark1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/Kopio/Bussicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/Kopio/Junaicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/Kopio/Metroicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/Kopio/Omasijainti.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/Kopio/Parkkicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/Kopio/Screenshot_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/Kopio/Screenshot_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/Kopio/Screenshot_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/Kopio/Screenshot_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/Kopio/Sporaicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/Kopio/Sporticon2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/Kopio/pysakit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/first.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/media/Bikeicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/media/Bikepark1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/media/Bussicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/media/Junaicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/media/Metroicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/media/Omasijainti.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/media/Parkkicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/media/Sporaicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/media/Sporticon2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/pysäköinti/pysakointi.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/pysäköinti/pysakointi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/testing2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/css/first.css" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/css/first.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../WebstormProjects\exportToHTML" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -32,7 +257,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sahkoauto-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Testing/Kopio" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
@@ -72,8 +297,8 @@
       <workItem from="1588417376020" duration="26512000" />
       <workItem from="1588531204753" duration="11575000" />
       <workItem from="1588588127637" duration="20556000" />
-      <workItem from="1588663689831" duration="15917000" />
-      <workItem from="1588751510879" duration="4357000" />
+      <workItem from="1588663689831" duration="22480000" />
+      <workItem from="1588759563342" duration="19082000" />
     </task>
     <task id="LOCAL−00001" summary="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja">
       <created>1587758156552</created>
@@ -165,29 +390,29 @@
       <option name="presentableId" value="LOCAL−00015" />
       <updated>1588709535874</updated>
     </task>
-    <task id="LOCAL−00016" summary="Lisätty tietoja reititykseen">
-      <created>1588752425819</created>
+    <task id="LOCAL−00016" summary="Skriptien yhdistys editynyt, pysakit ja pyora yhdistetty.">
+      <created>1588711033777</created>
       <option name="number" value="LOCAL−00016" />
       <option name="presentableId" value="LOCAL−00016" />
-      <updated>1588752425819</updated>
+      <updated>1588711033777</updated>
     </task>
-    <task id="LOCAL−00017" summary="hienosäätöä reititykseen">
-      <created>1588754487649</created>
+    <task id="LOCAL−00017" summary="Skriptit on saatu yhteen tiedostoon ja toimimaan ongelmitta, joten sovelluksen toimivuus on lähes valmis.">
+      <created>1588717781409</created>
       <option name="number" value="LOCAL−00017" />
       <option name="presentableId" value="LOCAL−00017" />
-      <updated>1588754487649</updated>
+      <updated>1588717781409</updated>
     </task>
-    <task id="LOCAL−00018" summary="markereista poistettu automaattinen avaaminen">
-      <created>1588780106320</created>
+    <task id="LOCAL−00018" summary="Muotoilu prosessissa">
+      <created>1588774432924</created>
       <option name="number" value="LOCAL−00018" />
       <option name="presentableId" value="LOCAL−00018" />
-      <updated>1588780106320</updated>
+      <updated>1588774432924</updated>
     </task>
     <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja" />
@@ -205,10 +430,10 @@
     <MESSAGE value="Helsingin rautatieaseman aikataulujen nouto toisesta rajapinnasta upotettu nykyiseen skriptiin. Asettelua muutettu hieman, se on kovin kesken vielä." />
     <MESSAGE value="Poistettu turhia muuttujia, sekä vaihdettu sijainti omasta sijainnista hakevaksi." />
     <MESSAGE value="Skriptien yhdistäminen aloitettu" />
-    <MESSAGE value="Lisätty tietoja reititykseen" />
-    <MESSAGE value="hienosäätöä reititykseen" />
-    <MESSAGE value="markereista poistettu automaattinen avaaminen" />
-    <option name="LAST_COMMIT_MESSAGE" value="markereista poistettu automaattinen avaaminen" />
+    <MESSAGE value="Skriptien yhdistys editynyt, pysakit ja pyora yhdistetty." />
+    <MESSAGE value="Skriptit on saatu yhteen tiedostoon ja toimimaan ongelmitta, joten sovelluksen toimivuus on lähes valmis." />
+    <MESSAGE value="Muotoilu prosessissa" />
+    <option name="LAST_COMMIT_MESSAGE" value="Muotoilu prosessissa" />
   </component>
   <component name="WindowStateProjectService">
     <state x="628" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588588272025">
@@ -219,20 +444,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588345392206" />
-    <state x="590" y="88" key="CommitChangelistDialog2" timestamp="1588782623850">
+    <state x="204" y="215" key="CommitChangelistDialog2" timestamp="1588774430854">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="590" y="88" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588782623850" />
-    <state x="204" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588709533720" />
-    <state x="755" y="291" key="FileChooserDialogImpl" timestamp="1588755399700">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="204" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588774430854" />
+    <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1587730290866">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="755" y="291" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588755399700" />
     <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112/-1920.358.1920.1040@0.0.2048.1112" timestamp="1587730290866" />
-    <state x="2104" y="86" key="MergeDialog" timestamp="1588707406088">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="184" y="86" key="MergeDialog" timestamp="1588782680371">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="184" y="86" key="MergeDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588674364975" />
+    <state x="184" y="86" key="MergeDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588782680371" />
     <state x="2104" y="86" key="MergeDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1588707406088" />
     <state x="662" y="236" key="MultipleFileMergeDialog" timestamp="1588243268881">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -242,28 +465,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="672" y="184" key="SettingsEditor/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588417454710" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588780108205">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588774436066">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588780108205" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588709538060" />
-    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588780115839">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588774436066" />
+    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588782673064">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588780115839" />
-    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588674348476" />
+    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588782673064" />
     <state x="2648" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1588707383507" />
-    <state x="1912" y="-8" width="976" height="1056" key="dock-window-1" timestamp="1588665904087">
+    <state x="1914" y="1" width="976" height="1056" key="dock-window-1" timestamp="1588782673471">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="1912" y="-8" width="976" height="1056" key="dock-window-1/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588665904087" />
+    <state x="1914" y="1" width="976" height="1056" key="dock-window-1/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588782673471" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1588194745736">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588194745736" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588350833560">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588778407464">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588350833560" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588778407464" />
   </component>
 </project>

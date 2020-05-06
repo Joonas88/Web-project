@@ -4,15 +4,64 @@ body{
     color: #f4deea;
 }
 
+#headernavContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+    border:10px solid #00b9e4;
+    border-radius: 5px;
+}
+
+#headerKuva{
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.headerContainer {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 75px;
+    color: #f092cd;
+    background: rgba(0, 122, 201, 0.75);
+    border:2px solid #00b9e4;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style-type:none;
+    padding:0;
+    margin-left: 50px;
+}
+nav li {
+    display:inline;
+    float:left;
+    padding: 10px;
+}
+
+
 #mapContainer {
-    padding: 50px;
+    padding: 0 50px 0 50px;
     display: flex;
     flex-direction: row;
 }
 
 #hakuContainer{
+    width:20%;
     margin-left: 10px;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     border:10px solid #00b9e4;
@@ -21,12 +70,16 @@ body{
 
 #map {
     width: 80%;
-    height: 400px;
+    height: 500px;
     border:10px solid #00b9e4;
     border-radius: 5px;
-
-
 }
+
+#tietojentulostus{
+    display: flex;
+    flex-direction: row;
+}
+
 /*Radiobutton muotoilu*/
 .container {
     display: block;
@@ -90,6 +143,10 @@ body{
     background: white;
 }
 
+#tietojentulostus{
+    padding: 0 0 0 50px;
+}
+
 
 /* Pysäkki asettelua alkaen tästä*/
 table {
@@ -140,10 +197,10 @@ td{
 
 #pysakkicontainer{
     width: 500px;
-    padding: 10px;
+    border:10px solid #00b9e4;
+    border-radius: 5px;
     background: #007ac9;
     color: white;
-    border-radius: 5px;
 }
 
 #pysakkiNimi{
@@ -197,3 +254,27 @@ a{
     text-decoration: none;
 }
 /*Pysäkkiasettelu päättyy*/
+
+#reittiohje{
+    width: auto;
+    border:10px solid #00b9e4;
+    border-radius: 5px;
+    background: #007ac9;
+    color: white;
+}
+
+#matka{
+    padding: 5px;
+    margin-left: 10px;
+}
+
+#ohjeet{
+    padding: 5px;
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+    header, main{
+        width: 100%;
+    }
+}
