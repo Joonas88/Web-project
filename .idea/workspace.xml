@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" name="Default Changelist" comment="Checkbox vaihdettu pudotusvalikkoon, siistitty koodia ja otettu turhia konsolitulostuksia pois, lisätty myös kuvatiedostot vyöhykemerkinnöistä sekä muotoilu.">
+      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/css/first.css" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/css/first.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/rajapinnat.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/rajapinnat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/tietoa.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/tietoa.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/video.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/video.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../WebstormProjects\exportToHTML" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -35,7 +36,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sahkoauto-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Testing/Kopio" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
@@ -47,10 +48,9 @@
       <recent name="D:\WebstormProjects\Ryhmä 8 projekti\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Timo\WebstormProjects\Web-project\Ryhmä 8 projekti\Media" />
+      <recent name="D:\WebstormProjects\Testing" />
       <recent name="D:\WebstormProjects\Testing\Kopio" />
       <recent name="D:\WebstormProjects\Testing\pysäköinti" />
-      <recent name="D:\WebstormProjects\Testing" />
       <recent name="D:\WebstormProjects\Ryhmä 8 projekti\Alkuperäiset koodit" />
     </key>
   </component>
@@ -76,8 +76,8 @@
       <workItem from="1588417376020" duration="26512000" />
       <workItem from="1588531204753" duration="11575000" />
       <workItem from="1588588127637" duration="20556000" />
-      <workItem from="1588663689831" duration="15917000" />
-      <workItem from="1588751510879" duration="4357000" />
+      <workItem from="1588663689831" duration="22480000" />
+      <workItem from="1588759563342" duration="24644000" />
     </task>
     <task id="LOCAL−00001" summary="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja">
       <created>1587758156552</created>
@@ -169,29 +169,41 @@
       <option name="presentableId" value="LOCAL−00015" />
       <updated>1588709535874</updated>
     </task>
-    <task id="LOCAL−00016" summary="Lisätty tietoja reititykseen">
-      <created>1588752425819</created>
+    <task id="LOCAL−00016" summary="Skriptien yhdistys editynyt, pysakit ja pyora yhdistetty.">
+      <created>1588711033777</created>
       <option name="number" value="LOCAL−00016" />
       <option name="presentableId" value="LOCAL−00016" />
-      <updated>1588752425819</updated>
+      <updated>1588711033777</updated>
     </task>
-    <task id="LOCAL−00017" summary="hienosäätöä reititykseen">
-      <created>1588754487649</created>
+    <task id="LOCAL−00017" summary="Skriptit on saatu yhteen tiedostoon ja toimimaan ongelmitta, joten sovelluksen toimivuus on lähes valmis.">
+      <created>1588717781409</created>
       <option name="number" value="LOCAL−00017" />
       <option name="presentableId" value="LOCAL−00017" />
-      <updated>1588754487649</updated>
+      <updated>1588717781409</updated>
     </task>
-    <task id="LOCAL−00018" summary="markereista poistettu automaattinen avaaminen">
-      <created>1588780106320</created>
+    <task id="LOCAL−00018" summary="Muotoilu prosessissa">
+      <created>1588774432924</created>
       <option name="number" value="LOCAL−00018" />
       <option name="presentableId" value="LOCAL−00018" />
-      <updated>1588780106320</updated>
+      <updated>1588774432924</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL−00019" summary="Muotoilua tehty ja luotu uudet sivustot sekä linkitys niille.">
+      <created>1588788437724</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1588788437724</updated>
+    </task>
+    <task id="LOCAL−00020" summary="Linkkien muotoilua päivitetty, lisätty paluunappi/päivitysnappi kartan vierelle.">
+      <created>1588790760042</created>
+      <option name="number" value="LOCAL−00020" />
+      <option name="presentableId" value="LOCAL−00020" />
+      <updated>1588790760042</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja" />
@@ -209,10 +221,12 @@
     <MESSAGE value="Helsingin rautatieaseman aikataulujen nouto toisesta rajapinnasta upotettu nykyiseen skriptiin. Asettelua muutettu hieman, se on kovin kesken vielä." />
     <MESSAGE value="Poistettu turhia muuttujia, sekä vaihdettu sijainti omasta sijainnista hakevaksi." />
     <MESSAGE value="Skriptien yhdistäminen aloitettu" />
-    <MESSAGE value="Lisätty tietoja reititykseen" />
-    <MESSAGE value="hienosäätöä reititykseen" />
-    <MESSAGE value="markereista poistettu automaattinen avaaminen" />
-    <option name="LAST_COMMIT_MESSAGE" value="markereista poistettu automaattinen avaaminen" />
+    <MESSAGE value="Skriptien yhdistys editynyt, pysakit ja pyora yhdistetty." />
+    <MESSAGE value="Skriptit on saatu yhteen tiedostoon ja toimimaan ongelmitta, joten sovelluksen toimivuus on lähes valmis." />
+    <MESSAGE value="Muotoilu prosessissa" />
+    <MESSAGE value="Muotoilua tehty ja luotu uudet sivustot sekä linkitys niille." />
+    <MESSAGE value="Linkkien muotoilua päivitetty, lisätty paluunappi/päivitysnappi kartan vierelle." />
+    <option name="LAST_COMMIT_MESSAGE" value="Linkkien muotoilua päivitetty, lisätty paluunappi/päivitysnappi kartan vierelle." />
   </component>
   <component name="WindowStateProjectService">
     <state x="628" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588588272025">
@@ -223,51 +237,47 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588345392206" />
-    <state x="590" y="88" key="CommitChangelistDialog2" timestamp="1588789563154">
+    <state x="204" y="215" key="CommitChangelistDialog2" timestamp="1588790758029">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="590" y="88" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588789563154" />
-    <state x="204" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588709533720" />
-    <state x="755" y="291" key="FileChooserDialogImpl" timestamp="1588755399700">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="204" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588790758029" />
+    <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1587730290866">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="755" y="291" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588755399700" />
     <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112/-1920.358.1920.1040@0.0.2048.1112" timestamp="1587730290866" />
-    <state x="2104" y="86" key="MergeDialog" timestamp="1588707406088">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="184" y="86" key="MergeDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588674364975" />
-    <state x="2104" y="86" key="MergeDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1588707406088" />
-    <state x="662" y="236" key="MultipleFileMergeDialog" timestamp="1588243268881">
+    <state x="184" y="86" key="MergeDialog" timestamp="1588782680371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="662" y="236" key="MultipleFileMergeDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588243268881" />
+    <state x="184" y="86" key="MergeDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588782680371" />
+    <state x="2104" y="86" key="MergeDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1588707406088" />
+    <state x="662" y="236" width="488" height="264" key="MultipleFileMergeDialog" timestamp="1588790826555">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="662" y="236" width="488" height="264" key="MultipleFileMergeDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588790826555" />
     <state x="672" y="184" key="SettingsEditor" timestamp="1588417454710">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="672" y="184" key="SettingsEditor/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588417454710" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588789564916">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588790818056">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588789564916" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588709538060" />
-    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588780115839">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588790818056" />
+    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588782673064">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588780115839" />
-    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588674348476" />
+    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588782673064" />
     <state x="2648" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1588707383507" />
-    <state x="1912" y="-8" width="976" height="1056" key="dock-window-1" timestamp="1588665904087">
+    <state x="1914" y="1" width="976" height="1056" key="dock-window-1" timestamp="1588782673471">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="1912" y="-8" width="976" height="1056" key="dock-window-1/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588665904087" />
+    <state x="1914" y="1" width="976" height="1056" key="dock-window-1/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588782673471" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1588194745736">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588194745736" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588350833560">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588788543321">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588350833560" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588788543321" />
   </component>
 </project>
