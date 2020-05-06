@@ -40,18 +40,31 @@ header{
     border:2px solid #00b9e4;
     border-radius: 5px;
 }
+nav li {
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 nav ul {
     list-style-type:none;
-    padding:0;
-    margin-left: 50px;
-}
-nav li {
-    display:inline;
-    float:left;
-    padding: 10px;
+    display:flex;
+    flex-direction: row;
 }
 
+nav a:link, nav a:visited {
+    background-color:white;
+    color: #f092cd;
+    display:block;
+    width:160px;
+    text-align:center;
+    padding:10px 0;
+    border:2px solid #00b9e4;
+    border-radius: 5px;
+}
+nav a:hover {
+    background-color: #00b9e4;
+}
 
 #mapContainer {
     padding: 0 50px 0 50px;

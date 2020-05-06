@@ -29,6 +29,8 @@ const allow = document.getElementById('allow');
 const spaces = document.getElementById('spaces');
 
 //Reittihaun muuttujat
+const tiedonkeruu = document.getElementById('tiedohaku');
+const paluuNappi = document.getElementById('paluuNappi');
 const reittiOhjeistus = document.getElementById('reittiohje');
 const reittiHaku = document.getElementById('reittihakuvalikko');
 const haeReitti = document.getElementById('haeReitti');
@@ -91,6 +93,7 @@ function error(err) { //Virheen sattuessa ajetaan tämä funktio ja tulostetaan 
 navigator.geolocation.getCurrentPosition(success, error, options); //Tämä ominaisuus hakee käyttäjän sijainnin
 
 hakunappi.addEventListener('click', napinpano);
+paluuNappi.addEventListener('click', pyyhiMarker);
 
 function napinpano() { //Funktiolla määritellään mitä tapahtuu hakunappia painettaessa
 
@@ -105,7 +108,7 @@ function napinpano() { //Funktiolla määritellään mitä tapahtuu hakunappia p
             hae(paikka);
             break;
         default:
-            pyyhiMarker();
+            alert('Valitse jokin näytettävä arvo.')
             break;
     }
     junaTiedot1(); //Helsingin rauatieasemaa koskevien aikataulutietojen haku suoritetaan aina nappia painaessa
@@ -900,6 +903,8 @@ function reittiAutolla(paikka, crd) {
 //funktio piirtää reitin kartalle taulukosta otettujen koordinaattien perusteella
 function reitti(latlngs) {
     reittiHaku.className='hidden';
+    tiedonkeruu.className='hidden';
+    paluuNappi.className='visible';
     console.log(latlngs);
     polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
     map.fitBounds(polyline.getBounds());

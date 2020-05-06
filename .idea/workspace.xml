@@ -189,9 +189,6 @@
       <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko4/media.mp4" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko4/original.mp3" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Media-harjoitukset/viikko4/viikko4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/rajapinnat.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/tietoa.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/video.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Testing/Kopio/Bikeicon.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Testing/Kopio/Bikepark1.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Testing/Kopio/Bussicon.png" afterDir="false" />
@@ -222,7 +219,6 @@
       <change afterPath="$PROJECT_DIR$/Testing/test.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Testing/testing2.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Testing/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/css/first.css" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/css/first.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" afterDir="false" />
@@ -298,7 +294,7 @@
       <workItem from="1588531204753" duration="11575000" />
       <workItem from="1588588127637" duration="20556000" />
       <workItem from="1588663689831" duration="22480000" />
-      <workItem from="1588759563342" duration="19082000" />
+      <workItem from="1588759563342" duration="21410000" />
     </task>
     <task id="LOCAL−00001" summary="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja">
       <created>1587758156552</created>
@@ -408,7 +404,13 @@
       <option name="presentableId" value="LOCAL−00018" />
       <updated>1588774432924</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL−00019" summary="Muotoilua tehty ja luotu uudet sivustot sekä linkitys niille.">
+      <created>1588788437724</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1588788437724</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,7 +435,8 @@
     <MESSAGE value="Skriptien yhdistys editynyt, pysakit ja pyora yhdistetty." />
     <MESSAGE value="Skriptit on saatu yhteen tiedostoon ja toimimaan ongelmitta, joten sovelluksen toimivuus on lähes valmis." />
     <MESSAGE value="Muotoilu prosessissa" />
-    <option name="LAST_COMMIT_MESSAGE" value="Muotoilu prosessissa" />
+    <MESSAGE value="Muotoilua tehty ja luotu uudet sivustot sekä linkitys niille." />
+    <option name="LAST_COMMIT_MESSAGE" value="Muotoilua tehty ja luotu uudet sivustot sekä linkitys niille." />
   </component>
   <component name="WindowStateProjectService">
     <state x="628" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588588272025">
@@ -444,10 +447,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588345392206" />
-    <state x="204" y="215" key="CommitChangelistDialog2" timestamp="1588774430854">
+    <state x="204" y="215" key="CommitChangelistDialog2" timestamp="1588788435704">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="204" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588774430854" />
+    <state x="204" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588788435704" />
     <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1587730290866">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -465,10 +468,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="672" y="184" key="SettingsEditor/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588417454710" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588774436066">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588788439849">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588774436066" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588788439849" />
     <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588782673064">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -482,9 +485,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588194745736" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588778407464">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588788543321">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588778407464" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588788543321" />
   </component>
 </project>
