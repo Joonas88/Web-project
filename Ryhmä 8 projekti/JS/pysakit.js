@@ -38,15 +38,35 @@ let polyline=null;
 let latlngs = [];
 
 
-const map = L.map('map'); //Luodaan kartalle muuttuja ja määritetään sille lähde karttapohjan hakuun
 
-L.tileLayer('https://cdn.digitransit.fi/map/v1/{id}/{z}/{x}/{y}.png', {
+let tumma = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+        maxZoom: 20,
+        attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    }),
+    osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }),
+    ilma = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+    }),
+    hsl = L.tileLayer('https://cdn.digitransit.fi/map/v1/{id}/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
         '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
     maxZoom: 19,
     tileSize: 512,
     zoomOffset: -1,
-    id: 'hsl-map'}).addTo(map);
+    id: 'hsl-map'});
+
+const map = L.map('map', {
+    layers: [tumma, osm, ilma, hsl]
+});
+let baseMaps = {
+    "Tumma": tumma,
+    "OSM": osm,
+    "Ilma": ilma,
+    "HSL": hsl
+};
+L.control.layers(baseMaps).addTo(map);
 
 const options = { //Kartan asetuksia joilla määritetään sijainnin tarkuuden tarkkuus
     enableHighAccuracy: true,
