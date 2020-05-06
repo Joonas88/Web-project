@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/rajapinnat.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/rajapinnat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/tietoa.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/tietoa.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/video.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/video.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +31,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sahkoauto-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ajax" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
@@ -187,7 +183,19 @@
       <option name="presentableId" value="LOCAL−00018" />
       <updated>1588780106320</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL−00019" summary="footer lisätty + muihin html tiedostoihin lisätty header ja footer">
+      <created>1588789563578</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1588789563578</updated>
+    </task>
+    <task id="LOCAL−00020" summary="banneri">
+      <created>1588789589036</created>
+      <option name="number" value="LOCAL−00020" />
+      <option name="presentableId" value="LOCAL−00020" />
+      <updated>1588789589036</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +220,9 @@
     <MESSAGE value="Lisätty tietoja reititykseen" />
     <MESSAGE value="hienosäätöä reititykseen" />
     <MESSAGE value="markereista poistettu automaattinen avaaminen" />
-    <option name="LAST_COMMIT_MESSAGE" value="markereista poistettu automaattinen avaaminen" />
+    <MESSAGE value="footer lisätty + muihin html tiedostoihin lisätty header ja footer" />
+    <MESSAGE value="banneri" />
+    <option name="LAST_COMMIT_MESSAGE" value="banneri" />
   </component>
   <component name="WindowStateProjectService">
     <state x="628" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588588272025">
@@ -223,15 +233,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588345392206" />
-    <state x="590" y="88" key="CommitChangelistDialog2" timestamp="1588789563154">
+    <state x="590" y="88" key="CommitChangelistDialog2" timestamp="1588789588615">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="590" y="88" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588789563154" />
+    <state x="590" y="88" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588789588615" />
     <state x="204" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588709533720" />
-    <state x="755" y="291" key="FileChooserDialogImpl" timestamp="1588755399700">
+    <state x="755" y="291" key="FileChooserDialogImpl" timestamp="1588790282474">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="755" y="291" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588755399700" />
+    <state x="755" y="291" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588790282474" />
     <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112/-1920.358.1920.1040@0.0.2048.1112" timestamp="1587730290866" />
     <state x="2104" y="86" key="MergeDialog" timestamp="1588707406088">
       <screen x="1920" y="0" width="1920" height="1040" />
@@ -246,10 +256,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="672" y="184" key="SettingsEditor/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588417454710" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588789564916">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588789590314">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588789564916" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588789590314" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588709538060" />
     <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588780115839">
       <screen x="0" y="0" width="1920" height="1040" />
