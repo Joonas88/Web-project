@@ -13,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -177,7 +177,13 @@
       <option name="presentableId" value="LOCAL−00017" />
       <updated>1588754487649</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL−00018" summary="markereista poistettu automaattinen avaaminen">
+      <created>1588780106320</created>
+      <option name="number" value="LOCAL−00018" />
+      <option name="presentableId" value="LOCAL−00018" />
+      <updated>1588780106320</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +207,8 @@
     <MESSAGE value="Skriptien yhdistäminen aloitettu" />
     <MESSAGE value="Lisätty tietoja reititykseen" />
     <MESSAGE value="hienosäätöä reititykseen" />
-    <option name="LAST_COMMIT_MESSAGE" value="hienosäätöä reititykseen" />
+    <MESSAGE value="markereista poistettu automaattinen avaaminen" />
+    <option name="LAST_COMMIT_MESSAGE" value="markereista poistettu automaattinen avaaminen" />
   </component>
   <component name="WindowStateProjectService">
     <state x="628" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588588272025">
@@ -212,10 +219,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588345392206" />
-    <state x="204" y="215" key="CommitChangelistDialog2" timestamp="1588754487158">
+    <state x="590" y="88" key="CommitChangelistDialog2" timestamp="1588782623850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="204" y="215" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588754487158" />
+    <state x="590" y="88" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588782623850" />
     <state x="204" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588709533720" />
     <state x="755" y="291" key="FileChooserDialogImpl" timestamp="1588755399700">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -235,15 +242,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="672" y="184" key="SettingsEditor/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588417454710" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588754490457">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588780108205">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588754490457" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588780108205" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588709538060" />
-    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588761616692">
+    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588780115839">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588761616692" />
+    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588780115839" />
     <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588674348476" />
     <state x="2648" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1588707383507" />
     <state x="1912" y="-8" width="976" height="1056" key="dock-window-1" timestamp="1588665904087">

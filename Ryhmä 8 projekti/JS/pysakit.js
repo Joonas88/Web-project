@@ -357,7 +357,6 @@ function bussiMarker(crd, teksti, pysakkiId) { //Tätä funktiota kutsutaan pys�
         nakyva.className='visible';
         taulukko.className='hidden';
         pyoraTulostus.className='hidden';
-        reittiOhjeistus.className='hidden';
     });
 }
 
@@ -373,7 +372,6 @@ function sporaMarker(crd, teksti, pysakkiId) { //Funktio tulostaa raitiovaunuiko
         nakyva.className='visible';
         taulukko.className='hidden';
         pyoraTulostus.className='hidden';
-        reittiOhjeistus.className='hidden';
     });
 }
 
@@ -390,7 +388,6 @@ function junaMarker(crd, teksti, pysakkiId) { //Tulostaa junaikonin, muuten sama
             taulukko.className='visible';
             nakyva.className='hidden';
             pyoraTulostus.className='hidden';
-            reittiOhjeistus.className='hidden';
         } else {
             if (polyline===null){
                 reittiHaku.className='visible';
@@ -398,7 +395,6 @@ function junaMarker(crd, teksti, pysakkiId) { //Tulostaa junaikonin, muuten sama
             nakyva.className='visible';
             taulukko.className='hidden';
             pyoraTulostus.className='hidden';
-            reittiOhjeistus.className='hidden';
             kulkuneuvot(pysakkiId);
         }
     });
@@ -416,7 +412,6 @@ function metroMarker(crd, teksti, pysakkiId) { //tulostaa metroikonin, muuten sa
         nakyva.className='visible';
         taulukko.className='hidden';
         pyoraTulostus.className='hidden';
-        reittiOhjeistus.className='hidden';
     });
 }
 
@@ -814,7 +809,6 @@ function pyoraMarker(crd, teksti, info) {
         pyoraTulostus.className='visible';
         taulukko.className='hidden';
         nakyva.className='hidden';
-        reittiOhjeistus.className='hidden';
         nimi.innerHTML = info.name;
         stationid.innerHTML = 'Aseman ID: ' + info.stationId;
         bikes.innerHTML = 'Vapaita pyöriä: ' + info.bikesAvailable;
@@ -826,9 +820,6 @@ function pyoraMarker(crd, teksti, info) {
 //funktio hakee reitti ohjeet kävellen
 function reittiKavellen(paikka, crd) {
     reittiOhjeistus.className='visible';
-    pyoraTulostus.className='hidden';
-    taulukko.className='hidden';
-    nakyva.className='hidden';
     fetch(`https://graphhopper.com/api/1/route?point=${paikka.latitude},${paikka.longitude}&point=${crd.latitude},${crd.longitude}&vehicle=foot&locale=fi&calc_points=true&points_encoded=false&key=212b25b6-ac73-4540-89bf-61b6cf489997`).
     then(function(vastaus) {
         return vastaus.json();
@@ -856,9 +847,6 @@ function reittiKavellen(paikka, crd) {
 //funktio hakee reitti ohjeet pyörällä
 function reittiPyoralla(paikka, crd) {
     reittiOhjeistus.className='visible';
-    pyoraTulostus.className='hidden';
-    taulukko.className='hidden';
-    nakyva.className='hidden';
     fetch(`https://graphhopper.com/api/1/route?point=${paikka.latitude},${paikka.longitude}&point=${crd.latitude},${crd.longitude}&vehicle=bike&locale=fi&calc_points=true&points_encoded=false&key=212b25b6-ac73-4540-89bf-61b6cf489997`).
     then(function(vastaus) {
         return vastaus.json();
@@ -886,9 +874,6 @@ function reittiPyoralla(paikka, crd) {
 //funktio hakee reittiohjeet autolla
 function reittiAutolla(paikka, crd) {
     reittiOhjeistus.className='visible';
-    pyoraTulostus.className='hidden';
-    taulukko.className='hidden';
-    nakyva.className='hidden';
     fetch(`https://graphhopper.com/api/1/route?point=${paikka.latitude},${paikka.longitude}&point=${crd.latitude},${crd.longitude}&vehicle=car&locale=fi&calc_points=true&points_encoded=false&key=212b25b6-ac73-4540-89bf-61b6cf489997`).
     then(function(vastaus) {
         return vastaus.json();
