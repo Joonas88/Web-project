@@ -40,18 +40,31 @@ header{
     border:2px solid #00b9e4;
     border-radius: 5px;
 }
+nav li {
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 nav ul {
     list-style-type:none;
-    padding:0;
-    margin-left: 50px;
-}
-nav li {
-    display:inline;
-    float:left;
-    padding: 10px;
+    display:flex;
+    flex-direction: row;
 }
 
+nav a:link, nav a:visited {
+    background-color:white;
+    color: #f092cd;
+    display:block;
+    width:160px;
+    text-align:center;
+    padding:10px 0;
+    border:2px solid #00b9e4;
+    border-radius: 5px;
+}
+nav a:hover {
+    background-color: #00b9e4;
+}
 
 #mapContainer {
     padding: 0 50px 0 50px;
@@ -66,6 +79,7 @@ nav li {
     flex-direction: column;
     border:10px solid #00b9e4;
     border-radius: 5px;
+    height: 500px;
 }
 
 #map {
@@ -77,7 +91,7 @@ nav li {
 
 #tietojentulostus{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 /*Radiobutton muotoilu*/
@@ -143,11 +157,6 @@ nav li {
     background: white;
 }
 
-#tietojentulostus{
-    padding: 0 0 0 50px;
-}
-
-
 /* Pysäkki asettelua alkaen tästä*/
 table {
     width:500px;
@@ -181,7 +190,6 @@ td{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin: 15px;
 }
 
 #vyohykeKuva{
@@ -196,11 +204,13 @@ td{
 }
 
 #pysakkicontainer{
-    width: 500px;
+    width: 450px;
     border:10px solid #00b9e4;
     border-radius: 5px;
     background: #007ac9;
     color: white;
+    margin-bottom: 5px;
+    margin-right: 10px;
 }
 
 #pysakkiNimi{
@@ -261,20 +271,28 @@ a{
     border-radius: 5px;
     background: #007ac9;
     color: white;
+    margin-right: 10px;
 }
 
-#matka{
+#pyoraHakuhtml{
+    width: 400px;
+    border:10px solid #00b9e4;
+    border-radius: 5px;
+    background: #007ac9;
+    color: white;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+#nimi, #stationid, #bikes, #spaces, #allow, #ohjeet, #matka, #hakuContainer, #reittihakuvalikko{
     padding: 5px;
     margin-left: 10px;
 }
-
-#ohjeet{
-    padding: 5px;
-    margin-left: 10px;
+.container{
+    margin-top: 10px;
 }
 
-@media only screen and (max-width: 500px) {
-    header, main{
+@media only screen and (max-width: 700px) {
+    header, main, body{
         width: 100%;
     }
 }

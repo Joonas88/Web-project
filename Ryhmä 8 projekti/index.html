@@ -10,7 +10,7 @@
 <body onload="startTime()">
 <div id="headernavContainer">
     <header>
-        <div class="headerContainer"><img id="headerKuva" src="media/banneri_v2.jpg"><div class="centered">Karttajuttuja!</div></div>
+        <div class="headerContainer"><img id="headerKuva" src="../Testing/banneri_v2.jpg"><div class="centered">Karttajuttuja!</div></div>
     </header>
 
     <nav id="navigointi">
@@ -24,39 +24,6 @@
 </div>
 
 <div id="mapContainer">
-    <div id="map"></div>
-
-    <div id="hakuContainer">
-        <div id="tiedohaku" class="visible">
-            <p>Valitse näytettävä tieto:</p>
-            <select name="valinta" id="valinta">
-                <option value="empty" id="empty"></option>
-                <option value="pysäkit" id="pysakit">Julkiset kulkuvälineet</option>
-                <option value="parkit" id="parkkipaikat">Liityntäpysäköinti</option>
-                <option value="pyörat" id="pyorahaku">Kaupunkipyörät</option>
-            </select>
-            <button id="hakunappi">HAE!</button>
-        </div>
-
-        <div id="reittihakuvalikko" class="hidden">
-            <label class="container">Jalan
-                <input type="radio" checked="checked" name="radio" id="radio1">
-                <span class="checkmark"></span>
-            </label>
-            <label class="container">Pyörällä
-                <input type="radio" name="radio" id="radio2">
-                <span class="checkmark"></span>
-            </label>
-            <label class="container">Autolla
-                <input type="radio" name="radio" id="radio3">
-                <span class="checkmark"></span>
-            </label>
-            <button id="haeReitti">Hae reitti</button>
-        </div>
-    </div>
-</div>
-
-<main class="markkerihaku">
     <div id="tietojentulostus">
         <div id="julkisetMarker" class="hidden">
             <div id="pysakkicontainer">
@@ -99,17 +66,55 @@
             </table>
         </div>
         <div id="pyoraHakuhtml" class="hidden">
-             <h3 id="nimi">nimi</h3>
-             <h4 id="stationid">asema</h4>
-             <p id="bikes">pyörä</p>
-             <p id="spaces">paikat</p>
-             <p id="allow">true</p>
+            <h3 id="nimi">nimi</h3>
+            <h4 id="stationid">asema</h4>
+            <p id="bikes">pyörä</p>
+            <p id="spaces">paikat</p>
+            <p id="allow">true</p>
         </div>
         <div id="reittiohje" class="hidden">
             <h3 id="matka"></h3>
             <p id="ohjeet"></p>
         </div>
+
     </div>
+    <div id="map"></div>
+
+    <div id="hakuContainer">
+        <div id="paluuNappi" class="hidden">
+            <button id="resetButton">Paluu</button>
+        </div>
+        <div id="tiedohaku" class="visible">
+            <p>Valitse näytettävä tieto:</p>
+            <select name="valinta" id="valinta">
+                <option value="empty" id="empty"></option>
+                <option value="pysäkit" id="pysakit">Julkiset kulkuvälineet</option>
+                <option value="parkit" id="parkkipaikat">Liityntäpysäköinti</option>
+                <option value="pyörat" id="pyorahaku">Kaupunkipyörät</option>
+            </select>
+            <button id="hakunappi">HAE!</button>
+        </div>
+
+        <div id="reittihakuvalikko" class="hidden">
+            <label class="container">Jalan
+                <input type="radio" checked="checked" name="radio" id="radio1">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Pyörällä
+                <input type="radio" name="radio" id="radio2">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Autolla
+                <input type="radio" name="radio" id="radio3">
+                <span class="checkmark"></span>
+            </label>
+            <button id="haeReitti">Hae reitti</button>
+        </div>
+    </div>
+</div>
+
+<main class="markkerihaku">
+
     <footer>
         <div>
             <nav>
