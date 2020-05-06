@@ -822,12 +822,12 @@ function reittiKavellen(paikka, crd) {
             }
             //for looppi joka tulostaa reitin tiedot sivulle
             for (let j = 0; j < info.paths[0].instructions.length; j++) {
-                ohjeet.innerHTML += (j + 1) + '. ' + info.paths[0].instructions[j].text + "<br/>";
+                ohjeet.innerHTML += (j + 1) + '. ' + info.paths[0].instructions[j].text + ' ' + Math.round(info.paths[0].instructions[j].distance) + 'm' + "<br/>";
                 console.log(info.paths[0].instructions[j].text);
             }
         }
         reitti(latlngs);
-        matka.innerHTML = 'Reitin pituus on ' + ((Math.round(info.paths[0].distance) / 1000).toFixed(2)) + ' Km' +"<br/>";
+        matka.innerHTML = 'Reitin pituus on ' + ((Math.round(info.paths[0].distance) / 1000).toFixed(2)) + ' Km' + "<br/>";
     }).
     catch(function(error) {
         console.log(error);
@@ -852,12 +852,12 @@ function reittiPyoralla(paikka, crd) {
             }
             //for looppi joka tulostaa reitin tiedot sivulle
             for (let j = 0; j < info.paths[0].instructions.length; j++) {
-                ohjeet.innerHTML += (j + 1) + '. ' + info.paths[0].instructions[j].text + "<br/>";
+                ohjeet.innerHTML += (j + 1) + '. ' + info.paths[0].instructions[j].text + ' ' + Math.round(info.paths[0].instructions[j].distance) + 'm' + "<br/>";
                 console.log(info.paths[0].instructions[j].text);
             }
         }
         reitti(latlngs);
-        matka.innerHTML = 'Reitin pituus on ' + ((Math.round(info.paths[0].distance) / 1000).toFixed(2)) + ' Km' +"<br/>";
+        matka.innerHTML = 'Reitin pituus on ' + ((Math.round(info.paths[0].distance) / 1000).toFixed(2)) + ' Km' + "<br/>";
     }).
     catch(function(error) {
         console.log(error);
@@ -882,12 +882,12 @@ function reittiAutolla(paikka, crd) {
             }
             //for looppi joka tulostaa reitin tiedot sivulle
             for (let j = 0; j < info.paths[0].instructions.length; j++) {
-                ohjeet.innerHTML += (j + 1) + '. ' + info.paths[0].instructions[j].text + "<br/>";
+                ohjeet.innerHTML += (j + 1) + '. ' + info.paths[0].instructions[j].text + ' ' + Math.round(info.paths[0].instructions[j].distance) + 'm' + "<br/>";
                 console.log(info.paths[0].instructions[j].text);
             }
         }
         reitti(latlngs);
-        matka.innerHTML = 'Reitin pituus on ' + ((Math.round(info.paths[0].distance) / 1000).toFixed(2)) + ' Km' +"<br/>";
+        matka.innerHTML = 'Reitin pituus on ' + ((Math.round(info.paths[0].distance) / 1000).toFixed(2)) + ' Km' + "<br/>";
     }).
     catch(function(error) {
         console.log(error);

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" name="Default Changelist" comment="reititys funktiot kunnossa">
+    <list default="true" id="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +72,7 @@
       <workItem from="1588531204753" duration="11575000" />
       <workItem from="1588588127637" duration="20556000" />
       <workItem from="1588663689831" duration="15917000" />
-      <workItem from="1588751510879" duration="888000" />
+      <workItem from="1588751510879" duration="2375000" />
     </task>
     <task id="LOCAL−00001" summary="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja">
       <created>1587758156552</created>
@@ -165,7 +164,13 @@
       <option name="presentableId" value="LOCAL−00015" />
       <updated>1588709535874</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL−00016" summary="Lisätty tietoja reititykseen">
+      <created>1588752425819</created>
+      <option name="number" value="LOCAL−00016" />
+      <option name="presentableId" value="LOCAL−00016" />
+      <updated>1588752425819</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +192,8 @@
     <MESSAGE value="Helsingin rautatieaseman aikataulujen nouto toisesta rajapinnasta upotettu nykyiseen skriptiin. Asettelua muutettu hieman, se on kovin kesken vielä." />
     <MESSAGE value="Poistettu turhia muuttujia, sekä vaihdettu sijainti omasta sijainnista hakevaksi." />
     <MESSAGE value="Skriptien yhdistäminen aloitettu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Skriptien yhdistäminen aloitettu" />
+    <MESSAGE value="Lisätty tietoja reititykseen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lisätty tietoja reititykseen" />
   </component>
   <component name="WindowStateProjectService">
     <state x="628" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588588272025">
@@ -198,9 +204,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588345392206" />
-    <state x="204" y="215" key="CommitChangelistDialog2" timestamp="1588709533720">
+    <state x="204" y="215" key="CommitChangelistDialog2" timestamp="1588752425266">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="204" y="215" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588752425266" />
     <state x="204" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588709533720" />
     <state x="755" y="291" key="FileChooserDialogImpl" timestamp="1588751525057">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -220,9 +227,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="672" y="184" key="SettingsEditor/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588417454710" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588709538060">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588752427434">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588752427434" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588709538060" />
     <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588752070053">
       <screen x="0" y="0" width="1920" height="1040" />
