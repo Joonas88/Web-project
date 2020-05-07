@@ -209,7 +209,13 @@
       <option name="presentableId" value="LOCAL−00022" />
       <updated>1588797659224</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL−00023" summary="kommentointia korjattu">
+      <created>1588859626315</created>
+      <option name="number" value="LOCAL−00023" />
+      <option name="presentableId" value="LOCAL−00023" />
+      <updated>1588859626315</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +244,8 @@
     <MESSAGE value="Linkkien muotoilua päivitetty, lisätty paluunappi/päivitysnappi kartan vierelle." />
     <MESSAGE value="Muotoilu lähes valmis, värimaailma katsomatta. Skripti valmis, muutamaa conlsole.logia lukuunottamatta. Hiomaton timantti." />
     <MESSAGE value="lisätty graphhopper api" />
-    <option name="LAST_COMMIT_MESSAGE" value="lisätty graphhopper api" />
+    <MESSAGE value="kommentointia korjattu" />
+    <option name="LAST_COMMIT_MESSAGE" value="kommentointia korjattu" />
   </component>
   <component name="WindowStateProjectService">
     <state x="628" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588588272025">
@@ -249,10 +256,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588345392206" />
-    <state x="204" y="215" key="CommitChangelistDialog2" timestamp="1588852090443">
+    <state x="204" y="215" key="CommitChangelistDialog2" timestamp="1588859625758">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="204" y="215" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588852090443" />
+    <state x="204" y="215" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588859625758" />
     <state x="204" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588794031120" />
     <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1587730290866">
       <screen x="0" y="0" width="2048" height="1112" />
@@ -272,10 +279,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="672" y="184" key="SettingsEditor/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588417454710" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588852097666">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588859627818">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588852097666" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588859627818" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588794034992" />
     <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588857709426">
       <screen x="0" y="0" width="1920" height="1040" />
