@@ -77,8 +77,8 @@ const options = { //Kartan asetuksia joilla määritetään sijainnin tarkuuden 
 };
 //Helsingin rautatieasmean koordinaatit:lat:60.171040,lon: 24.941957
 function success(pos) { //Funktiolla ajetaan käyttäjän sijainti kartalle
-    paikka = pos.coords;
-    //paikka={latitude:'60.171040', longitude:'24.941957'};
+    //paikka = pos.coords;
+    paikka={latitude:'60.168917', longitude:'24.947473'};
 
     //console.log(`Latitude: ${paikka.latitude}`);
     //console.log(`Longitude: ${paikka.longitude}`);

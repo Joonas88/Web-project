@@ -26,9 +26,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/css/first.css" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/css/first.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/rajapinnat.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/rajapinnat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/tietoa.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/tietoa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/video.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/video.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +107,7 @@
       <workItem from="1588759563342" duration="28648000" />
       <workItem from="1588798654865" duration="599000" />
       <workItem from="1588840942101" duration="13895000" />
-      <workItem from="1588857607895" duration="5528000" />
+      <workItem from="1588857607895" duration="8703000" />
     </task>
     <task id="LOCAL−00001" summary="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja">
       <created>1587758156552</created>
@@ -280,7 +283,13 @@
       <option name="presentableId" value="LOCAL−00029" />
       <updated>1588857687425</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL−00030" summary="Pientä hiomista">
+      <created>1588870226837</created>
+      <option name="number" value="LOCAL−00030" />
+      <option name="presentableId" value="LOCAL−00030" />
+      <updated>1588870226837</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +325,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Tulostettavaan pysäkkaikatuluihin lisätty reittiä kilkkaamalla aukeava uusi ikkuna joka hakee suoraan HSL:n sivuilta linjan tiedot." />
     <MESSAGE value="Karttaan lisätty Joonatanin tekemät markerit ja lisätty koodiin funktioita kaikille omille markereille, eli junat, bussit, metrot ja ratikat on omilla ikoneilla." />
     <MESSAGE value="Poistettu turhia koodirivejä" />
     <MESSAGE value="Lisätty reaaliaikainen kello pysäkkihaun yhteyteen. Lisätty CSS-muotoilua pysäkkiaikataulutulostukselle sekä koodia kommentoitu urakalla" />
@@ -341,7 +349,8 @@
     <MESSAGE value="Kuva" />
     <MESSAGE value="Videoupotus unohtui" />
     <MESSAGE value="Uutta puskua" />
-    <option name="LAST_COMMIT_MESSAGE" value="Uutta puskua" />
+    <MESSAGE value="Pientä hiomista" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pientä hiomista" />
   </component>
   <component name="WindowStateProjectService">
     <state x="628" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588854444897">
@@ -352,10 +361,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588345392206" />
-    <state x="428" y="12" key="CommitChangelistDialog2" timestamp="1588857686463">
+    <state x="428" y="12" key="CommitChangelistDialog2" timestamp="1588870225767">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="428" y="12" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588857686463" />
+    <state x="428" y="12" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588870225767" />
     <state x="184" y="86" key="DiffContextDialog" timestamp="1588856771465">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -365,10 +374,10 @@
     </state>
     <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112/-1920.358.1920.1040@0.0.2048.1112" timestamp="1587730290866" />
     <state x="755" y="291" key="FileChooserDialogImpl/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588855383755" />
-    <state x="184" y="86" key="MergeDialog" timestamp="1588854152759">
+    <state x="184" y="86" key="MergeDialog" timestamp="1588870152149">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="184" y="86" key="MergeDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588854152759" />
+    <state x="184" y="86" key="MergeDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588870152149" />
     <state x="2104" y="86" key="MergeDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1588707406088" />
     <state x="662" y="236" width="488" height="264" key="MultipleFileMergeDialog" timestamp="1588790826555">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -386,19 +395,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="808" y="434" key="VCS.ChangelistChooser/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588857186312" />
-    <state x="651" y="230" key="Vcs.Push.Dialog.v2" timestamp="1588857690358">
+    <state x="651" y="230" key="Vcs.Push.Dialog.v2" timestamp="1588870228981">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="651" y="230" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588857690358" />
-    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588854145112">
+    <state x="651" y="230" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588870228981" />
+    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588870205895">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588854145112" />
+    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588870205895" />
     <state x="2648" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1588707383507" />
-    <state x="1914" y="1" width="976" height="1056" key="dock-window-1" timestamp="1588861038480">
+    <state x="1914" y="1" width="976" height="1056" key="dock-window-1" timestamp="1588875197367">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="1914" y="1" width="976" height="1056" key="dock-window-1/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588861038480" />
+    <state x="1914" y="1" width="976" height="1056" key="dock-window-1/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588875197367" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1588194745736">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

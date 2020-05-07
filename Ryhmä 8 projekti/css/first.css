@@ -356,6 +356,21 @@ a{
     margin-right: auto;
 }
 
+#tekijoidenKuvat{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+figure{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tietoja {
+text-align: center;
+}
+
 @media only screen and (max-width: 750px) {
     header, main, body{
         width: 100%;
