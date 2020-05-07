@@ -79,8 +79,8 @@ const options = { //Kartan asetuksia joilla määritetään sijainnin tarkuuden 
 function success(pos) { //Funktiolla ajetaan käyttäjän sijainti kartalle
     paikka = pos.coords;
 
-    console.log(`Latitude: ${paikka.latitude}`);
-    console.log(`Longitude: ${paikka.longitude}`);
+    //console.log(`Latitude: ${paikka.latitude}`);
+    //console.log(`Longitude: ${paikka.longitude}`);
 
     map.setView([paikka.latitude, paikka.longitude], 13);
     minaOlenTassa(paikka,'Minä olen tässä!');
@@ -115,7 +115,7 @@ function napinpano() { //Funktiolla määritellään mitä tapahtuu hakunappia p
 }
 
 function pyyhiMarker(){ //Funktio päivittää sivuston
-    console.log('Päivitetään sivu');
+    //console.log('Päivitetään sivu');
     location.reload(paikka);
 }
 
@@ -192,15 +192,15 @@ const pyoraParkkiIkoni = L.icon({
     popupAnchor: [5,-30]
 });
 
-//Helsingin rautatieasmean koordinaatit:
+//Helsingin rautatieasmean koordinaatit:lat:60.171040,lon: 24.941957
 //Tikkurila Heurekan koordinaatit:lat:60.287520,lon: 25.040841
 //Pasia koordinaatit:lat:60.198008,lon:24.933722
-// kartan toiminnallisuuden testaamista varten lat:${crd.latitude},lon: ${crd.longitude}
+// kartan toiminnallisuuden testaamista varten
 
 function pysakit (crd) { //Funktiolla haetaan API:sta dataa, tässä tapauksessa pysäkkien sijaintitietoja
     const pysakkiKysely = { //Annetaan hakuun parametrit, mitä tietoja rajapinnasta haetaan, käytetään omaa sijaintia sekä 500m sädettä tuloksien rajaamiseen
         query: `{
-    stopsByRadius(lat:60.171040,lon: 24.941957,radius:1000) { 
+    stopsByRadius(lat:${crd.latitude},lon: ${crd.longitude},radius:1000) { 
       edges {
         node {
           stop { 
@@ -255,7 +255,7 @@ function pysakit (crd) { //Funktiolla haetaan API:sta dataa, tässä tapauksessa
 }
 
 function kulkuneuvot (pysakkiId) { //Funktiolla haetaan API:sta dataa, tässä tapauksessa edellä haettujen pysäkkien kautta kulkevia linjoja, käyttäen pysäkkiId parametriä joka on määritetty toisessa funktiossa
-    console.log(pysakkiId);
+    //console.log(pysakkiId);
     const  kulkuneuvot = {
         query: `{
   stop(id: "${pysakkiId}") {
@@ -356,6 +356,7 @@ function bussiMarker(crd, teksti, pysakkiId) { //Tätä funktiota kutsutaan pys�
         if (polyline===null){
             reittiHaku.className='visible';
         }
+        nakyva.id='bussiTausta';
         nakyva.className='visible';
         taulukko.className='hidden';
         pyoraTulostus.className='hidden';
@@ -371,6 +372,7 @@ function sporaMarker(crd, teksti, pysakkiId) { //Funktio tulostaa raitiovaunuiko
         if (polyline===null){
             reittiHaku.className='visible';
         }
+        nakyva.id='sporaTausta';
         nakyva.className='visible';
         taulukko.className='hidden';
         pyoraTulostus.className='hidden';
@@ -394,6 +396,7 @@ function junaMarker(crd, teksti, pysakkiId) { //Tulostaa junaikonin, muuten sama
             if (polyline===null){
                 reittiHaku.className='visible';
             }
+            nakyva.id='junaTausta';
             nakyva.className='visible';
             taulukko.className='hidden';
             pyoraTulostus.className='hidden';
@@ -411,6 +414,7 @@ function metroMarker(crd, teksti, pysakkiId) { //tulostaa metroikonin, muuten sa
         if (polyline===null){
             reittiHaku.className='visible';
         }
+        nakyva.id='metroTausta';
         nakyva.className='visible';
         taulukko.className='hidden';
         pyoraTulostus.className='hidden';
@@ -655,8 +659,8 @@ function junaAsematiedot(zoneID,asemaNimi, junaTietoLista) {//Funktiolla haetaan
         }
         for (let i=0;i<junaAsematiedot.length;i++){ //Iteroidaan uusi rajapinta
             if (junaAsematiedot[i].stationName===asemaNimi){ //Vertailuoperaattorilla katsotaan oikea asematunnus, että saadaan oikean aseman aikataulu tulostettua.
-                console.log(junaAsematiedot[i].stationName);
-                console.log(junaAsematiedot[i].stationUICCode);
+                //console.log(junaAsematiedot[i].stationName);
+                //console.log(junaAsematiedot[i].stationUICCode);
                 asemaTunnus=junaAsematiedot[i].stationUICCode;
             }
         }
@@ -768,7 +772,7 @@ allowDropoff
     then(function(response){
         return response.json()
     }).then(function(bikeInfo){
-        console.log(bikeInfo)
+        //console.log(bikeInfo)
         for(let i = 0; i<bikeInfo.data.bikeRentalStations.length; i++) {
             const sijainti = {
                 latitude: bikeInfo.data.bikeRentalStations[i].lat,
@@ -782,7 +786,7 @@ allowDropoff
         <p>Vapaita paikkoja:${bikeInfo.data.bikeRentalStations[i].spacesAvailable}</p>
         <p>Tilaa palauttaa:${bikeInfo.data.bikeRentalStations[i].allowDropoff}</p>
         `;
-            console.log(sijainti);
+            //console.log(sijainti);
             pyoraMarker(sijainti, teksti, bikeInfo.data.bikeRentalStations[i]);
         }
     }).
@@ -821,7 +825,7 @@ function reittiKavellen(paikka, crd) {
         return vastaus.json();
     }).
     then(function(info) {
-        console.log(info);
+        //console.log(info);
         for (let i=0;i<info.paths.length; i++){
             for (let y=0;y<info.paths[i].points.coordinates.length;y++){
                 latlngs.push([info.paths[i].points.coordinates[y][1], info.paths[i].points.coordinates[y][0]]);
@@ -829,7 +833,7 @@ function reittiKavellen(paikka, crd) {
             //for looppi joka tulostaa reitin tiedot sivulle
             for (let j = 0; j < info.paths[0].instructions.length; j++) {
                 ohjeet.innerHTML += (j + 1) + '. ' + info.paths[0].instructions[j].text + ' ' + Math.round(info.paths[0].instructions[j].distance) + 'm' + "<br/>";
-                console.log(info.paths[0].instructions[j].text);
+                //console.log(info.paths[0].instructions[j].text);
             }
         }
         reitti(latlngs);
@@ -838,7 +842,7 @@ function reittiKavellen(paikka, crd) {
     catch(function(error) {
         console.log(error);
     })
-    console.log(latlngs);
+    //console.log(latlngs);
 }
 //funktio hakee reitti ohjeet pyörällä
 function reittiPyoralla(paikka, crd) {
@@ -848,7 +852,7 @@ function reittiPyoralla(paikka, crd) {
         return vastaus.json();
     }).
     then(function(info) {
-        console.log(info);
+        //console.log(info);
         for (let i=0;i<info.paths.length; i++){
             for (let y=0;y<info.paths[i].points.coordinates.length;y++){
                 latlngs.push([info.paths[i].points.coordinates[y][1], info.paths[i].points.coordinates[y][0]]);
@@ -856,7 +860,7 @@ function reittiPyoralla(paikka, crd) {
             //for looppi joka tulostaa reitin tiedot sivulle
             for (let j = 0; j < info.paths[0].instructions.length; j++) {
                 ohjeet.innerHTML += (j + 1) + '. ' + info.paths[0].instructions[j].text + ' ' + Math.round(info.paths[0].instructions[j].distance) + 'm' + "<br/>";
-                console.log(info.paths[0].instructions[j].text);
+                //console.log(info.paths[0].instructions[j].text);
             }
         }
         reitti(latlngs);
@@ -865,7 +869,7 @@ function reittiPyoralla(paikka, crd) {
     catch(function(error) {
         console.log(error);
     })
-    console.log(latlngs);
+    //console.log(latlngs);
 }
 //funktio hakee reittiohjeet autolla
 function reittiAutolla(paikka, crd) {
@@ -875,7 +879,7 @@ function reittiAutolla(paikka, crd) {
         return vastaus.json();
     }).
     then(function(info) {
-        console.log(info);
+        //console.log(info);
         for (let i=0;i<info.paths.length; i++){
             for (let y=0;y<info.paths[i].points.coordinates.length;y++){
                 latlngs.push([info.paths[i].points.coordinates[y][1], info.paths[i].points.coordinates[y][0]]);
@@ -883,7 +887,7 @@ function reittiAutolla(paikka, crd) {
             //for looppi joka tulostaa reitin tiedot sivulle
             for (let j = 0; j < info.paths[0].instructions.length; j++) {
                 ohjeet.innerHTML += (j + 1) + '. ' + info.paths[0].instructions[j].text + ' ' + Math.round(info.paths[0].instructions[j].distance) + 'm' + "<br/>";
-                console.log(info.paths[0].instructions[j].text);
+                //console.log(info.paths[0].instructions[j].text);
             }
         }
         reitti(latlngs);
@@ -892,14 +896,14 @@ function reittiAutolla(paikka, crd) {
     catch(function(error) {
         console.log(error);
     })
-    console.log(latlngs);
+    //console.log(latlngs);
 }
 //funktio piirtää reitin kartalle taulukosta otettujen koordinaattien perusteella
 function reitti(latlngs) {
     reittiHaku.className='hidden';
     tiedonkeruu.className='hidden';
     paluuNappi.className='visible';
-    console.log(latlngs);
+    //console.log(latlngs);
     polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
     map.fitBounds(polyline.getBounds());
 }

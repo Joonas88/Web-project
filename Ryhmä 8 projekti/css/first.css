@@ -98,7 +98,7 @@ nav a:hover {
     flex-direction: column;
     border:10px solid #00b9e4;
     border-radius: 5px;
-    height: 500px;
+    height: 490px;
 }
 
 #map {
@@ -182,7 +182,7 @@ table {
     height:auto;
     border-spacing:0;
     border:1px solid #007ac9;
-    background: #007ac9;
+    background: #8c4799;
     border-radius: 5px;
     color: white;
 }
@@ -222,11 +222,41 @@ td{
     padding: 5px;
 }
 
-#pysakkicontainer{
+#bussiTausta{
     width: 450px;
     border:10px solid #00b9e4;
     border-radius: 5px;
     background: #007ac9;
+    color: white;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+#sporaTausta{
+    width: 450px;
+    border:10px solid #00b9e4;
+    border-radius: 5px;
+    background: #00985f;
+    color: white;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+#junaTausta{
+    width: 450px;
+    border:10px solid #00b9e4;
+    border-radius: 5px;
+    background: #8c4799;
+    color: white;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+#metroTausta{
+    width: 450px;
+    border:10px solid #00b9e4;
+    border-radius: 5px;
+    background: #ff6319;
     color: white;
     margin-bottom: 5px;
     margin-right: 10px;
@@ -299,8 +329,8 @@ a{
     width: 400px;
     border:10px solid #00b9e4;
     border-radius: 5px;
-    background: #007ac9;
-    color: white;
+    background: #fed100;
+    color: #dc0451;
     margin-right: 10px;
     margin-bottom: 5px;
 }
@@ -319,8 +349,17 @@ a{
 }
 
 
-@media only screen and (max-width: 700px) {
+#projektiVideo{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 750px) {
     header, main, body{
         width: 100%;
+        display: flex;
+        flex-direction: column;
     }
 }
