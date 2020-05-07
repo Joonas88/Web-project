@@ -684,7 +684,6 @@ function trainSchedule(zoneID, asemaTunnus, junaTietolista) {//Funktiolla haetaa
     });
 }
 
-
 function junaAikatauluKoostus(junaTietolista, lahtoaika, linjaID, raide) {//Funktiolla koostetaan kahden eri rajapinnan tiedot yhdeksi aikataululistaksi
     let dateStr = null, maaranpaa = null, paivamaara = null;
     dateStr = lahtoaika;

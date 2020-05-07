@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" name="Default Changelist" comment="" />
+    <list default="true" id="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/css/first.css" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/css/first.css" afterDir="false" />
+    </list>
+    <list id="5da31355-a37a-4164-a78e-5e04e8783e27" name="Tulostutsen taustaväriä optimoitu. Video upotettu sivustolle. Värimaailmaa paranneltu" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/css/first.css" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/css/first.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/video.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/video.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +30,49 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/Ryhmä 8 projekti/css/first.css">
+      <ranges>
+        <range start1="100" end1="101" start2="100" end2="101" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="184" end1="185" start2="184" end2="185" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="224" end1="225" start2="224" end2="225" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="234" end1="234" start2="234" end2="264" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="301" end1="303" start2="331" end2="333" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="318" end1="319" start2="348" end2="348" changelist="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" />
+        <range start1="320" end1="320" start2="349" end2="350" changelist="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" />
+        <range start1="321" end1="322" start2="351" end2="359" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="324" end1="324" start2="361" end2="363" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/Ryhmä 8 projekti/JS/pysakit.js">
+      <ranges>
+        <range start1="81" end1="83" start2="81" end2="83" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="117" end1="118" start2="117" end2="118" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="194" end1="195" start2="194" end2="195" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="197" end1="198" start2="197" end2="198" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="202" end1="203" start2="202" end2="203" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="257" end1="258" start2="257" end2="258" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="358" end1="358" start2="358" end2="359" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="373" end1="373" start2="374" end2="375" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="396" end1="396" start2="398" end2="399" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="413" end1="413" start2="416" end2="417" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="657" end1="659" start2="661" end2="663" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="686" end1="687" start2="690" end2="690" changelist="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" />
+        <range start1="771" end1="772" start2="774" end2="775" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="785" end1="786" start2="788" end2="789" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="824" end1="825" start2="827" end2="828" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="832" end1="833" start2="835" end2="836" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="841" end1="842" start2="844" end2="845" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="851" end1="852" start2="854" end2="855" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="859" end1="860" start2="862" end2="863" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="868" end1="869" start2="871" end2="872" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="878" end1="879" start2="881" end2="882" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="886" end1="887" start2="889" end2="890" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="895" end1="896" start2="898" end2="899" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+        <range start1="902" end1="903" start2="905" end2="906" changelist="5da31355-a37a-4164-a78e-5e04e8783e27" />
+      </ranges>
+    </file>
   </component>
   <component name="ProjectId" id="1azDyRAqTQ6oWE7deNK5whICX1T" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -207,14 +259,43 @@
       <option name="presentableId" value="LOCAL−00022" />
       <updated>1588797659224</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL−00023" summary="rajapinnat.html lisätty linkit, kuvat ja selitteet mitä mistäkin rajapinnasta on käytetty. Lisätty asettelu sivulle.">
+      <created>1588847518590</created>
+      <option name="number" value="LOCAL−00023" />
+      <option name="presentableId" value="LOCAL−00023" />
+      <updated>1588847518590</updated>
+    </task>
+    <task id="LOCAL−00024" summary="Asettelua Helsingin rautatieaseman juna-aikataululle paranneltu. Korjattu koodista virhe ettei tulosta peruttuja junavuoroja. Värimaailmaa muuteltu.">
+      <created>1588850748931</created>
+      <option name="number" value="LOCAL−00024" />
+      <option name="presentableId" value="LOCAL−00024" />
+      <updated>1588850748931</updated>
+    </task>
+    <task id="LOCAL−00025" summary="Tulostutsen taustaväriä optimoitu. Video upotettu sivustolle. Värimaailmaa paranneltu">
+      <created>1588854232001</created>
+      <option name="number" value="LOCAL−00025" />
+      <option name="presentableId" value="LOCAL−00025" />
+      <updated>1588854232001</updated>
+    </task>
+    <task id="LOCAL−00026" summary="Tulostutsen taustaväriä optimoitu. Video upotettu sivustolle. Värimaailmaa paranneltu">
+      <created>1588857298149</created>
+      <option name="number" value="LOCAL−00026" />
+      <option name="presentableId" value="LOCAL−00026" />
+      <updated>1588857298149</updated>
+    </task>
+    <task id="LOCAL−00027" summary="Kuva">
+      <created>1588857415283</created>
+      <option name="number" value="LOCAL−00027" />
+      <option name="presentableId" value="LOCAL−00027" />
+      <updated>1588857415283</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja" />
     <MESSAGE value="Pysäkkihaku tehty uudelleen eri menetelmällä, sisältää nyt myös pysäkeiltä kulkevat linjat, sekä määränpäät." />
     <MESSAGE value="Pysäkkien haku toteutettu toisella menetelmällä, näyttää pysäkit 500m säteellä sijainnista, pysäkkiä klikkaamalla tulostaa sivulle pysäkiltä kulkevat linjat ja seuraavat lähtöajat.&#10;Huom! Nyt kaksi .js tiedostoa, muista aina valita &lt;script&gt;-kohdalta se mitä haluat käyttää." />
     <MESSAGE value="Tulostettavaan pysäkkaikatuluihin lisätty reittiä kilkkaamalla aukeava uusi ikkuna joka hakee suoraan HSL:n sivuilta linjan tiedot." />
@@ -235,8 +316,12 @@
     <MESSAGE value="Muotoilua tehty ja luotu uudet sivustot sekä linkitys niille." />
     <MESSAGE value="Linkkien muotoilua päivitetty, lisätty paluunappi/päivitysnappi kartan vierelle." />
     <MESSAGE value="Muotoilu lähes valmis, värimaailma katsomatta. Skripti valmis, muutamaa conlsole.logia lukuunottamatta. Hiomaton timantti." />
-    <MESSAGE value="lisätty graphhopper api" />
-    <option name="LAST_COMMIT_MESSAGE" value="lisätty graphhopper api" />
+    <MESSAGE value="Lisäilty pieniä muotuilua ja vaihdeltu kuvia." />
+    <MESSAGE value="rajapinnat.html lisätty linkit, kuvat ja selitteet mitä mistäkin rajapinnasta on käytetty. Lisätty asettelu sivulle." />
+    <MESSAGE value="Asettelua Helsingin rautatieaseman juna-aikataululle paranneltu. Korjattu koodista virhe ettei tulosta peruttuja junavuoroja. Värimaailmaa muuteltu." />
+    <MESSAGE value="Tulostutsen taustaväriä optimoitu. Video upotettu sivustolle. Värimaailmaa paranneltu" />
+    <MESSAGE value="Kuva" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kuva" />
   </component>
   <component name="WindowStateProjectService">
     <state x="628" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588588272025">
@@ -247,7 +332,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588345392206" />
-    <state x="204" y="215" key="CommitChangelistDialog2" timestamp="1588852090443">
+    <state x="428" y="12" key="CommitChangelistDialog2" timestamp="1588857414462">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="428" y="12" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588857414462" />
+    <state x="184" y="86" key="DiffContextDialog" timestamp="1588856771465">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="204" y="215" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588852090443" />
@@ -269,12 +358,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="672" y="184" key="SettingsEditor/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588417454710" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588852097666">
+    <state x="808" y="434" key="VCS.ChangelistChooser" timestamp="1588857186312">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588852097666" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588794034992" />
-    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588794397942">
+    <state x="808" y="434" key="VCS.ChangelistChooser/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588857186312" />
+    <state x="651" y="230" key="Vcs.Push.Dialog.v2" timestamp="1588857416978">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="651" y="230" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588857416978" />
+    <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588854145112">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588794397942" />
