@@ -201,11 +201,11 @@
       <option name="presentableId" value="LOCAL−00021" />
       <updated>1588794032084</updated>
     </task>
-    <task id="LOCAL−00022" summary="lisätty graphhopper api">
-      <created>1588852090869</created>
+    <task id="LOCAL−00022" summary="Lisäilty pieniä muotuilua ja vaihdeltu kuvia.">
+      <created>1588797659224</created>
       <option name="number" value="LOCAL−00022" />
       <option name="presentableId" value="LOCAL−00022" />
-      <updated>1588852090869</updated>
+      <updated>1588797659224</updated>
     </task>
     <option name="localTasksCounter" value="23" />
     <servers />
@@ -279,10 +279,10 @@
     </state>
     <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588794397942" />
     <state x="2648" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1588707383507" />
-    <state x="1914" y="1" width="976" height="1056" key="dock-window-1" timestamp="1588782673471">
+    <state x="1914" y="1" width="976" height="1056" key="dock-window-1" timestamp="1588851807545">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="1914" y="1" width="976" height="1056" key="dock-window-1/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588782673471" />
+    <state x="1914" y="1" width="976" height="1056" key="dock-window-1/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588851807545" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1588194745736">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
