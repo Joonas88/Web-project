@@ -192,15 +192,15 @@ const pyoraParkkiIkoni = L.icon({
     popupAnchor: [5,-30]
 });
 
-//Helsingin rautatieasmean koordinaatit:lat:60.171040,lon: 24.941957
+//Helsingin rautatieasmean koordinaatit:
 //Tikkurila Heurekan koordinaatit:lat:60.287520,lon: 25.040841
 //Pasia koordinaatit:lat:60.198008,lon:24.933722
-// kartan toiminnallisuuden testaamista varten
+// kartan toiminnallisuuden testaamista varten lat:${crd.latitude},lon: ${crd.longitude}
 
 function pysakit (crd) { //Funktiolla haetaan API:sta dataa, tässä tapauksessa pysäkkien sijaintitietoja
     const pysakkiKysely = { //Annetaan hakuun parametrit, mitä tietoja rajapinnasta haetaan, käytetään omaa sijaintia sekä 500m sädettä tuloksien rajaamiseen
         query: `{
-    stopsByRadius(lat:${crd.latitude},lon: ${crd.longitude},radius:1000) { 
+    stopsByRadius(lat:60.171040,lon: 24.941957,radius:1000) { 
       edges {
         node {
           stop { 
@@ -674,7 +674,7 @@ function trainSchedule(zoneID, asemaTunnus, junaTietolista) {//Funktiolla haetaa
         //console.log(junaTietolista);
         for (let i=0;i<trainSchedule.length;i++){
             for (let u=0;u<trainSchedule[i].timeTableRows.length;u++) { //Iteroidaan API:sta saatu tieto
-                if (trainSchedule[i].timeTableRows[u].stationUICCode===asemaTunnus&&trainSchedule[i].timeTableRows[u].type==='DEPARTURE') {//Vertailuoperaattoreilla haetaan tietyn aseman lähtevät junat
+                if (trainSchedule[i].timeTableRows[u].stationUICCode===asemaTunnus&&trainSchedule[i].timeTableRows[u].type==='DEPARTURE'&&trainSchedule[i].timeTableRows[u].cancelled===false) {//Vertailuoperaattoreilla haetaan tietyn aseman lähtevät junat
                     junaAikatauluKoostus(junaTietolista, trainSchedule[i].timeTableRows[u].scheduledTime, trainSchedule[i].commuterLineID, trainSchedule[i].timeTableRows[0].commercialTrack); //Kutsutaan tiettyjen ehtojen täyttessä seuraavaa funktiota minne lähetetään raaka data juuri iteroidusta rajapinnasta
                 }
             }

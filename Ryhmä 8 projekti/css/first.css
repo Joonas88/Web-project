@@ -53,8 +53,8 @@ nav ul {
 }
 
 nav a:link, nav a:visited {
-    background-color:white;
-    color: #f092cd;
+    background-color: #bee4f8;
+    color: #00985f;
     display:block;
     width:160px;
     text-align:center;
@@ -63,7 +63,7 @@ nav a:link, nav a:visited {
     border-radius: 5px;
 }
 nav a:hover {
-    background-color: #00b9e4;
+    background-color: #f4deea;
 }
 
 #rajapinnat{
@@ -237,9 +237,10 @@ td{
 }
 
 #pysakkitxt{
-
     padding: 5px;
     float: right;
+    border:1px solid #00b9e4;
+    border-radius: 10px;
 }
 
 #pysakkiInfo {
@@ -266,6 +267,7 @@ td{
     padding: 5px;
     text-align: center;
     margin-left: 10px;
+    width: 30px;
 
 }
 
@@ -275,7 +277,7 @@ td{
     flex-direction: column;
     padding: 5px;
     margin-left: 10px;
-
+    width: 290px;
 }
 
 a{
@@ -308,6 +310,12 @@ a{
 }
 .container{
     margin-top: 10px;
+}
+
+#helsinkiRautatieasema{
+    border:10px solid #00b9e4;
+    border-radius: 5px;
+    margin-right: 10px;
 }
 
 @media only screen and (max-width: 700px) {
