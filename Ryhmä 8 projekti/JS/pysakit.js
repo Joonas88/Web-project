@@ -908,7 +908,7 @@ function reitti(latlngs) {
     map.fitBounds(polyline.getBounds());
 }
 
-//mene pitää korvata jollain yllä olevalla funktiolla
+//reittihakuvalinta funktio
 function valifunktio(crd) {
     haeReitti.addEventListener('click', napinpainallus);
     function napinpainallus() {
