@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" name="Default Changelist" comment="Checkbox vaihdettu pudotusvalikkoon, siistitty koodia ja otettu turhia konsolitulostuksia pois, lisätty myös kuvatiedostot vyöhykemerkinnöistä sekä muotoilu.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/rajapinnat.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/rajapinnat.html" afterDir="false" />
-    </list>
+    <list default="true" id="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -204,7 +201,13 @@
       <option name="presentableId" value="LOCAL−00021" />
       <updated>1588794032084</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL−00022" summary="lisätty graphhopper api">
+      <created>1588852090869</created>
+      <option name="number" value="LOCAL−00022" />
+      <option name="presentableId" value="LOCAL−00022" />
+      <updated>1588852090869</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +235,8 @@
     <MESSAGE value="Muotoilua tehty ja luotu uudet sivustot sekä linkitys niille." />
     <MESSAGE value="Linkkien muotoilua päivitetty, lisätty paluunappi/päivitysnappi kartan vierelle." />
     <MESSAGE value="Muotoilu lähes valmis, värimaailma katsomatta. Skripti valmis, muutamaa conlsole.logia lukuunottamatta. Hiomaton timantti." />
-    <option name="LAST_COMMIT_MESSAGE" value="Muotoilu lähes valmis, värimaailma katsomatta. Skripti valmis, muutamaa conlsole.logia lukuunottamatta. Hiomaton timantti." />
+    <MESSAGE value="lisätty graphhopper api" />
+    <option name="LAST_COMMIT_MESSAGE" value="lisätty graphhopper api" />
   </component>
   <component name="WindowStateProjectService">
     <state x="628" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588588272025">
@@ -243,9 +247,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588345392206" />
-    <state x="204" y="215" key="CommitChangelistDialog2" timestamp="1588794031120">
+    <state x="204" y="215" key="CommitChangelistDialog2" timestamp="1588852090443">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="204" y="215" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588852090443" />
     <state x="204" y="215" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588794031120" />
     <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1587730290866">
       <screen x="0" y="0" width="2048" height="1112" />
@@ -264,9 +269,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="672" y="184" key="SettingsEditor/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588417454710" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588794034992">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588852097666">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588852097666" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588794034992" />
     <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588794397942">
       <screen x="0" y="0" width="1920" height="1040" />
