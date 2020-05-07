@@ -66,8 +66,27 @@ nav a:hover {
     background-color: #00b9e4;
 }
 
+#rajapinnat{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#pintaLista{
+    margin-left: auto;
+    margin-right: auto;
+}
+#tmfg{
+
+}
+
+#digitraffic{
+    padding: 50px 0 50px 0;
+}
+
+
 #mapContainer {
-    padding: 0 50px 0 50px;
+    padding: 0 40px 0 40px;
     display: flex;
     flex-direction: row;
 }
