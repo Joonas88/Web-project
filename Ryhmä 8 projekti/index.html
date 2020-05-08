@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ryhmä 8 projekti</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.3/leaflet.css" rel="stylesheet">
     <link href="css/first.css" rel="stylesheet">
@@ -10,27 +11,28 @@
 <body onload="startTime()">
 <div id="headernavContainer">
     <header>
-        <div class="headerContainer"><img id="headerKuva"src="media/banneri_v3.png"/><div class="centered">Katso karttaa!</div></div>
+        <div class="headerContainer">
+            <img id="headerKuva" alt="katsokarttaabanner" src="media/banneri_v3.png"/>
+            <div class="centered">Katso karttaa!</div>
+        </div>
     </header>
-
     <nav id="navigointi">
         <ul id="navigointiLista">
             <li id="etusivu"><a href="index.html">Etusivu</a></li>
             <li id="video"><a href="video.html">Esittelyvideo</a></li>
-            <li id="tietojameista"><a href="tietoa.html">Tietoja tekijöistä</a></li>
+            <li id="tietojameista"><a href="tietoa.html">Tietoja</a></li>
             <li id="lahteet"><a href="rajapinnat.html">Käytetyt rajapinnat</a></li>
         </ul>
     </nav>
 </div>
 <main class="markkerihaku">
-<div id="mapContainer">
+    <div id="mapContainer">
     <div id="tietojentulostus">
         <div id="julkisetMarker" class="hidden">
             <div id="pysakkicontainer">
-                <img id="vyohykeKuva" src="">
+                <img id="vyohykeKuva" alt="vyohykeKuva" src="#">
                 <div id="pysakkitxt"></div>
                 <div id="pysakkiNimi"></div>
-
                 <div id="pysakkiInfo">
                     <div id="pysakkidata2"></div>
                     <div id="pysakkidata3"></div>
@@ -42,7 +44,7 @@
             <table>
                 <thead>
                 <tr>
-                    <th colspan="4" id="vyöhyke"><img src="media/vyohyke_A.png" height="25" width="160"/></th>
+                    <th colspan="4" id="vyöhyke"><img alt="vyohykeKuva" src="media/vyohyke_A.png" height="25" width="160"/></th>
                 </tr>
                 <tr>
                     <th id="kellonaika"></th>
@@ -76,10 +78,8 @@
             <h3 id="matka"></h3>
             <p id="ohjeet"></p>
         </div>
-
     </div>
     <div id="map"></div>
-
     <div id="hakuContainer">
         <div id="paluuNappi" class="hidden">
             <button id="resetButton">Paluu</button>
@@ -87,14 +87,13 @@
         <div id="tiedohaku" class="visible">
             <p>Valitse näytettävä tieto:</p>
             <select name="valinta" id="valinta">
-                <option value="empty" id="empty"></option>
+                <option value="empty" id="empty">Valitse tästä:</option>
                 <option value="pysäkit" id="pysakit">Julkiset kulkuvälineet</option>
                 <option value="parkit" id="parkkipaikat">Liityntäpysäköinti</option>
                 <option value="pyörat" id="pyorahaku">Kaupunkipyörät</option>
             </select>
             <button id="hakunappi">HAE!</button>
         </div>
-
         <div id="reittihakuvalikko" class="hidden">
             <label class="container">Jalan
                 <input type="radio" checked="checked" name="radio" id="radio1">
@@ -111,23 +110,21 @@
             <button id="haeReitti">Hae reitti</button>
         </div>
     </div>
-</div>
+    </div>
     <footer>
         <div>
             <nav>
                 <ul>
                     <li><a href="index.html">Etusivu</a></li>
                     <li><a href="video.html">Esittelyvideo</a></li>
-                    <li><a href="tietoa.html">Tietoja tekijöistä</a></li>
+                    <li><a href="tietoa.html">Tietoja</a></li>
                     <li><a href="rajapinnat.html">Käytetyt rajapinnat</a></li>
                 </ul>
             </nav>
         </div>
     </footer>
 </main>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.3/leaflet.js"></script>
 <script src="JS/pysakit.js"></script>
-
 </body>
 </html>
