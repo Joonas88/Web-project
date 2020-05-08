@@ -4,8 +4,8 @@ kartta.js
     function options
     function error
 
-pysakit.js
+katsoKarttaa.js
     const hakunappi
     function etsi
-    const pysakit
+    const katsoKarttaa
 

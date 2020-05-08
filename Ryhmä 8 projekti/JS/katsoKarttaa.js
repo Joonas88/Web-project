@@ -41,7 +41,7 @@ let latlngs = [];
 
 
 
-let tumma = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+let tumma = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', { //Määritettään eri karttakerroksille muuttujat ja karttojen lähteet
         maxZoom: 20,
         attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
     }),
@@ -59,26 +59,31 @@ let tumma = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/
     zoomOffset: -1,
     id: 'hsl-map'});
 
-const map = L.map('map', {
+const map = L.map('map', { //Määritetään kartalle muttuja ja annetaan sille eri käytetttävät layerit
     layers: [tumma, osm, ilma, hsl]
 });
-let baseMaps = {
+let baseMaps = { //Tässä luodaan muttuja karttavalikolle
     "Tumma": tumma,
     "OSM": osm,
     "Ilma": ilma,
     "HSL": hsl
 };
-L.control.layers(baseMaps).addTo(map);
+L.control.layers(baseMaps).addTo(map); //Tällä lisätään luotu karttamuuttuja itse kartalle
 
 const options = { //Kartan asetuksia joilla määritetään sijainnin tarkuuden tarkkuus
     enableHighAccuracy: true,
     timeout: 5000,
     maximumAge: 0
 };
+
 //Helsingin rautatieasmean koordinaatit:lat:60.171040,lon: 24.941957
-function success(pos) { //Funktiolla ajetaan käyttäjän sijainti kartalle
-    //paikka = pos.coords;
-    paikka={latitude:'60.168917', longitude:'24.947473'};
+//Tikkurila Heurekan koordinaatit:lat:60.287520,lon: 25.040841
+//Pasia koordinaatit:lat:60.198008,lon:24.933722
+// kartan toiminnallisuuden testaamista varten
+
+function success(pos) { //Funktiolla ajetaan käyttäjän sijainti kartalle ja määritetään kartan zoom-taso
+    paikka = pos.coords;
+    //paikka={latitude:'60.168917', longitude:'24.947473'};
 
     //console.log(`Latitude: ${paikka.latitude}`);
     //console.log(`Longitude: ${paikka.longitude}`);
@@ -100,7 +105,7 @@ function napinpano() { //Funktiolla määritellään mitä tapahtuu hakunappia p
 
     switch (pudotusValikko.selectedIndex) { //Switch-case määrittää mikä pudostusvalikon atribuutti on käytössä ja default päivittä kartan
         case 1:
-            pysakit(paikka);
+            katsoKarttaa(paikka);
             break;
         case 2:
             pysakointiPaikat(paikka);
@@ -116,10 +121,8 @@ function napinpano() { //Funktiolla määritellään mitä tapahtuu hakunappia p
 }
 
 function pyyhiMarker(){ //Funktio päivittää sivuston
-    //console.log('Päivitetään sivu');
     location.reload(paikka);
 }
-
 
 function minaOlenTassa(crd, teksti) { //Tämä funktio tulostaa markerin kartalle oman sijainnin kohdalle ja avaa popupin, joka myös aukeaa markeria klikattaessa.
     L.marker([crd.latitude, crd.longitude], {icon: omaIkoni}).addTo(map).bindPopup(teksti).openPopup()
@@ -193,12 +196,7 @@ const pyoraParkkiIkoni = L.icon({
     popupAnchor: [5,-30]
 });
 
-//Helsingin rautatieasmean koordinaatit:lat:60.171040,lon: 24.941957
-//Tikkurila Heurekan koordinaatit:lat:60.287520,lon: 25.040841
-//Pasia koordinaatit:lat:60.198008,lon:24.933722
-// kartan toiminnallisuuden testaamista varten
-
-function pysakit (crd) { //Funktiolla haetaan API:sta dataa, tässä tapauksessa pysäkkien sijaintitietoja
+function katsoKarttaa (crd) { //Funktiolla haetaan API:sta dataa, tässä tapauksessa pysäkkien sijaintitietoja
     const pysakkiKysely = { //Annetaan hakuun parametrit, mitä tietoja rajapinnasta haetaan, käytetään omaa sijaintia sekä 500m sädettä tuloksien rajaamiseen
         query: `{
     stopsByRadius(lat:${crd.latitude},lon: ${crd.longitude},radius:1000) { 
@@ -228,15 +226,15 @@ function pysakit (crd) { //Funktiolla haetaan API:sta dataa, tässä tapauksessa
         body: JSON.stringify(pysakkiKysely),
     };
 
-    fetch('https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql', options).then(function (response) { //Rajapinnasta nouto
+    fetch('https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql', options).then(function (response) { //Rajapinnasta nouto, palauttaa .json tiedoston
         return response.json()
-    }).then(function (pysakit) { //Tässä on haettu data tulos-muuttujan muodossa
+    }).then(function (pysakit) { //Tässä on haettu data pysäkit-muuttujan muodossa
 
-        //console.log(pysakit);
+        //console.log(katsoKarttaa);
         for (let x = 0; x < pysakit.data.stopsByRadius.edges.length; x++) { //Rajapinnan tulos iteroidaan sieltä löytyvän Arrayn pituuden mukaan ja annetaan muuttujille halutut arvot
 
             //console.log(tulos.data.stopsByRadius.edges[x].node.stop.gtfsId+' '+tulos.data.stopsByRadius.edges[x].node.stop.name+' '+tulos.data.stopsByRadius.edges[x].node.distance+'m päässä');
-            //console.log(pysakit.data.stopsByRadius.edges[x].node.stop.vehicleMode);
+            //console.log(katsoKarttaa.data.stopsByRadius.edges[x].node.stop.vehicleMode);
 
             const koordinaatit = {latitude: pysakit.data.stopsByRadius.edges[x].node.stop.lat, longitude: pysakit.data.stopsByRadius.edges[x].node.stop.lon}; //Tässä tapauksessa koordinaatit ja toiselle pysäkin nimi ja etäisyys käyttäjästä
             const teksti=`<h4>${pysakit.data.stopsByRadius.edges[x].node.stop.name+' '+pysakit.data.stopsByRadius.edges[x].node.distance+'m päässä'}</h4>`;
@@ -330,7 +328,7 @@ function kulkuneuvot (pysakkiId) { //Funktiolla haetaan API:sta dataa, tässä t
     });
 }
 
-function tietojenTulostus(pysakinNimi, linjaNumero, maaranpaa, lahtoAika, reittiID,vyohyke) { //Tämä funktio tulostaa HTML-sivulle kartan alle halutut tiedot, eli pysäkin nimen, sen läpi kulkevat linjat ja niiden lähtöajan
+function tietojenTulostus(pysakinNimi, linjaNumero, maaranpaa, lahtoAika, reittiID,vyohyke) { //Tämä funktio tulostaa HTML-sivulle kartan vierelle halutut tiedot, eli pysäkin nimen, sen läpi kulkevat linjat ja niiden lähtöajan
 
     if (vyohyke==='D'){
         vyohykeKuva.src='media/vyohyke_D.png';
