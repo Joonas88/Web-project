@@ -735,7 +735,7 @@ function junaAikataulutulostus() { //Funktiolla tulostetaan kartan alapuolelle j
 /**
  * @author Timo Tamminiemi
  */
-
+//pyöräasemien markkeri muutetaan omaksi kuvaksi
 const pyoraIkoni = L.icon({
     iconUrl: 'media/Bikeicon.png',
     iconSize: [40,40],
@@ -772,19 +772,26 @@ allowDropoff
     then(function(response){
         return response.json()
     }).then(function(bikeInfo){
-        //console.log(bikeInfo)
+        console.log(bikeInfo)
+        //for looppi iteroi json:sta asemien sijaintitiedot erikseen ja muut tiedot erikseen
         for(let i = 0; i<bikeInfo.data.bikeRentalStations.length; i++) {
             const sijainti = {
                 latitude: bikeInfo.data.bikeRentalStations[i].lat,
                 longitude: bikeInfo.data.bikeRentalStations[i].lon,
             };
+            let totta;
+            if (bikeInfo.data.bikeRentalStations[i].allowDropoff === false) {//jos api palautta arvon false se muuttuu arvoksi ei
+                totta = 'Ei';
+            } else {//jos api palautta arvon true se muuttuu arvoksi kyllä
+                totta = 'Kyllä';
+            }
 
             const teksti = `
         <h3>${bikeInfo.data.bikeRentalStations[i].name}</h3>
         <p>Aseman ID:${bikeInfo.data.bikeRentalStations[i].stationId}</p>
         <p>Vapaita pyöriä:${bikeInfo.data.bikeRentalStations[i].bikesAvailable}</p>
         <p>Vapaita paikkoja:${bikeInfo.data.bikeRentalStations[i].spacesAvailable}</p>
-        <p>Tilaa palauttaa:${bikeInfo.data.bikeRentalStations[i].allowDropoff}</p>
+        <p>Tilaa palauttaa:${totta}</p>
         `;
             //console.log(sijainti);
             pyoraMarker(sijainti, teksti, bikeInfo.data.bikeRentalStations[i]);
@@ -794,7 +801,7 @@ allowDropoff
         console.log(error);
     })
 }
-
+//lisää kaupunkipyöräasemien sijainnit markkereilla kartalle
 function pyoraMarker(crd, teksti, info) {
 
     L.marker([crd.latitude, crd.longitude], {icon: pyoraIkoni}).
@@ -803,8 +810,14 @@ function pyoraMarker(crd, teksti, info) {
     on('click', function () {
         clear();
         valifunktio(crd);
-        if (polyline===null){
+        if (polyline===null){//jos kartalla ei ole reittiä piirrettynä avaa klikatessa markkeria reititys valikon
             reittiHaku.className='visible';
+        }
+        if (info.allowDropoff === true) {//jos api palautta arvon true se muuttuu arvoksi kyllä
+            info.allowDropoff = 'Kyllä';
+        }
+        if (info.allowDropoff === false) {//jos api palautta arvon false se muuttuu arvoksi ei
+            info.allowDropoff = 'Ei';
         }
         pyoraTulostus.className='visible';
         taulukko.className='hidden';
@@ -817,7 +830,7 @@ function pyoraMarker(crd, teksti, info) {
 
     });
 }
-//funktio hakee reitti ohjeet kävellen
+//funktio hakee reitti ohjeet graphhopper apista kävellen
 function reittiKavellen(paikka, crd) {
     reittiOhjeistus.className='visible';
     fetch(`https://graphhopper.com/api/1/route?point=${paikka.latitude},${paikka.longitude}&point=${crd.latitude},${crd.longitude}&vehicle=foot&locale=fi&calc_points=true&points_encoded=false&key=212b25b6-ac73-4540-89bf-61b6cf489997`).
@@ -826,25 +839,26 @@ function reittiKavellen(paikka, crd) {
     }).
     then(function(info) {
         //console.log(info);
+        //iteroi json:sta reitin koordinaattitiedot ja tallentaa ne taulukkoon
         for (let i=0;i<info.paths.length; i++){
             for (let y=0;y<info.paths[i].points.coordinates.length;y++){
                 latlngs.push([info.paths[i].points.coordinates[y][1], info.paths[i].points.coordinates[y][0]]);
             }
-            //for looppi joka tulostaa reitin tiedot sivulle
+            //for looppi joka tulostaa reitin ohjeet sivulle kirjallisena
             for (let j = 0; j < info.paths[0].instructions.length; j++) {
                 ohjeet.innerHTML += (j + 1) + '. ' + info.paths[0].instructions[j].text + ' ' + Math.round(info.paths[0].instructions[j].distance) + 'm' + "<br/>";
                 //console.log(info.paths[0].instructions[j].text);
             }
         }
-        reitti(latlngs);
-        matka.innerHTML = 'Reitin pituus on ' + ((Math.round(info.paths[0].distance) / 1000).toFixed(2)) + ' Km' + "<br/>";
+        reitti(latlngs);//kutsuu reitin piirto funktiota kordinaatti taulukolle
+        matka.innerHTML = 'Reitin pituus on ' + ((Math.round(info.paths[0].distance) / 1000).toFixed(2)) + ' Km' + "<br/>";//tulostaa reitin pituuden sivulle
     }).
     catch(function(error) {
         console.log(error);
     })
     //console.log(latlngs);
 }
-//funktio hakee reitti ohjeet pyörällä
+//funktio hakee reitti ohjeet graphhopper apista pyörällä
 function reittiPyoralla(paikka, crd) {
     reittiOhjeistus.className='visible';
     fetch(`https://graphhopper.com/api/1/route?point=${paikka.latitude},${paikka.longitude}&point=${crd.latitude},${crd.longitude}&vehicle=bike&locale=fi&calc_points=true&points_encoded=false&key=212b25b6-ac73-4540-89bf-61b6cf489997`).
@@ -853,25 +867,26 @@ function reittiPyoralla(paikka, crd) {
     }).
     then(function(info) {
         //console.log(info);
+        //iteroi json:sta reitin koordinaattitiedot ja tallentaa ne taulukkoon
         for (let i=0;i<info.paths.length; i++){
             for (let y=0;y<info.paths[i].points.coordinates.length;y++){
                 latlngs.push([info.paths[i].points.coordinates[y][1], info.paths[i].points.coordinates[y][0]]);
             }
-            //for looppi joka tulostaa reitin tiedot sivulle
+            //for looppi joka tulostaa reitin ohjeet sivulle kirjallisena
             for (let j = 0; j < info.paths[0].instructions.length; j++) {
                 ohjeet.innerHTML += (j + 1) + '. ' + info.paths[0].instructions[j].text + ' ' + Math.round(info.paths[0].instructions[j].distance) + 'm' + "<br/>";
                 //console.log(info.paths[0].instructions[j].text);
             }
         }
-        reitti(latlngs);
-        matka.innerHTML = 'Reitin pituus on ' + ((Math.round(info.paths[0].distance) / 1000).toFixed(2)) + ' Km' + "<br/>";
+        reitti(latlngs);//kutsuu reitin piirto funktiota kordinaatti taulukolle
+        matka.innerHTML = 'Reitin pituus on ' + ((Math.round(info.paths[0].distance) / 1000).toFixed(2)) + ' Km' + "<br/>";//tulostaa reitin pituuden sivulle
     }).
     catch(function(error) {
         console.log(error);
     })
     //console.log(latlngs);
 }
-//funktio hakee reittiohjeet autolla
+//funktio hakee reitti ohjeet graphhopper apista autolla
 function reittiAutolla(paikka, crd) {
     reittiOhjeistus.className='visible';
     fetch(`https://graphhopper.com/api/1/route?point=${paikka.latitude},${paikka.longitude}&point=${crd.latitude},${crd.longitude}&vehicle=car&locale=fi&calc_points=true&points_encoded=false&key=212b25b6-ac73-4540-89bf-61b6cf489997`).
@@ -880,18 +895,19 @@ function reittiAutolla(paikka, crd) {
     }).
     then(function(info) {
         //console.log(info);
+        //iteroi json:sta reitin koordinaattitiedot ja tallentaa ne taulukkoon
         for (let i=0;i<info.paths.length; i++){
             for (let y=0;y<info.paths[i].points.coordinates.length;y++){
                 latlngs.push([info.paths[i].points.coordinates[y][1], info.paths[i].points.coordinates[y][0]]);
             }
-            //for looppi joka tulostaa reitin tiedot sivulle
+            //for looppi joka tulostaa reitin ohjeet sivulle kirjallisena
             for (let j = 0; j < info.paths[0].instructions.length; j++) {
                 ohjeet.innerHTML += (j + 1) + '. ' + info.paths[0].instructions[j].text + ' ' + Math.round(info.paths[0].instructions[j].distance) + 'm' + "<br/>";
                 //console.log(info.paths[0].instructions[j].text);
             }
         }
-        reitti(latlngs);
-        matka.innerHTML = 'Reitin pituus on ' + ((Math.round(info.paths[0].distance) / 1000).toFixed(2)) + ' Km' + "<br/>";
+        reitti(latlngs);//kutsuu reitin piirto funktiota kordinaatti taulukolle
+        matka.innerHTML = 'Reitin pituus on ' + ((Math.round(info.paths[0].distance) / 1000).toFixed(2)) + ' Km' + "<br/>";//tulostaa reitin pituuden sivulle
     }).
     catch(function(error) {
         console.log(error);
@@ -908,7 +924,7 @@ function reitti(latlngs) {
     map.fitBounds(polyline.getBounds());
 }
 
-//reittihakuvalinta funktio
+//reittihakuvalinta funktio kuuntelee mikä vaihtoehto radiobuttoneista on valittu ja sen perusteella kutsuu eri funktioita
 function valifunktio(crd) {
     haeReitti.addEventListener('click', napinpainallus);
     function napinpainallus() {
