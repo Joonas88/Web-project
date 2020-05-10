@@ -25,11 +25,27 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/etusivu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/rajapinnat.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/rajapinnat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/tietoa.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/tietoa.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ryhmä 8 projekti/video.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ryhmä 8 projekti/video.html" afterDir="false" />
+    <list default="true" id="444d52c7-7c31-4f2e-b64b-8f7984fec2d9" name="Default Changelist" comment="Hienosäätöä">
+      <change afterPath="$PROJECT_DIR$/Kevytversio/media/Juna.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kevytversio/media/Ratikka.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kevytversio/media/bussi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kevytversio/media/lautta.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kevytversio/media/metro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kevytversio/media/runkobussi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/Kopio/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/banneri_v2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/kokeilu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/media/vyohyke_A.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/media/vyohyke_B.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/media/vyohyke_C.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/media/vyohyke_D.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/pysäköinti/koeputki.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/pysäköinti/koeputki.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing/reititys.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kevytversio/kevytversio.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kevytversio/kevytversio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kevytversio/tektsitulostus.html" beforeDir="false" afterPath="$PROJECT_DIR$/Kevytversio/tektsitulostus.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +64,8 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Kevytversio" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="ProjectId" id="1azDyRAqTQ6oWE7deNK5whICX1T" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -61,22 +77,23 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Testing/Kopio" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Kevytversio" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\WebstormProjects\Ryhmä 8 projekti\Alkuperäiset koodit" />
-      <recent name="D:\WebstormProjects\Testing" />
-      <recent name="D:\WebstormProjects\Testing\Kopio" />
-      <recent name="D:\WebstormProjects\Testing\pysäköinti" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\WebstormProjects\Testing\Kopio" />
       <recent name="D:\WebstormProjects\Testing" />
       <recent name="D:\WebstormProjects\Testing\media" />
       <recent name="D:\WebstormProjects\Ryhmä 8 projekti\media" />
       <recent name="D:\WebstormProjects\Ryhmä 8 projekti\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WebstormProjects\Kevytversio\media" />
+      <recent name="D:\WebstormProjects\Kevytversio" />
+      <recent name="D:\WebstormProjects\Ryhmä 8 projekti\Alkuperäiset koodit" />
+      <recent name="D:\WebstormProjects\Testing" />
+      <recent name="D:\WebstormProjects\Testing\Kopio" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -105,7 +122,8 @@
       <workItem from="1588759563342" duration="28648000" />
       <workItem from="1588798654865" duration="599000" />
       <workItem from="1588840942101" duration="13895000" />
-      <workItem from="1588857607895" duration="29274000" />
+      <workItem from="1588857607895" duration="37925000" />
+      <workItem from="1589010527684" duration="30203000" />
     </task>
     <task id="LOCAL−00001" summary="kartta.js siirretty uuteen kansioon, missä on alkuperäiset muokkaamattomat koodit.&#10;Luotu pysakit.js tiedostoon kartalla näkyvät sijainnit ja alettu luomaan linjojen hakua-&#10;index.html muokattu hieman, script kohtaa ja lisätty testitageja">
       <created>1587758156552</created>
@@ -305,7 +323,19 @@
       <option name="presentableId" value="LOCAL−00033" />
       <updated>1588934482035</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL−00034" summary="Hienosäätöä">
+      <created>1588934706168</created>
+      <option name="number" value="LOCAL−00034" />
+      <option name="presentableId" value="LOCAL−00034" />
+      <updated>1588934706168</updated>
+    </task>
+    <task id="LOCAL−00035" summary="Kevytverion tynkä">
+      <created>1588964634709</created>
+      <option name="number" value="LOCAL−00035" />
+      <option name="presentableId" value="LOCAL−00035" />
+      <updated>1588964634709</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,6 +344,40 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$/Kevytversio" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="2">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$/Kevytversio" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -338,11 +402,15 @@
         </entry>
       </map>
     </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+        <entry key="2" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Kellon toiminnallisuus unohtunut lisätä, lisätty" />
-    <MESSAGE value="Lisätty pysäkkien tietoihin reittiohjeistus joka aukeaa uuteen ikkunaan, sekä muotoilu yms. mitä se tarvitsi." />
     <MESSAGE value="Pysäkkihaun tulostusnäkymään lisätty HSL-vyöhykeinfo.&#10;Lisätty liityntäpysköintihaku, autoille ja polkupyörille oma. Näyttää onko maksullinen pysäköinti vaiko rajoitetusti ilmainen. Näyttää vain aktiiviset paikat. &#10;Pysäkeille ja p-paikoille linkitetty reittihaku uudessa ikkunassa ulkopuolisena palveluna." />
     <MESSAGE value="Checkbox vaihdettu pudotusvalikkoon, siistitty koodia ja otettu turhia konsolitulostuksia pois, lisätty myös kuvatiedostot vyöhykemerkinnöistä sekä muotoilu." />
     <MESSAGE value="Reititys-apiin kirjoitettu loopit ja arrayn-tulostus, että saadaan haalittua data oikeaan muotoon reitin kartalle piirtämistä varten." />
@@ -366,9 +434,15 @@
     <MESSAGE value="Lähes valmis tuotos. Sivusto valmis, vielä pientä hiomista siel tääl" />
     <MESSAGE value="Siistitty asettelua ja katsottu HTML läpi sekä korjattu pieniä virheitä" />
     <MESSAGE value="Koodi kommentoitu loppuun ja viimeinen pusku ennen palautusta." />
-    <option name="LAST_COMMIT_MESSAGE" value="Koodi kommentoitu loppuun ja viimeinen pusku ennen palautusta." />
+    <MESSAGE value="Hienosäätöä" />
+    <MESSAGE value="Kevytverion tynkä" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kevytverion tynkä" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588964032787">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588964032787" />
     <state x="628" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588854444897">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -377,19 +451,23 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588345392206" />
-    <state x="428" y="12" key="CommitChangelistDialog2" timestamp="1588934480876">
+    <state x="428" y="12" key="CommitChangelistDialog2" timestamp="1588964634224">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="428" y="12" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588934480876" />
-    <state x="184" y="86" key="DiffContextDialog" timestamp="1588856771465">
+    <state x="428" y="12" key="CommitChangelistDialog2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588964634224" />
+    <state x="184" y="86" key="DiffContextDialog" timestamp="1588964586768">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="184" y="86" key="DiffContextDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588856771465" />
-    <state x="755" y="291" key="FileChooserDialogImpl" timestamp="1588855383755">
+    <state x="184" y="86" key="DiffContextDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588964586768" />
+    <state x="755" y="291" key="FileChooserDialogImpl" timestamp="1589142912021">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112/-1920.358.1920.1040@0.0.2048.1112" timestamp="1587730290866" />
-    <state x="755" y="291" key="FileChooserDialogImpl/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588855383755" />
+    <state x="755" y="291" key="FileChooserDialogImpl/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589142912021" />
+    <state x="793" y="418" key="Github.ShareDialog" timestamp="1589142785930">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="793" y="418" key="Github.ShareDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589142785930" />
     <state x="184" y="86" key="MergeDialog" timestamp="1588933905115">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -399,10 +477,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="662" y="236" width="488" height="264" key="MultipleFileMergeDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588790826555" />
-    <state x="719" y="222" key="RollbackChangesDialog" timestamp="1588856855581">
+    <state x="719" y="222" key="RollbackChangesDialog" timestamp="1588964370070">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="719" y="222" key="RollbackChangesDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588856855581" />
+    <state x="719" y="222" key="RollbackChangesDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588964370070" />
     <state x="672" y="184" key="SettingsEditor" timestamp="1588417454710">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -411,10 +489,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="808" y="434" key="VCS.ChangelistChooser/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588857186312" />
-    <state x="651" y="230" key="Vcs.Push.Dialog.v2" timestamp="1588934484449">
+    <state x="651" y="230" key="Vcs.Push.Dialog.v2" timestamp="1589143018435">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="651" y="230" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588934484449" />
+    <state x="651" y="230" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589143018435" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1589143061770">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589143061770" />
     <state x="728" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588933874040">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -425,6 +507,10 @@
     </state>
     <state x="1914" y="1" width="976" height="1056" key="dock-window-1/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588875197367" />
     <state x="1914" y="1" width="976" height="1056" key="dock-window-1/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1588921437743" />
+    <state x="731" y="381" key="git4idea.rebase.GitRebaseDialog" timestamp="1589142903626">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="731" y="381" key="git4idea.rebase.GitRebaseDialog/1920.0.1920.1040/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589142903626" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1588194745736">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
